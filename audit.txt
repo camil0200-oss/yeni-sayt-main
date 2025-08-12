@@ -1,3 +1,255 @@
+### TREE (level 2)
+.
+./audit.txt
+./jsconfig.json
+./tailwind.config.js
+./app
+./app/layout.js
+./app/page.js
+./app/icon.svg
+./app/api
+./app/globals.css
+./next.config.js
+./tests
+./tests/__init__.py
+./.emergent
+./.emergent/emergent.yml
+./components
+./components/ui
+./yarn.lock
+./public
+./public/images
+./public/sitemap.xml
+./public/robots.txt
+./package.json
+./test_result.md
+./.env
+./hooks
+./hooks/use-mobile.jsx
+./hooks/use-toast.js
+./backend_test.py
+./lib
+./lib/utils.js
+./components.json
+./postcss.config.js
+
+### package.json
+{
+    "name": "nextjs-mongo-template",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "NODE_OPTIONS='--max-old-space-size=512' next dev --hostname 0.0.0.0 --port 3000",
+        "dev:no-reload": "next dev --hostname 0.0.0.0 --port 3000",
+        "dev:webpack": "next dev --hostname 0.0.0.0 --port 3000",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@hookform/resolvers": "^5.1.1",
+        "@radix-ui/react-accordion": "^1.2.11",
+        "@radix-ui/react-alert-dialog": "^1.1.14",
+        "@radix-ui/react-aspect-ratio": "^1.1.7",
+        "@radix-ui/react-avatar": "^1.1.10",
+        "@radix-ui/react-checkbox": "^1.3.2",
+        "@radix-ui/react-collapsible": "^1.1.11",
+        "@radix-ui/react-context-menu": "^2.2.15",
+        "@radix-ui/react-dialog": "^1.1.14",
+        "@radix-ui/react-dropdown-menu": "^2.1.15",
+        "@radix-ui/react-hover-card": "^1.1.14",
+        "@radix-ui/react-label": "^2.1.7",
+        "@radix-ui/react-menubar": "^1.1.15",
+        "@radix-ui/react-navigation-menu": "^1.2.13",
+        "@radix-ui/react-popover": "^1.1.14",
+        "@radix-ui/react-progress": "^1.1.7",
+        "@radix-ui/react-radio-group": "^1.3.7",
+        "@radix-ui/react-scroll-area": "^1.2.9",
+        "@radix-ui/react-select": "^2.2.5",
+        "@radix-ui/react-separator": "^1.1.7",
+        "@radix-ui/react-slider": "^1.3.5",
+        "@radix-ui/react-slot": "^1.2.3",
+        "@radix-ui/react-switch": "^1.2.5",
+        "@radix-ui/react-tabs": "^1.1.12",
+        "@radix-ui/react-toast": "^1.2.14",
+        "@radix-ui/react-toggle": "^1.1.9",
+        "@radix-ui/react-toggle-group": "^1.1.10",
+        "@radix-ui/react-tooltip": "^1.2.7",
+        "@tanstack/react-table": "^8.21.3",
+        "axios": "^1.10.0",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "cmdk": "^1.1.1",
+        "date-fns": "^4.1.0",
+        "embla-carousel-react": "^8.6.0",
+        "input-otp": "^1.4.2",
+        "lucide-react": "^0.516.0",
+        "mongodb": "^6.6.0",
+        "next": "14.2.3",
+        "next-themes": "^0.4.6",
+        "react": "^18",
+        "react-day-picker": "^9.7.0",
+        "react-dom": "^18",
+        "react-hook-form": "^7.58.1",
+        "react-resizable-panels": "^3.0.3",
+        "recharts": "^2.15.3",
+        "sonner": "^2.0.5",
+        "tailwind-merge": "^3.3.1",
+        "tailwindcss-animate": "^1.0.7",
+        "uuid": "^9.0.1",
+        "vaul": "^1.1.2",
+        "zod": "^3.25.67"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.19",
+        "globals": "^16.2.0",
+        "postcss": "^8",
+        "tailwindcss": "^3.4.1"
+    },
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
+
+### next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'standalone',
+  images: { unoptimized: true },
+  experimental: {
+    // Remove if not using Server Components
+    serverComponentsExternalPackages: ['mongodb'],
+  },
+  webpack(config, { dev }) {
+    if (dev) {
+      // Reduce CPU/memory from file watching
+      config.watchOptions = {
+        poll: 2000,
+        aggregateTimeout: 300,
+        ignored: ['**/node_modules'],
+      };
+    }
+    return config;
+  },
+  onDemandEntries: {
+    maxInactiveAge: 10000,
+    pagesBufferLength: 2,
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          // **Security**
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },                 // clickjacking-dən qoruyur
+          { key: 'Content-Security-Policy', value: "frame-ancestors 'self';" }, // yalnız öz saytınızdan embed olunsun
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+
+          // **CORS** – lazım olsa daralda bilərik
+          { key: 'Access-Control-Allow-Origin', value: process.env.CORS_ORIGINS || '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: '*' },
+        ],
+      },
+    ];
+  },
+};
+
+module.exports = nextConfig;
+
+
+### app/layout.js
+import './globals.css'
+import { Inter } from 'next/font/google'
+import Script from 'next/script'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata = {
+  metadataBase: new URL('https://smartkilid.az'),
+  title: 'Smart Kilid Sistemləri - Təhlükəsizlik və Avtomatlaşdırma Sistemləri',
+  description:
+    'Bakıda elektron qapılar, smart kilidlər, barmaq izi və üz tanıma cihazları ilə giriş sistemləri, kartla lift idarəetmə və access control sistemlərinin satışı və quraşdırılması.',
+  keywords:
+    'smart kilidlər, elektron qapılar, barmaq izi giriş, access control, liftlər üçün kart ilə idarəetmə, Barmaq izi və üz tanıma cihazları, Bakı',
+  authors: [{ name: 'Smart Kilid Sistemləri' }],
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  openGraph: {
+    url: 'https://smartkilid.az',
+    title: 'Smart Kilid Sistemləri - Təhlükəsizlik Sistemləri',
+    description:
+      'Bakıda Turniket və Şlaqbaum sistemləri, smart kilidlər və access control sistemlərinin satışı və quraşdırılması.',
+    siteName: 'Smart Kilid Sistemləri',
+    type: 'website',
+    locale: 'az_AZ',
+    images: [
+      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Smart Kilid Sistemləri' }
+    ]
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png'
+  }
+}
+
+export default function RootLayout({ children }) {
+  // JSON-LD obyektləri (səhvsiz olması üçün JSON.stringify ilə çıxarılacaq)
+  const ldLocalBusiness = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Smart Kilid Sistemləri',
+    url: 'https://smartkilid.az',
+    description: 'Təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması',
+    email: 'smartkilid.az@gmail.com',
+    telephone: ['+994552370200', '+994708001000'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Bakı',
+      addressCountry: 'AZ'
+    },
+    openingHours: 'Mo-Su 09:00-21:00',
+    areaServed: 'AZ',
+    logo: 'https://smartkilid.az/logo.png',
+    image: 'https://smartkilid.az/og-image.jpg',
+    // varsa sosial linklər:
+    // sameAs: ['https://facebook.com/..','https://instagram.com/..']
+  }
+
+  const ldWebsite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: 'https://smartkilid.az',
+    name: 'Smart Kilid Sistemləri',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://smartkilid.az/?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
+    }
+  }
+
+  return (
+    <html lang="az">
+      <body className={inter.className}>
+        {/* JSON-LD blokları — HTML entity problemi olmaması üçün Script + dangerouslySetInnerHTML */}
+        <Script
+          id="ld-localbusiness"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldLocalBusiness) }}
+        />
+        <Script
+          id="ld-website"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldWebsite) }}
+        />
+        {children}
+      </body>
+    </html>
+  )
+}
+
+### app/page.js (ilk 300 sətir)
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -29,7 +281,7 @@ export default function HomePage() {
       description: "Qapılar üçün elektron kilid və idarəetmə həlləri",
       detailedDescription: "Evinizdə və iş yerinizdə girişləri təhlükəsiz idarə edin. Elektron kilid sistemləri ilə icazəsiz girişlərin qarşısını alın, rahatlığı artırın.",
       cta: "Məsləhət üçün WhatsApp-da yazın.",
-      image: "/images/service-gate.webp"
+      image: "/images/service-gate.png"
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
@@ -37,7 +289,7 @@ export default function HomePage() {
       description: "Biometrik təhlükəsizlik barmaq izi və üz tanıma",
       detailedDescription: "Biometrik texnologiya ilə yalnız icazəli şəxslərə giriş verin. Sürətli və dəqiq identifikasiya.",
       cta: "İndi sifariş edin – təhlükəsizlik səviyyənizi artırın!",
-      image: "/images/service-biometrics.webp"
+      image: "/images/service-biometrics.png"
     },
     {
       icon: <Settings className="w-8 h-8" />,
@@ -45,7 +297,7 @@ export default function HomePage() {
       description: "Liftlərdə mərtəbə üzrə giriş nəzarəti",
       detailedDescription: "Kart əsaslı lift nəzarəti ilə yalnız səlahiyyətli şəxslər istənilən mərtəbəyə çata bilər. Binalar üçün təhlükəsiz və rahat həll.",
       cta: "Layihəniz üçün uyğun konfiqurasiya təklif edək.",
-      image: "/images/service-lift.webp"
+      image: "/images/service-lift.png"
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -53,7 +305,7 @@ export default function HomePage() {
       description: "Ofis, müəssisə və obyektlər üçün giriş-buraxılış",
       detailedDescription: "Turniketlər ilə işçi və ziyarətçi axınını idarə edin. Kart, biometrik və QR girişləri ilə inteqrasiya mümkündür.",
       cta: "Obyektiniz üçün uyğun turniket tipini seçək.",
-      image: "/images/service-turnstile.webp"
+      image: "/images/service-turnstile.png"
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -61,7 +313,7 @@ export default function HomePage() {
       description: "Dayanacaq və ərazi girişlərinin idarə edilməsi",
       detailedDescription: "Avtomatik şlaqbaumlar ilə nəqliyyat axınını təhlükəsiz və rahat idarə edin. Pult, karta və ANPR (nömrə tanıma) inteqrasiyası.",
       cta: "Məkanınıza uyğun şlaqbaum seçimində kömək edək.",
-      image: "/images/service-barrier.webp"
+      image: "/images/service-barrier.png"
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -69,7 +321,7 @@ export default function HomePage() {
       description: "İşçi davamiyyəti və giriş nəzarəti",
       detailedDescription: "Ofislər, müəssisələr və obyektlər üçün giriş-çıxışların mərkəzləşdirilmiş idarə edilməsi və hesabatlandırma.",
       cta: "İş yerinizə tam nəzarət üçün bu gün əlaqə saxlayın.",
-      image: "/images/service-access-control.webp"
+      image: "/images/service-access-control.png"
     },
     {
       icon: <Lock className="w-8 h-8" />,
@@ -77,7 +329,7 @@ export default function HomePage() {
       description: "Elektron kilidlər və smart giriş sistemləri",
       detailedDescription: "Açar daşımağa ehtiyac yoxdur — qapınızı telefon, kart və ya kodla açın. Təhlükəsiz, rahat, estetik.",
       cta: "Eviniz üçün ən uyğun smart kilidi seçək.",
-      image: "/images/service-smart-lock.webp"
+      image: "/images/service-smart-lock.png"
     },
     {
       icon: <Clock className="w-8 h-8" />,
@@ -85,7 +337,7 @@ export default function HomePage() {
       description: "PIN-klaviatura, kart və biometrika kombinasiyası",
       detailedDescription: "Şifrələr, kartlar və biometrik həllər – hamısı bir sistemdə. Giriş ssenarilərini sərbəst qurun.",
       cta: "Mütəxəssis məsləhəti üçün bizə yazın.",
-      image: "/images/service-keypad.webp"
+      image: "/images/service-keypad.png"
     }
   ]
 
@@ -298,159 +550,100 @@ export default function HomePage() {
               <div key={index} className="text-center group">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                   {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Haqqımızda</h2>
-              <div className="space-y-4 text-gray-600 text-lg">
-                <p>Smart Kilid Sistemləri olaraq, biz Azərbaycanda müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması sahəsində fəaliyyət göstəririk.</p>
-                <p>Komandamız yüksək ixtisaslı mütəxəssislərdən ibarətdir və müştərilərimizə ən keyfiyyətli xidmət göstərməyə çalışır. Biz həm ev, həm də kommersiya obyektləri üçün həllər təklif edirik.</p>
-                <p>Məqsədimiz müştərilərimizin təhlükəsizliyini təmin etmək və ən son texnologiyalardan istifadə edərək rahatlıq yaratmaqdır.</p>
-                <p className="font-semibold text-blue-600">Smart Kilid Sistemləri – təhlükəsizlik və avtomatlaşdırma sahəsində etibarlı partnyorunuz, peşəkar satış və quraşdırma xidmətləri təqdim edirik.</p>
-              </div>
-              <div className="mt-8">
-                <a
-                  href="https://wa.me/994552370200"
-                  target="_blank"
-                  rel="noopener"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Bizimlə Əlaqə</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <img
-                src="/images/about-team.webp"
-                alt="About team"
-                className="w-full h-auto rounded-xl shadow-xl"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+### components faylları (max depth 2)
+components/ui/accordion.jsx
+components/ui/alert-dialog.jsx
+components/ui/alert.jsx
+components/ui/aspect-ratio.jsx
+components/ui/avatar.jsx
+components/ui/badge.jsx
+components/ui/breadcrumb.jsx
+components/ui/button.jsx
+components/ui/calendar.jsx
+components/ui/card.jsx
+components/ui/carousel.jsx
+components/ui/chart.jsx
+components/ui/checkbox.jsx
+components/ui/collapsible.jsx
+components/ui/command.jsx
+components/ui/context-menu.jsx
+components/ui/dialog.jsx
+components/ui/drawer.jsx
+components/ui/dropdown-menu.jsx
+components/ui/form.jsx
+components/ui/hover-card.jsx
+components/ui/input-otp.jsx
+components/ui/input.jsx
+components/ui/label.jsx
+components/ui/menubar.jsx
+components/ui/navigation-menu.jsx
+components/ui/pagination.jsx
+components/ui/popover.jsx
+components/ui/progress.jsx
+components/ui/radio-group.jsx
+components/ui/resizable.jsx
+components/ui/scroll-area.jsx
+components/ui/select.jsx
+components/ui/separator.jsx
+components/ui/sheet.jsx
+components/ui/sidebar.jsx
+components/ui/skeleton.jsx
+components/ui/slider.jsx
+components/ui/sonner.jsx
+components/ui/switch.jsx
+components/ui/table.jsx
+components/ui/tabs.jsx
+components/ui/textarea.jsx
+components/ui/toast.jsx
+components/ui/toaster.jsx
+components/ui/toggle-group.jsx
+components/ui/toggle.jsx
+components/ui/tooltip.jsx
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Bizimlə Əlaqə</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Suallarınız üçün bizimlə əlaqə saxlayın. Pulsuz məsləhət üçün WhatsApp yazın!
-            </p>
-          </div>
+### Naviqasiya anchor axtarışı (#services/#about/#contact)
+app/page.js:112:              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Xidmətlərimiz</a>
+app/page.js:113:              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">Haqqımızda</a>
+app/page.js:114:              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Əlaqə</a>
+app/page.js:128:                <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Xidmətlərimiz</a>
+app/page.js:129:                <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Haqqımızda</a>
+app/page.js:130:                <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Əlaqə</a>
+app/page.js:162:                  href="#services"
+app/page.js:271:                      href="#contact"
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <Phone className="w-6 h-6 text-blue-400 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Telefon</h3>
-                  <p className="text-gray-300">+994 55 237 02 00</p>
-                  <p className="text-gray-300">+994 70 800 10 00</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 text-blue-400 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Email</h3>
-                  <p className="text-gray-300">smartkilid.az@gmail.com</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-blue-400 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Ünvan</h3>
-                  <p className="text-gray-300">Bakı, Azərbaycan</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <Clock className="w-6 h-6 text-blue-400 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">İş Saatları</h3>
-                  <p className="text-gray-300">Hər gün, 09:00–21:00</p>
-                </div>
-              </div>
-            </div>
+### PNG istinadları (kod fayllarında)
+tapılmadı
 
-            {/* WhatsApp Buttons — Şəffaf, diqqətçəkən, daha iri */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold mb-6">WhatsApp Əlaqə</h3>
+### public/images siyahısı
+total 1800
+-rw-rw-r--@ 1 camil  staff   111K Aug 13 01:54 about-team.webp
+-rw-rw-r--@ 1 camil  staff    43K Aug 13 01:54 hero-security.webp
+-rw-r--r--  1 camil  staff   136K Aug 13 01:55 service-access-control.webp
+-rw-r--r--  1 camil  staff    70K Aug 13 01:55 service-barrier.webp
+-rw-r--r--  1 camil  staff   127K Aug 13 01:55 service-biometrics.webp
+-rw-r--r--  1 camil  staff    68K Aug 13 01:55 service-gate.webp
+-rw-r--r--  1 camil  staff    62K Aug 13 01:55 service-keypad.webp
+-rw-r--r--  1 camil  staff    74K Aug 13 01:55 service-lift.webp
+-rw-r--r--  1 camil  staff   119K Aug 13 01:55 service-smart-lock.webp
+-rw-r--r--  1 camil  staff    72K Aug 13 01:55 service-turnstile.webp
 
-              <button
-                onClick={() => openWhatsApp('994552370200')}
-                aria-label="WhatsApp (055)"
-                className="w-full text-lg px-6 py-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-green-500/20 ring-1 ring-green-500/50"
-              >
-                <Phone className="w-5 h-5" />
-                <span>WhatsApp (055)</span>
-              </button>
+### robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://smartkilid.az/sitemap.xml
 
-              <button
-                onClick={() => openWhatsApp('994708001000')}
-                aria-label="WhatsApp (070)"
-                className="w-full text-lg px-6 py-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-green-500/20 ring-1 ring-green-500/50"
-              >
-                <Phone className="w-5 h-5" />
-                <span>WhatsApp (070)</span>
-              </button>
+### sitemap status
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://smartkilid.az/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
 
-              <a
-                href="mailto:smartkilid.az@gmail.com"
-                className="w-full text-lg px-6 py-5 rounded-xl bg-blue-600/90 hover:bg-blue-600 transition-colors flex items-center justify-center gap-3 shadow-lg"
-              >
-                <Mail className="w-5 h-5" />
-                <span>Email Göndər</span>
-              </a>
-            </div>
-
-            {/* Map */}
-            <div>
-              <h3 className="text-xl font-semibold mb-6">Xəritə</h3>
-              <div className="bg-gray-800 rounded-lg p-4 h-64 flex items-center justify-center">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194473.42201399864!2d49.73893!3d40.394734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2sBaku%2C%20Azerbaijan!5e0!3m2!1sen!2s!4v1633024800000!5m2!1sen!2s"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-gray-300 py-8">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <p>&copy; 2024 Smart Kilid Sistemləri. Bütün hüquqlar qorunur.</p>
-            <p className="mt-2">Təhlükəsizlik və Avtomatlaşdırma Sistemləri</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  )
-}
+### .env açarları (maskalanmış)
+MONGO_URL=***HIDDEN***
+DB_NAME=***HIDDEN***
+NEXT_PUBLIC_BASE_URL=***HIDDEN***
+CORS_ORIGINS=***HIDDEN***
