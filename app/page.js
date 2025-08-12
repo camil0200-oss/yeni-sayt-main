@@ -338,7 +338,7 @@ export default function HomePage() {
             <div>
               <img
                 src="/images/about-team.webp"
-                alt=
+                alt="About team"
                 className="w-full h-auto rounded-xl shadow-xl"
                 loading="lazy"
               />
