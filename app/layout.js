@@ -1,4 +1,4 @@
-import './globals.css'
+import './critical.css'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
@@ -75,6 +75,8 @@ export default function RootLayout({ children }) {
     <html lang="az">
       <head>
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/globals.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet" href="/globals.css" /></noscript>
       </head>
       <body className={inter.className}>
         {/* JSON-LD blokları — HTML entity problemi olmaması üçün Script + dangerouslySetInnerHTML */}
