@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { useState, useEffect } from 'react'
 import {
@@ -10,7 +11,6 @@ import {
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [selectedService, setSelectedService] = useState(null)
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -22,17 +22,19 @@ export default function HomePage() {
     window.open(`https://wa.me/${number}`, '_blank')
   }
 
-  // XİDMƏTLƏR — “darvaza” -> “elektron kilid”; Turniket və Şlaqbaum əlavə edildi
+  // XİDMƏTLƏR (slug-larla)
   const services = [
     {
+      slug: "gate",
       icon: <Shield className="w-8 h-8" />,
       title: "Elektron Kilid Sistemləri",
-      description: "Qapılar üçün elektron kilid və idarəetmə həlləri",
+      description: "Qapılar üçün elektron kilid və idarəetmə həllləri",
       detailedDescription: "Evinizdə və iş yerinizdə girişləri təhlükəsiz idarə edin. Elektron kilid sistemləri ilə icazəsiz girişlərin qarşısını alın, rahatlığı artırın.",
       cta: "Məsləhət üçün WhatsApp-da yazın.",
       image: "/images/service-gate.webp"
     },
     {
+      slug: "biometrics",
       icon: <Smartphone className="w-8 h-8" />,
       title: "Barmaq İzi ilə Giriş Sistemləri",
       description: "Biometrik təhlükəsizlik barmaq izi və üz tanıma",
@@ -41,6 +43,7 @@ export default function HomePage() {
       image: "/images/service-biometrics.webp"
     },
     {
+      slug: "lift",
       icon: <Settings className="w-8 h-8" />,
       title: "Kartla Lift İdarəetmə",
       description: "Liftlərdə mərtəbə üzrə giriş nəzarəti",
@@ -49,6 +52,7 @@ export default function HomePage() {
       image: "/images/service-lift.webp"
     },
     {
+      slug: "turnstile",
       icon: <Users className="w-8 h-8" />,
       title: "Turniket Sistemləri",
       description: "Ofis, müəssisə və obyektlər üçün giriş-buraxılış",
@@ -57,6 +61,7 @@ export default function HomePage() {
       image: "/images/service-turnstile.webp"
     },
     {
+      slug: "barrier",
       icon: <Shield className="w-8 h-8" />,
       title: "Şlaqbaum Sistemləri",
       description: "Dayanacaq və ərazi girişlərinin idarə edilməsi",
@@ -65,6 +70,7 @@ export default function HomePage() {
       image: "/images/service-barrier.webp"
     },
     {
+      slug: "access-control",
       icon: <Users className="w-8 h-8" />,
       title: "Access Control Sistemləri",
       description: "İşçi davamiyyəti və giriş nəzarəti",
@@ -73,6 +79,7 @@ export default function HomePage() {
       image: "/images/service-access-control.webp"
     },
     {
+      slug: "smart-lock",
       icon: <Lock className="w-8 h-8" />,
       title: "Smart Kilidlər",
       description: "Elektron kilidlər və smart giriş sistemləri",
@@ -81,9 +88,10 @@ export default function HomePage() {
       image: "/images/service-smart-lock.webp"
     },
     {
+      slug: "keypad",
       icon: <Clock className="w-8 h-8" />,
       title: "Kodlayıcı Sistemlər",
-      description: "PIN-klaviatura, kart və biometrika kombinasiyası",
+      description: "Pin-klaviatura, kart və biometrika kombinasiyası",
       detailedDescription: "Şifrələr, kartlar və biometrik həllər – hamısı bir sistemdə. Giriş ssenarilərini sərbəst qurun.",
       cta: "Mütəxəssis məsləhəti üçün bizə yazın.",
       image: "/images/service-keypad.webp"
@@ -186,17 +194,20 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
-                onClick={() => setSelectedService(service)}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                prefetch
+                className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer block"
               >
                 <div className="h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
+                    width={1200}
+                    height={800}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
@@ -216,65 +227,9 @@ export default function HomePage() {
                     <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
-
-          {/* Service Modal */}
-          {selectedService && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-              <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-                <div className="relative">
-                  <img
-                    src={selectedService.image}
-                    alt={selectedService.title}
-                    className="w-full h-64 object-cover"
-                  />
-                  <button
-                    onClick={() => setSelectedService(null)}
-                    className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-gray-100 transition-colors"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-                <div className="p-8">
-                  <div className="flex items-center mb-4">
-                    <div className="text-blue-600 mr-4">
-                      {selectedService.icon}
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900">
-                      {selectedService.title}
-                    </h2>
-                  </div>
-                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                    {selectedService.detailedDescription}
-                  </p>
-                  <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                    <p className="text-blue-900 font-semibold">
-                      {selectedService.cta}
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <button
-                      onClick={() => openWhatsApp('994552370200')}
-                      className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 flex-1"
-                    >
-                      <Phone className="w-5 h-5" />
-                      <span>WhatsApp Əlaqə</span>
-                    </button>
-                    <a
-                      href="/contact"
-                      onClick={() => setSelectedService(null)}
-                      className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center space-x-2 flex-1"
-                    >
-                      <Mail className="w-5 h-5" />
-                      <span>Əlaqə</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
@@ -381,7 +336,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* WhatsApp Buttons — Şəffaf, diqqətçəkən, daha iri */}
+            {/* WhatsApp Buttons */}
             <div className="space-y-4">
               <h3 className="text-xl font-semibold mb-6">WhatsApp Əlaqə</h3>
 

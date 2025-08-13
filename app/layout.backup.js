@@ -31,7 +31,7 @@ export const metadata = {
   }
 }
 
-export default function RootLayout({ children, modal }) {
+export default function RootLayout({ children }) {
   // JSON-LD obyektləri (səhvsiz olması üçün JSON.stringify ilə çıxarılacaq)
   const ldLocalBusiness = {
     '@context': 'https://schema.org',
@@ -83,7 +83,6 @@ export default function RootLayout({ children, modal }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ldWebsite) }}
         />
         {children}
-        {modal}
       </body>
     </html>
   )
