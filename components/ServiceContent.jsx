@@ -117,7 +117,7 @@ export const SERVICES = [
   {
     slug: 'intercom',
     title: 'Domofon Sistemləri',
-    heroImg: '/images/service-intercom.webp',
+    heroImg: '/images/service-gate.webp',
     short: 'Video və audio domofon sistemləri ilə təhlükəsiz giriş.',
     intro: `Müasir domofon sistemləri yaşayış kompleksləri, villalar və ofis binaları üçün ən yaxşı təhlükəsizlik həllidir. Video görüntü, yüksək keyfiyyətli audio əlaqə və smart telefon inteqrasiyası ilə girişləri tam idarə edin.`,
     features: [
