@@ -126,15 +126,28 @@ export default function ServiceContent({ slug }) {
 
   return (
     <article className="space-y-10">
+      {/* Başlıq */}
       <header className="space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{svc.title}</h1>
         <p className="text-lg text-gray-600 max-w-3xl">{svc.short}</p>
       </header>
 
-      <div className="rounded-2xl overflow-hidden shadow-lg">
-        <Image src={svc.heroImg} alt={svc.title} width={1600} height={900} className="w-full h-auto object-cover" priority />
+      {/* Hero şəkil — məhdud en + səliqəli */}
+      <div className="mx-auto max-w-4xl">
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-lg">
+          <Image
+            src={svc.heroImg}
+            alt={svc.title}
+            width={1200}
+            height={675}
+            className="h-auto w-full object-cover"
+            sizes="(min-width: 1280px) 1024px, (min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </div>
 
+      {/* Intro + Features */}
       <section className="grid md:grid-cols-2 gap-8">
         <div>
           <h2 className="text-2xl font-semibold mb-3">Xidmət haqqında</h2>
@@ -156,6 +169,7 @@ export default function ServiceContent({ slug }) {
         </div>
       </section>
 
+      {/* FAQ */}
       {svc.faq?.length ? (
         <section>
           <h2 className="text-2xl font-semibold mb-4">Sual–Cavab</h2>
@@ -170,11 +184,12 @@ export default function ServiceContent({ slug }) {
         </section>
       ) : null}
 
+      {/* Güclü CTA */}
       <section className="rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 p-6 md:p-8 text-white">
         <h2 className="text-2xl font-semibold mb-2">Layihəniz üçün məsləhət alaq</h2>
         <p className="opacity-90 mb-4">Ödənişsiz konsultasiya və yerində baxış mümkündür. WhatsApp və ya email ilə zəng edin.</p>
         <div className="flex flex-col sm:flex-row gap-3">
-          <a href="https://wa.me/994552370200" className="bg白 text-blue-700 px-5 py-3 rounded-lg text-center font-semibold">WhatsApp (055)</a>
+          <a href="https://wa.me/994552370200" className="bg-white text-blue-700 px-5 py-3 rounded-lg text-center font-semibold">WhatsApp (055)</a>
           <a href="https://wa.me/994708001000" className="bg-white/15 px-5 py-3 rounded-lg text-center font-semibold">WhatsApp (070)</a>
           <a href="/#contact" className="bg-black/20 px-5 py-3 rounded-lg text-center">Əlaqə forması</a>
         </div>

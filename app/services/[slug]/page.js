@@ -29,17 +29,19 @@ export async function generateMetadata({ params }) {
 
 export default function ServicePage({ params }) {
   return (
-    <main className="container mx-auto px-4 py-10">
-      <nav className="text-sm text-gray-500 mb-6">
+    <main className="container mx-auto max-w-6xl px-4 py-10">
+      {/* Breadcrumb */}
+      <nav className="text-gray-500 text-base md:text-lg mb-6">
         <a href="/" className="hover:underline">Əsas səhifə</a>
-        <span className="mx-2">/</span>
+        <span className="mx-2">›</span>
         <a href="/services" className="hover:underline">Xidmətlər</a>
-        <span className="mx-2">/</span>
-        <span className="text-gray-700 font-medium">{params.slug}</span>
+        <span className="mx-2">›</span>
+        <span className="text-gray-700 font-medium capitalize">{params.slug.replace('-', ' ')}</span>
       </nav>
 
       <ServiceContent slug={params.slug} />
 
+      {/* JSON-LD (Service) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
