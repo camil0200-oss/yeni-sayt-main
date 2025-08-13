@@ -17,7 +17,7 @@ const services = [
   { slug: 'biometrics',       title: 'Biometrik Giriş',           img: '/images/service-biometrics.webp' },
   { slug: 'gate',             title: 'Elektron Darvaza',          img: '/images/service-gate.webp' },
   { slug: 'keypad',           title: 'Kodlayıcı Sistemlər',       img: '/images/service-keypad.webp' },
-  { slug: 'intercom',         title: 'Domofon Sistemləri',        img: '/images/service-gate.webp' },
+  { slug: 'intercom',         title: 'Domofon Sistemləri',        img: '/images/service-intercom.webp' },
 ]
 
 export default function ServicesPage() {

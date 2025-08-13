@@ -103,7 +103,7 @@ export default function HomePage() {
       description: "Video və audio domofon sistemləri",
       detailedDescription: "Müasir domofon sistemləri ilə girişləri təhlükəsiz idarə edin. Video görüntü, audio əlaqə və smart telefon inteqrasiyası.",
       cta: "Yaşayış kompleksiniz üçün domofon sistemi quraşdıraq.",
-      image: "/images/service-gate.webp"
+      image: "/images/service-intercom.webp"
     }
   ]
 
