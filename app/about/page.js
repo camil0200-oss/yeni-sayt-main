@@ -24,7 +24,14 @@ export default function AboutPage() {
     <main className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-semibold mb-6">Haqqımızda</h1>
       <p className="mb-8">Biz təhlükəsizlik və avtomatlaşdırma üzrə həllər təqdim edirik.</p>
-      <Image src="/images/about-team.webp" alt="Komandamız" width={1200} height={800} className="rounded-xl shadow" />
+      <Image 
+        src="/images/about-team.webp" 
+        alt="Komandamız" 
+        width={800} 
+        height={600} 
+        className="rounded-xl shadow" 
+        sizes="(max-width: 768px) 100vw, 800px"
+      />
     </main>
   );
 }

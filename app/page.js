@@ -187,7 +187,16 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <Image src="/images/hero-security.webp" alt="Təhlükəsizlik Sistemləri" width={1600} height={900} className="w-full h-auto rounded-2xl shadow-xl" loading="eager" priority />
+              <Image 
+                src="/images/hero-security.webp" 
+                alt="Təhlükəsizlik Sistemləri" 
+                width={800} 
+                height={600} 
+                className="w-full h-auto rounded-2xl shadow-xl" 
+                loading="eager" 
+                priority 
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
@@ -215,10 +224,11 @@ export default function HomePage() {
                   <Image
                     src={service.image}
                     alt={service.title}
-                    width={1200}
-                    height={800}
+                    width={400}
+                    height={300}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6">

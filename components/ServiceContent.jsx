@@ -170,10 +170,10 @@ export default function ServiceContent({ slug }) {
           <Image
             src={svc.heroImg}
             alt={svc.title}
-            width={1200}
-            height={675}
+            width={800}
+            height={450}
             className="h-auto w-full object-cover"
-            sizes="(min-width: 1280px) 1024px, (min-width: 768px) 768px, 100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
             priority
           />
         </div>
