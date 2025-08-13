@@ -1,4 +1,3 @@
-import Image from 'next/image'
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -170,7 +169,13 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <Image src="/images/hero-security.webp" alt="Təhlükəsizlik Sistemləri" width={1600} height={900} className="w-full h-auto rounded-2xl shadow-xl" loading="eager" priority />
+              <img
+                   src="/images/hero-security.webp"
+                   alt="Təhlükəsizlik Sistemləri"
+                   className="w-full h-auto rounded-xl shadow-2xl"
+                   loading="lazy"
+
+              />
             </div>
           </div>
         </div>
@@ -331,7 +336,12 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <Image src="/images/about-team.webp" alt="About team" width={1400} height={933} className="w-full h-auto rounded-xl shadow-xl" loading="lazy" />
+              <img
+                src="/images/about-team.webp"
+                alt="About team"
+                className="w-full h-auto rounded-xl shadow-xl"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
