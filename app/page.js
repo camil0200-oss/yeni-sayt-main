@@ -219,17 +219,7 @@ export default function HomePage() {
                     height={800}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
                   />
-                  <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center" style={{display: 'none'}}>
-                    <div className="text-blue-600 text-center">
-                      <Phone className="w-12 h-12 mx-auto mb-2" />
-                      <p className="text-sm font-medium">{service.title}</p>
-                    </div>
-                  </div>
                 </div>
                 <div className="p-6">
                   <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">

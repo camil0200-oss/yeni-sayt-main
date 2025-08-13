@@ -1,7 +1,6 @@
 // app/services/page.js
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone } from 'lucide-react'
 
 export const metadata = {
   title: 'Xidmətlər — Smart Kilid Sistemləri',
@@ -48,17 +47,7 @@ export default function ServicesPage() {
                   height={800}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
                 />
-                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center" style={{display: 'none'}}>
-                  <div className="text-blue-600 text-center">
-                    <Phone className="w-12 h-12 mx-auto mb-2" />
-                    <p className="text-sm font-medium">{s.title}</p>
-                  </div>
-                </div>
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:underline">{s.title}</h3>
