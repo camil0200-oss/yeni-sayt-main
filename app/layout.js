@@ -2,7 +2,12 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial']
+})
 
 export const metadata = {
   metadataBase: new URL('https://smartkilid.az'),
@@ -68,6 +73,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="az">
+      <head>
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body className={inter.className}>
         {/* JSON-LD blokları — HTML entity problemi olmaması üçün Script + dangerouslySetInnerHTML */}
         <Script

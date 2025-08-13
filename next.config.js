@@ -5,6 +5,8 @@ const nextConfig = {
     // Remove if not using Server Components
     serverComponentsExternalPackages: ['mongodb'],
   },
+  optimizeFonts: true,
+  compress: true,
   webpack(config, { dev }) {
     if (dev) {
       // Reduce CPU/memory from file watching
