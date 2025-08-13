@@ -1,9 +1,24 @@
 export const metadata = {
   title: 'Haqqımızda — Smart Kilid Sistemləri',
-  description: 'Smart kilid və giriş nəzarəti üzrə komanda və dəyərlərimiz.',
+  description: 'Təhlükəsizlik və avtomatlaşdırma üzrə komandamız və dəyərlərimiz.',
   alternates: { canonical: '/about' },
+  openGraph: {
+    type: 'website',
+    url: 'https://smartkilid.az/about',
+    title: 'Haqqımızda — Smart Kilid Sistemləri',
+    description: 'Təhlükəsizlik və avtomatlaşdırma üzrə komandamız və dəyərlərimiz.',
+    images: [{ url: '/images/about-team.webp', width: 1200, height: 630, alt: 'Komandamız' }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Haqqımızda — Smart Kilid Sistemləri',
+    description: 'Təhlükəsizlik və avtomatlaşdırma üzrə komandamız və dəyərlərimiz.',
+    images: ['/images/about-team.webp']
+  }
 };
+
 import Image from 'next/image';
+
 export default function AboutPage() {
   return (
     <main className="container mx-auto px-4 py-12">
