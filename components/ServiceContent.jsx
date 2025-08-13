@@ -114,6 +114,38 @@ export const SERVICES = [
     faq: [['Tək qapıda işləyir?', 'Bəli, tək qapı və ya çoxqapı sistemlərinə uyğundur.']],
     keywords: ['kodlu qapı', 'klaviatura giriş sistemi'],
   },
+  {
+    slug: 'intercom',
+    title: 'Domofon Sistemləri',
+    heroImg: '/images/service-intercom.webp',
+    short: 'Video və audio domofon sistemləri ilə təhlükəsiz giriş.',
+    intro: `Müasir domofon sistemləri yaşayış kompleksləri, villalar və ofis binaları üçün ən yaxşı təhlükəsizlik həllidir. Video görüntü, yüksək keyfiyyətli audio əlaqə və smart telefon inteqrasiyası ilə girişləri tam idarə edin.`,
+    features: [
+      'HD video görüntü və yüksək keyfiyyətli audio',
+      'Smart telefon tətbiqi ilə uzaqdan idarəetmə',
+      'Çoxqapı və çoxmərtəbə dəstəyi',
+      'Gecə görüşü və hərəkət sensorları',
+      'PoE (Power over Ethernet) dəstəyi',
+      'Cloud və local video qeydiyyatı',
+      'QR kod və NFC inteqrasiyası',
+      'Təcili çağırış düyməsi'
+    ],
+    usecases: [
+      'Yaşayış kompleksləri və çoxmərtəbəli binalar',
+      'Villa və özəl evlər',
+      'Ofis binaları və biznes mərkəzləri',
+      'Otel və sanatoriya müəssisələri',
+      'Təhsil müəssisələri və xəstəxanalar'
+    ],
+    faq: [
+      ['Mövcud binaya quraşdırıla bilər?', 'Bəli, mövcud elektrik və şəbəkə infrastrukturu ilə uyğunlaşdırılır.'],
+      ['Smart telefon tətbiqi pulsuzdur?', 'Bəli, əsas funksiyalar pulsuz, əlavə xüsusiyyətlər üçün kiçik ödəniş tələb oluna bilər.'],
+      ['Video qeydiyyatı nə qədər saxlanılır?', 'Lokal qeydiyyat 30 gün, cloud qeydiyyat 7-90 gün arası seçilə bilər.'],
+      ['Elektrik kəsiləndə işləyir?', 'UPS dəstəyi ilə 2-4 saat işləmə mümkündür.'],
+      ['Çoxdilli dəstək var?', 'Bəli, Azərbaycan, Rus və İngilis dilləri dəstəklənir.']
+    ],
+    keywords: ['domofon', 'video domofon', 'audio domofon', 'yaşayış kompleksi domofon', 'villa domofon', 'ofis domofon', 'smart domofon', 'HD domofon', 'PoE domofon', 'cloud domofon', 'domofon quraşdırma', 'domofon satışı', 'Bakı domofon'],
+  },
 ]
 
 export function getService(slug) {

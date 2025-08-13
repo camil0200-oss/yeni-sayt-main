@@ -8,9 +8,9 @@ export const metadata = {
   metadataBase: new URL('https://smartkilid.az'),
   title: 'Smart Kilid Sistemləri - Təhlükəsizlik və Avtomatlaşdırma Sistemləri',
   description:
-    'Bakıda elektron qapılar, smart kilidlər, barmaq izi və üz tanıma cihazları ilə giriş sistemləri, kartla lift idarəetmə və access control sistemlərinin satışı və quraşdırılması.',
+    'Bakıda elektron qapılar, smart kilidlər, domofon sistemləri, barmaq izi və üz tanıma cihazları ilə giriş sistemləri, kartla lift idarəetmə və access control sistemlərinin satışı və quraşdırılması.',
   keywords:
-    'smart kilidlər, elektron qapılar, barmaq izi giriş, access control, liftlər üçün kart ilə idarəetmə, Barmaq izi və üz tanıma cihazları, Bakı',
+    'smart kilidlər, elektron qapılar, domofon sistemləri, video domofon, audio domofon, barmaq izi giriş, access control, liftlər üçün kart ilə idarəetmə, Barmaq izi və üz tanıma cihazları, Bakı',
   authors: [{ name: 'Smart Kilid Sistemləri' }],
   alternates: { canonical: '/' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
@@ -18,7 +18,7 @@ export const metadata = {
     url: 'https://smartkilid.az',
     title: 'Smart Kilid Sistemləri - Təhlükəsizlik Sistemləri',
     description:
-      'Bakıda Turniket və Şlaqbaum sistemləri, smart kilidlər və access control sistemlərinin satışı və quraşdırılması.',
+      'Bakıda Domofon, Turniket və Şlaqbaum sistemləri, smart kilidlər və access control sistemlərinin satışı və quraşdırılması.',
     siteName: 'Smart Kilid Sistemləri',
     type: 'website',
     locale: 'az_AZ',
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
     '@type': 'LocalBusiness',
     name: 'Smart Kilid Sistemləri',
     url: 'https://smartkilid.az',
-    description: 'Təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması',
+    description: 'Təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması - domofon, smart kilid, access control',
     email: 'smartkilid.az@gmail.com',
     telephone: ['+994552370200', '+994708001000'],
     address: {

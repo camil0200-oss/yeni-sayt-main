@@ -1,6 +1,7 @@
 // app/services/page.js
 import Link from 'next/link'
 import Image from 'next/image'
+import { Phone } from 'lucide-react'
 
 export const metadata = {
   title: 'Xidmətlər — Smart Kilid Sistemləri',
@@ -17,6 +18,7 @@ const services = [
   { slug: 'biometrics',       title: 'Biometrik Giriş',           img: '/images/service-biometrics.webp' },
   { slug: 'gate',             title: 'Elektron Darvaza',          img: '/images/service-gate.webp' },
   { slug: 'keypad',           title: 'Kodlayıcı Sistemlər',       img: '/images/service-keypad.webp' },
+  { slug: 'intercom',         title: 'Domofon Sistemləri',        img: '/images/service-intercom.webp' },
 ]
 
 export default function ServicesPage() {
@@ -26,7 +28,7 @@ export default function ServicesPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Xidmətlər</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            8 əsas xidmət üzrə satış və quraşdırma — klikləyin, detalları görün.
+            9 əsas xidmət üzrə satış və quraşdırma — klikləyin, detalları görün.
           </p>
         </div>
 
@@ -46,7 +48,17 @@ export default function ServicesPage() {
                   height={800}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
                 />
+                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center" style={{display: 'none'}}>
+                  <div className="text-blue-600 text-center">
+                    <Phone className="w-12 h-12 mx-auto mb-2" />
+                    <p className="text-sm font-medium">{s.title}</p>
+                  </div>
+                </div>
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:underline">{s.title}</h3>

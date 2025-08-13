@@ -95,6 +95,15 @@ export default function HomePage() {
       detailedDescription: "Şifrələr, kartlar və biometrik həllər – hamısı bir sistemdə. Giriş ssenarilərini sərbəst qurun.",
       cta: "Mütəxəssis məsləhəti üçün bizə yazın.",
       image: "/images/service-keypad.webp"
+    },
+    {
+      slug: "intercom",
+      icon: <Phone className="w-8 h-8" />,
+      title: "Domofon Sistemləri",
+      description: "Video və audio domofon sistemləri",
+      detailedDescription: "Müasir domofon sistemləri ilə girişləri təhlükəsiz idarə edin. Video görüntü, audio əlaqə və smart telefon inteqrasiyası.",
+      cta: "Yaşayış kompleksiniz üçün domofon sistemi quraşdıraq.",
+      image: "/images/service-intercom.webp"
     }
   ]
 
@@ -153,7 +162,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-xl text-gray-600 leading-relaxed">
-                Smart kilidlər, <b>elektron kilidlər</b>, turniket və şlaqbaum sistemləri, eləcə də access control həlləri ilə təhlükəsizliyinizi bizə etibar edin.
+                Smart kilidlər, <b>elektron kilidlər</b>, domofon sistemləri, turniket və şlaqbaum sistemləri, eləcə də access control həlləri ilə təhlükəsizliyinizi bizə etibar edin.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -210,7 +219,17 @@ export default function HomePage() {
                     height={800}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
                   />
+                  <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center" style={{display: 'none'}}>
+                    <div className="text-blue-600 text-center">
+                      <Phone className="w-12 h-12 mx-auto mb-2" />
+                      <p className="text-sm font-medium">{service.title}</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="p-6">
                   <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">
