@@ -389,6 +389,7 @@ export default function HomePage() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg"
+                  title="Smart Kilid Sistemləri - Bakı xəritəsi"
                 />
               </div>
             </div>
