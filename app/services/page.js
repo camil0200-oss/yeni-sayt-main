@@ -1,54 +1,61 @@
+// app/services/page.js
+import Link from 'next/link'
+import Image from 'next/image'
+
 export const metadata = {
   title: 'Xidmətlər — Smart Kilid Sistemləri',
-  description: 'Elektron kilid, access control, turniket/şlaqbaum, biometrik sistemlər və liftin kartla idarəsi. Satış və peşəkar quraşdırma.',
+  description: 'Elektron kilid, access control, turniket, şlaqbaum, biometrik sistemlər və lift kart sistemi.',
   alternates: { canonical: '/services' },
-  openGraph: {
-    type: 'website',
-    url: 'https://smartkilid.az/services',
-    title: 'Xidmətlər — Smart Kilid Sistemləri',
-    description: 'Elektron kilid, access control, turniket/şlaqbaum, biometrik sistemlər və liftin kartla idarəsi.',
-    images: [{ url: '/images/service-smart-lock.webp', width: 1200, height: 630, alt: 'Smart kilid' }]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Xidmətlər — Smart Kilid Sistemləri',
-    description: 'Elektron kilid, access control, turniket/şlaqbaum, biometrik sistemlər və liftin kartla idarəsi.',
-    images: ['/images/service-smart-lock.webp']
-  }
-};
+}
 
-import Image from 'next/image';
+const services = [
+  { slug: 'smart-lock',       title: 'Smart Kilidlər',            img: '/images/service-smart-lock.webp' },
+  { slug: 'access-control',   title: 'Access Control Sistemləri', img: '/images/service-access-control.webp' },
+  { slug: 'turnstile',        title: 'Turniket Sistemləri',       img: '/images/service-turnstile.webp' },
+  { slug: 'barrier',          title: 'Şlaqbaum Sistemləri',       img: '/images/service-barrier.webp' },
+  { slug: 'lift',             title: 'Kartla Lift İdarəetmə',     img: '/images/service-lift.webp' },
+  { slug: 'biometrics',       title: 'Biometrik Giriş',           img: '/images/service-biometrics.webp' },
+  { slug: 'gate',             title: 'Elektron Darvaza',          img: '/images/service-gate.webp' },
+  { slug: 'keypad',           title: 'Kodlayıcı Sistemlər',       img: '/images/service-keypad.webp' },
+]
 
 export default function ServicesPage() {
   return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-semibold mb-6">Xidmətlər</h1>
+    <main className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Xidmətlər</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            8 əsas xidmət üzrə satış və quraşdırma — klikləyin, detalları görün.
+          </p>
+        </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <section>
-          <h2 className="text-xl font-medium mb-2">Access Control</h2>
-          <p className="mb-4">Kart, barmaq izi, üz tanıma ilə giriş nəzarəti sistemləri.</p>
-          <Image src="/images/service-access-control.webp" alt="Access control sistemi" width={1200} height={800} className="rounded-xl shadow" />
-        </section>
-
-        <section>
-          <h2 className="text-xl font-medium mb-2">Smart Kilid</h2>
-          <p className="mb-4">Telefonla idarə olunan ağıllı qapı kilidləri və quraşdırma.</p>
-          <Image src="/images/service-smart-lock.webp" alt="Smart kilid" width={1200} height={800} className="rounded-xl shadow" />
-        </section>
-
-        <section>
-          <h2 className="text-xl font-medium mb-2">Turniket / Şlaqbaum</h2>
-          <p className="mb-4">Avtomobil və piyada keçid həllləri.</p>
-          <Image src="/images/service-barrier.webp" alt="Şlaqbaum sistemi" width={1200} height={800} className="rounded-xl shadow" />
-        </section>
-
-        <section>
-          <h2 className="text-xl font-medium mb-2">Liftin kartla idarəsi</h2>
-          <p className="mb-4">Mərtəbə əsaslı icazələr və mərkəzləşdirilmiş idarəetmə.</p>
-          <Image src="/images/service-lift.webp" alt="Liftin kartla idarəsi" width={1200} height={800} className="rounded-xl shadow" />
-        </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((s) => (
+            <Link
+              key={s.slug}
+              href={`/services/${s.slug}`}
+              prefetch
+              className="group block rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-md transition overflow-hidden bg-white"
+            >
+              <div className="h-48 overflow-hidden">
+                <Image
+                  src={s.img}
+                  alt={s.title}
+                  width={1200}
+                  height={800}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:underline">{s.title}</h3>
+                <p className="text-sm text-gray-600 mt-1">Ətraflı məlumat üçün klikləyin</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </main>
-  );
+  )
 }
