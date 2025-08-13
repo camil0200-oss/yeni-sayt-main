@@ -109,9 +109,9 @@ export default function HomePage() {
             {/* Desktop Menu */}
             <nav className="hidden md:flex space-x-8">
               <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">Əsas Səhifə</a>
-              <a href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Xidmətlərimiz</a>
-              <a href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">Haqqımızda</a>
-              <a href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Əlaqə</a>
+              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Xidmətlərimiz</a>
+              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">Haqqımızda</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Əlaqə</a>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -125,9 +125,9 @@ export default function HomePage() {
             <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
               <div className="flex flex-col space-y-4">
                 <a href="#home" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Əsas Səhifə</a>
-                <a href="/services" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Xidmətlərimiz</a>
-                <a href="/about" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Haqqımızda</a>
-                <a href="/contact" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Əlaqə</a>
+                <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Xidmətlərimiz</a>
+                <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Haqqımızda</a>
+                <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Əlaqə</a>
               </div>
             </div>
           )}
@@ -159,7 +159,7 @@ export default function HomePage() {
                 </a>
 
                 <a
-                  href="/services"
+                  href="#services"
                   className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center gap-2"
                 >
                   <span>Xidmətlər</span>
@@ -268,7 +268,7 @@ export default function HomePage() {
                       <span>WhatsApp Əlaqə</span>
                     </button>
                     <a
-                      href="/contact"
+                      href="#contact"
                       onClick={() => setSelectedService(null)}
                       className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center space-x-2 flex-1"
                     >
