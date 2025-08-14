@@ -12,6 +12,19 @@
   [id] {
     scroll-margin-top: 96px;
   }
+  /* Explicit font sizes for headings to prevent deprecated API warnings */
+  h1 {
+    font-size: 1.875rem; /* text-3xl */
+    line-height: 2.25rem;
+  }
+  h2 {
+    font-size: 1.5rem; /* text-2xl */
+    line-height: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem; /* text-xl */
+    line-height: 1.75rem;
+  }
 }
 
 @layer utilities {
