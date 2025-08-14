@@ -7,6 +7,25 @@ module.exports = {
       './app/**/*.{js,jsx}',
       './src/**/*.{js,jsx}',
     ],
+    purge: {
+      enabled: process.env.NODE_ENV === 'production',
+      content: [
+        './pages/**/*.{js,jsx}',
+        './components/**/*.{js,jsx}',
+        './app/**/*.{js,jsx}',
+        './src/**/*.{js,jsx}',
+      ],
+      options: {
+        safelist: [
+          'bg-green-700',
+          'bg-green-800',
+          'bg-blue-700',
+          'bg-blue-800',
+          'text-white',
+          'font-semibold'
+        ]
+      }
+    },
     prefix: "",
     theme: {
     	container: {
