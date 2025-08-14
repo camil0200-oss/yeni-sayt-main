@@ -77,6 +77,18 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/globals.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
         <noscript><link rel="stylesheet" href="/globals.css" /></noscript>
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical CSS inline */
+            body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+            html { scroll-behavior: smooth; }
+            img { height: auto; max-width: 100%; }
+            .container { margin: 0 auto; padding: 0 1rem; }
+            @media (min-width: 640px) { .container { padding: 0 2rem; } }
+            @media (min-width: 1024px) { .container { padding: 0 2rem; } }
+            @media (min-width: 1280px) { .container { max-width: 1400px; } }
+          `
+        }} />
       </head>
       <body className={inter.className}>
         {/* JSON-LD blokları — HTML entity problemi olmaması üçün Script + dangerouslySetInnerHTML */}
