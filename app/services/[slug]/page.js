@@ -55,6 +55,21 @@ export default function ServicePage({ params }) {
           })
         }}
       />
+      {/* JSON-LD (BreadcrumbList) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Əsas səhifə", "item": "https://smartkilid.az/" },
+              { "@type": "ListItem", "position": 2, "name": "Xidmətlər", "item": "https://smartkilid.az/services" },
+              { "@type": "ListItem", "position": 3, "name": getService(params.slug)?.title || params.slug, "item": `https://smartkilid.az/services/${params.slug}` }
+            ]
+          })
+        }}
+      />
     </main>
   )
 }
