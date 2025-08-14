@@ -28,6 +28,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default function ServicePage({ params }) {
+  const svc = getService(params.slug)
   return (
     <main className="container mx-auto max-w-6xl px-4 py-10">
       {/* Breadcrumb */}
@@ -70,6 +71,23 @@ export default function ServicePage({ params }) {
           })
         }}
       />
+      {/* JSON-LD (FAQPage) */}
+      {svc?.faq?.length ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": svc.faq.map(([q, a]) => ({
+                "@type": "Question",
+                "name": q,
+                "acceptedAnswer": { "@type": "Answer", "text": a }
+              }))
+            })
+          }}
+        />
+      ) : null}
     </main>
   )
 }

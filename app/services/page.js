@@ -22,11 +22,11 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="py-20 bg-white">
+    <main className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Xidmətlər</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Xidmətlər</h1>
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
             9 əsas xidmət üzrə satış və quraşdırma — klikləyin, detalları görün.
           </p>
         </div>
@@ -37,22 +37,22 @@ export default function ServicesPage() {
               key={s.slug}
               href={`/services/${s.slug}`}
               prefetch
-              className="group block rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-md transition overflow-hidden bg-white"
+              className="group block rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300 overflow-hidden bg-white"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-56 overflow-hidden">
                 <Image
                   src={s.img}
                   alt={s.title}
                   width={380}
                   height={253}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:underline">{s.title}</h3>
-                <p className="text-sm text-gray-600 mt-1">Ətraflı məlumat üçün klikləyin</p>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-700 transition-colors">{s.title}</h3>
+                <p className="text-base text-gray-600 mt-2">Ətraflı məlumat üçün klikləyin</p>
               </div>
             </Link>
           ))}

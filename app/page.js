@@ -125,16 +125,16 @@ export default function HomePage() {
       <header className={`site-header transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
         <div className="container py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-blue-600">
+            <div className="text-3xl font-bold text-blue-600">
               Smart Kilid Sistemləri
             </div>
 
             {/* Desktop Menu */}
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Əsas Səhifə</Link>
-              <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Xidmətlərimiz</Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">Haqqımızda</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Əlaqə</Link>
+            <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+              <Link href="/" className="px-3 py-2 rounded-md text-base md:text-lg font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition-colors">Əsas Səhifə</Link>
+              <Link href="/services" className="px-3 py-2 rounded-md text-base md:text-lg font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition-colors">Xidmətlərimiz</Link>
+              <Link href="/about" className="px-3 py-2 rounded-md text-base md:text-lg font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition-colors">Haqqımızda</Link>
+              <Link href="/contact" className="px-3 py-2 rounded-md text-base md:text-lg font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition-colors">Əlaqə</Link>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -155,10 +155,10 @@ export default function HomePage() {
           <div id="mobile-menu" className="mobile-menu-overlay md:hidden">
             <div className="container py-6">
               <div className="flex flex-col space-y-4">
-                <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Əsas Səhifə</Link>
-                <Link href="/services" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Xidmətlərimiz</Link>
-                <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Haqqımızda</Link>
-                <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Əlaqə</Link>
+                <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-800 hover:bg-gray-100 rounded-lg px-4 py-3 text-lg">Əsas Səhifə</Link>
+                <Link href="/services" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-800 hover:bg-gray-100 rounded-lg px-4 py-3 text-lg">Xidmətlərimiz</Link>
+                <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-800 hover:bg-gray-100 rounded-lg px-4 py-3 text-lg">Haqqımızda</Link>
+                <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-800 hover:bg-gray-100 rounded-lg px-4 py-3 text-lg">Əlaqə</Link>
               </div>
             </div>
           </div>
