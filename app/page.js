@@ -95,8 +95,8 @@ export default function HomePage() {
     {
       slug: "keypad",
       icon: <Clock className="w-8 h-8" />,
-      title: "Kodlayıcı Sistemlər",
-      description: "Pin-klaviatura, kart və biometrika kombinasiyası",
+      title: "Pin Klaviatura",
+      description: "Şifrəli giriş nəzarəti, kart və biometrika kombinasiyası",
       detailedDescription: "Şifrələr, kartlar və biometrik həllər – hamısı bir sistemdə. Giriş ssenarilərini sərbəst qurun.",
       cta: "Mütəxəssis məsləhəti üçün bizə yazın.",
       image: "/images/service-keypad.webp"

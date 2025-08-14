@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const metadata = {
   title: 'Xidmətlər — Smart Kilid Sistemləri',
-  description: 'Elektron kilid, access control, turniket, şlaqbaum, biometrik sistemlər və lift kart sistemi.',
+  description: 'Elektron kilid, access control, turniket, şlaqbaum, biometrik sistemlər və lift üçün kart sistemi.',
   alternates: { canonical: '/services' },
 }
 
@@ -15,7 +15,7 @@ const services = [
   { slug: 'barrier',          title: 'Şlaqbaum Sistemləri',       img: '/images/service-barrier.webp' },
   { slug: 'lift',             title: 'Kartla Lift İdarəetmə',     img: '/images/service-lift.webp' },
   { slug: 'biometrics',       title: 'Biometrik Giriş',           img: '/images/service-biometrics.webp' },
-  { slug: 'gate',             title: 'Elektron Darvaza',          img: '/images/service-gate.webp' },
+  { slug: 'gate',             title: 'Elektron Qpılar',          img: '/images/service-gate.webp' },
   { slug: 'keypad',           title: 'Kodlayıcı Sistemlər',       img: '/images/service-keypad.webp' },
   { slug: 'intercom',         title: 'Domofon Sistemləri',        img: '/images/service-intercom.webp' },
 ]
