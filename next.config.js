@@ -5,7 +5,7 @@ const nextConfig = {
     // Remove if not using Server Components
     serverComponentsExternalPackages: ['mongodb'],
   },
-  webpack(config, { dev, isServer }) {
+  webpack(config, { dev }) {
     if (dev) {
       // Reduce CPU/memory from file watching
       config.watchOptions = {
@@ -15,52 +15,13 @@ const nextConfig = {
       };
     }
     
-    // Optimize for modern browsers and reduce bundle size
-    if (!isServer) {
-      // Enable tree shaking
-      config.optimization = {
-        ...config.optimization,
-        usedExports: true,
-        sideEffects: false,
-        splitChunks: {
-          ...config.optimization.splitChunks,
-          chunks: 'all',
-          cacheGroups: {
-            ...config.optimization.splitChunks.cacheGroups,
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-              priority: 10,
-            },
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              priority: 5,
-            },
-          },
-        },
-      };
-      
-      // Remove unused code
-      config.optimization.minimize = true;
-    }
-    
     return config;
   },
   onDemandEntries: {
     maxInactiveAge: 10000,
     pagesBufferLength: 2,
   },
-  // Enable compression
-  compress: true,
-  // Optimize images
-  images: {
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
+
   async headers() {
     return [
       {
