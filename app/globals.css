@@ -73,7 +73,7 @@ img, .prose img {
 
 /* ====== Kart şəkilləri: tam örtmə, kəsim, kölgə ====== */
 .card-img {
-  @apply overflow-hidden rounded-xl shadow;
+  @apply relative overflow-hidden rounded-xl shadow;
 }
 .card-img > img,
 .card-img > span > img {

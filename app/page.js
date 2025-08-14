@@ -296,37 +296,43 @@ export default function HomePage() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 bg-white">
-          <div className="container">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Haqqımızda</h2>
-                <div className="space-y-4 text-gray-600 text-lg">
-                  <p>Smart Kilid Sistemləri olaraq, biz Azərbaycanda müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması sahəsində fəaliyyət göstəririk.</p>
-                  <p>Komandamız yüksək ixtisaslı mütəxəssislərdən ibarətdir və müştərilərimizə ən keyfiyyətli xidmət göstərməyə çalışır. Biz həm ev, həm də kommersiya obyektləri üçün həllər təklif edirik.</p>
-                  <p>Məqsədimiz müştərilərimizin təhlükəsizliyini təmin etmək və ən son texnologiyalardan istifadə edərək rahatlıq yaratmaqdır.</p>
-                  <p className="font-semibold text-blue-600">Smart Kilid Sistemləri – təhlükəsizlik və avtomatlaşdırma sahəsində etibarlı partnyorunuz, peşəkar satış və quraşdırma xidmətləri təqdim edirik.</p>
-                </div>
-                <div className="mt-8">
-                  <a
-                    href="https://wa.me/994552370200"
-                    target="_blank"
-                    rel="noopener"
-                    className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>Bizimlə Əlaqə</span>
-                  </a>
-                </div>
-              </div>
-              <div className="card-img aspect-[16/10]">
-                <Image src="/images/about-team.webp" alt="Komandamız" fill sizes="(min-width: 1024px) 50vw, 100vw" className="rounded-xl shadow-xl" />
-              </div>
-            </div>
-          </div>
-        </section>
+<section id="about" className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 className="text-4xl font-bold text-gray-900 mb-6">Haqqımızda</h2>
+        <div className="space-y-4 text-gray-600 text-lg">
+          <p>Smart Kilid Sistemləri olaraq, biz Azərbaycanda müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması sahəsində fəaliyyət göstəririk.</p>
+          <p>Komandamız yüksək ixtisaslı mütəxəssislərdən ibarətdir və müştərilərimizə ən keyfiyyətli xidmət göstərməyə çalışır. Biz həm ev, həm də kommersiya obyektləri üçün həllər təklif edirik.</p>
+          <p>Məqsədimiz müştərilərimizin təhlükəsizliyini təmin etmək və ən son texnologiyalardan istifadə edərək rahatlıq yaratmaqdır.</p>
+          <p className="font-semibold text-blue-600">Smart Kilid Sistemləri – təhlükəsizlik və avtomatlaşdırma sahəsində etibarlı partnyorunuz, peşəkar satış və quraşdırma xidmətləri təqdim edirik.</p>
+        </div>
+        <div className="mt-8">
+          <a
+            href="https://wa.me/994552370200"
+            target="_blank"
+            rel="noopener"
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.09 15.09 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.25 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1v3.68a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.72a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.25 1z"/></svg>
+            <span>Bizimlə Əlaqə</span>
+          </a>
+        </div>
+      </div>
 
-        {/* Contact Section */}
+      <div className="card-img relative aspect-[16/10]">
+        <img
+          src="/images/about-team.webp"
+          alt="Komandamız"
+          className="w-full h-full object-cover rounded-xl shadow-xl"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Contact Section */}
         <section id="contact" className="py-20 bg-gray-900 text-white">
           <div className="container">
             <div className="text-center mb-16">
