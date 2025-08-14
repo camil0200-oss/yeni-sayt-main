@@ -333,7 +333,7 @@ export default function HomePage() {
               <div className="flex items-start space-x-4">
                 <Phone className="w-6 h-6 text-blue-400 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-2">Telefon</h3>
+                  <h3 className="text-lg font-semibold mb-2">Telefon</h3>
                   <p className="text-gray-300">+994 55 237 02 00</p>
                   <p className="text-gray-300">+994 70 800 10 00</p>
                 </div>
@@ -341,21 +341,21 @@ export default function HomePage() {
               <div className="flex items-start space-x-4">
                 <Mail className="w-6 h-6 text-blue-400 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-2">Email</h3>
+                  <h3 className="text-lg font-semibold mb-2">Email</h3>
                   <p className="text-gray-300">smartkilid.az@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <MapPin className="w-6 h-6 text-blue-400 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-2">Ünvan</h3>
+                  <h3 className="text-lg font-semibold mb-2">Ünvan</h3>
                   <p className="text-gray-300">Bakı, Azərbaycan</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Clock className="w-6 h-6 text-blue-400 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-2">İş Saatları</h3>
+                  <h3 className="text-lg font-semibold mb-2">İş Saatları</h3>
                   <p className="text-gray-300">Hər gün, 09:00–21:00</p>
                 </div>
               </div>
