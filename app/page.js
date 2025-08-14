@@ -133,14 +133,20 @@ export default function HomePage() {
             </nav>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button 
+              className="md:hidden p-2" 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Menyunu bağla" : "Menyunu aç"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+            >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
+            <div id="mobile-menu" className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
               <div className="flex flex-col space-y-4">
                 <a href="#home" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Əsas Səhifə</a>
                 <a href="/#services" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-700 hover:bg-gray-100 rounded px-3 py-2">Xidmətlərimiz</a>
@@ -361,7 +367,7 @@ export default function HomePage() {
 
               <button
                 onClick={() => openWhatsApp('994552370200')}
-                aria-label="WhatsApp (055)"
+                aria-label="WhatsApp ilə əlaqə saxla: +994 55 237 02 00"
                 className="w-full text-lg px-6 py-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-green-500/20 ring-1 ring-green-500/50"
               >
                 <Phone className="w-5 h-5" />
@@ -370,7 +376,7 @@ export default function HomePage() {
 
               <button
                 onClick={() => openWhatsApp('994708001000')}
-                aria-label="WhatsApp (070)"
+                aria-label="WhatsApp ilə əlaqə saxla: +994 70 800 10 00"
                 className="w-full text-lg px-6 py-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-green-500/20 ring-1 ring-green-500/50"
               >
                 <Phone className="w-5 h-5" />
