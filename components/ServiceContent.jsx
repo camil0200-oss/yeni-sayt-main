@@ -58,7 +58,7 @@ export const SERVICES = [
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə tam quraşdırma xidməti.'],
       ['Neçə istifadəçi dəstəklənir?', 'Sistemdə 1000-dən çox istifadəçi qeydiyyatı mümkündür.']
     ],
-    keywords: ['access control', 'davamiyyət', 'turniket inteqrasiya', 'Bakı access control', 'giriş sistemi', 'davamiyyət sistemi', 'kart sistemi Bakı'],
+    keywords: ['access control', 'işçidavamiyyəti quraşdırılma', 'turniket quraşdırılması', 'Bakı access control', 'elektron giriş sistemi', 'davamiyyət sistemi', 'kart sistemi Bakı'],
   },
   {
     slug: 'turnstile',
@@ -73,7 +73,7 @@ export const SERVICES = [
       ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
       ['Neçə nəfər keçid edə bilər?', 'Saatda 1000-dən çox keçid mümkündür.']
     ],
-    keywords: ['turniket', 'giriş sistemləri', 'Bakı turniket', 'turniket satışı', 'turniket quraşdırma', 'giriş turniketi'],
+    keywords: ['turniket', 'giriş sistemləri', 'Bakı turniket qiyməti', 'turniket satışı', 'turniket quraşdırma', 'giriş turniketi sistemlər'],
   },
   {
     slug: 'barrier',
@@ -88,13 +88,13 @@ export const SERVICES = [
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə tam quraşdırma.'],
       ['Neçə avtomobil dəstəklənir?', 'Saatda 500-dən çox avtomobil keçidi mümkündür.']
     ],
-    keywords: ['şlaqbaum', 'dayanacaq idarəetmə', 'Bakı şlaqbaum', 'şlaqbaum satışı', 'avtomatik qapı', 'dayanacaq sistemi'],
+    keywords: ['şlaqbaum qiymeti', 'parking şlaqbaum sistemi', 'Bakı şlaqbaum', 'şlaqbaum satışı', 'avtomatik qapılar', 'Bariyer sistemləri'],
   },
   {
     slug: 'lift',
     title: 'Kartla Lift İdarəetmə',
     heroImg: '/images/service-lift.webp',
-    short: 'Mərtəbə üzrə giriş icazələrini idarə edin. Bakıda lift kart sistemi.',
+    short: 'Mərtəbə üzrə giriş icazələrini idarə edin. lift kart sistemi.Bakıda lift kart sistemlərinin quraşdırılması.',
     intro: `Sakin və ya əməkdaş yalnız icazə verilən mərtəbəyə çıxa bilir. Access control və domofonlarla birlikdə işləyir. Bakıda lift kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət.`,
     features: ['Mərtəbə əsaslı icazə', 'Zaman cədvəlləri', 'Brend lift panelləri ilə uyğunluq'],
     usecases: ['Yaşayış binaları', 'Otel və biznes mərkəzləri'],
@@ -118,16 +118,16 @@ export const SERVICES = [
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
       ['Dəqiqlik faizi nə qədərdir?', '99.9% dəqiqlik ilə işləyir.']
     ],
-    keywords: ['biometrika', 'üz tanıma', 'barmaq izi', 'Bakı biometrik', 'biometrik giriş', 'üz tanıma sistemi', 'barmaq izi sistemi'],
+    keywords: ['biometrik giriş sistemləri', 'üz tanıma aparatı', 'barmaq izi cihazı', 'Bakı biometrik qapı sistemləri', 'biometrik giriş', 'üz tanıma sistemi', 'barmaq izi sistemi'],
   },
   {
     slug: 'gate',
-    title: 'Elektron Darvaza',
+    title: 'Elektron Qapılar',
     heroImg: '/images/service-gate.webp',
-    short: 'Pult, tətbiq və ya nömrə tanıma ilə idarəetmə. Bakıda elektron darvaza.',
-    intro: `Elektron darvaza motorları, məsafədən idarəetmə modulları və təhlükəsizlik sensorları ilə tam həll. Bakıda elektron darvaza sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
-    features: ['Wi-Fi/4G modul', 'Hərəkət sensorları', 'Manual açma'],
-    usecases: ['Private həyətlər', 'Anbar/loqistika girişləri'],
+    short: 'Pult, tətbiq və ya nömrə tanıma ilə idarəetmə. Bakıda elektron qapılar. Avtomatiq Jaluz qapıları',
+    intro: `Elektron darvaza motorları, məsafədən idarəetmə modulları və təhlükəsizlik sensorları ilə tam həll. Bakıda elektron qapı sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
+    features: ['Elektron kilid', 'Hərəkət sensorları', 'Manual açma', 'Manual açma', 'Maqnit kilid'],
+    usecases: ['Ofis qapıları', 'Anbar/loqistika girişləri'],
     faq: [
       ['Elektrik kəsiləndə?', 'Manual açma və ya UPS dəstəyi ilə.'],
       ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
