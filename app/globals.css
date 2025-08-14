@@ -37,3 +37,53 @@ a:focus {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
+
+/* ====== Base headings (stabil ölçü) — h1 xəbərdarlığını söndürür ====== */
+@layer base {
+  h1, section h1, article h1, nav h1, aside h1 {
+    @apply text-3xl md:text-4xl font-semibold leading-tight;
+  }
+  h2, section h2, article h2, nav h2, aside h2 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+  h3 { @apply text-xl md:text-2xl font-semibold; }
+  h4 { @apply text-lg md:text-xl font-medium; }
+  p  { @apply leading-relaxed; }
+}
+
+/* ====== Şəkillər: konteynerdən daşmasın, hər zaman uyğunlaşsın ====== */
+img, .prose img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====== Konteyner (səhifə eni və kənarlar) ====== */
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+/* ====== Sabit header və onun üçün üst boşluq ====== */
+.site-header {
+  @apply fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-slate-200;
+}
+.page-with-sticky-header {
+  @apply pt-16 md:pt-20; /* header hündürlüyünə uyğun offset */
+}
+
+/* ====== Kart şəkilləri: tam örtmə, kəsim, kölgə ====== */
+.card-img {
+  @apply overflow-hidden rounded-xl shadow;
+}
+.card-img > img,
+.card-img > span > img {
+  @apply object-cover w-full h-full;
+}
+
+/* ====== Mobil menyu overlay (üst-üstə düşməsin) ====== */
+.mobile-menu-overlay {
+  @apply fixed inset-0 z-[60] bg-white overflow-y-auto;
+}
+.mobile-menu-trigger {
+  @apply z-[70];
+}
