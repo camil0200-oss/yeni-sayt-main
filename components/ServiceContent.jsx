@@ -160,7 +160,7 @@ export default function ServiceContent({ slug }) {
     <article className="space-y-10">
       {/* Başlıq */}
       <header className="space-y-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{svc.title}</h2>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{svc.title}</h1>
         <p className="text-lg text-gray-600 max-w-3xl">{svc.short}</p>
       </header>
 

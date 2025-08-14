@@ -12,38 +12,6 @@
   [id] {
     scroll-margin-top: 96px;
   }
-  
-  /* Explicit font sizes for headings to prevent deprecated API warnings */
-  h1 {
-    font-size: 1.875rem; /* text-3xl */
-    line-height: 2.25rem;
-    font-weight: 600;
-  }
-  h2 {
-    font-size: 1.5rem; /* text-2xl */
-    line-height: 2rem;
-    font-weight: 600;
-  }
-  h3 {
-    font-size: 1.25rem; /* text-xl */
-    line-height: 1.75rem;
-    font-weight: 600;
-  }
-  h4 {
-    font-size: 1.125rem; /* text-lg */
-    line-height: 1.75rem;
-    font-weight: 600;
-  }
-  h5 {
-    font-size: 1rem; /* text-base */
-    line-height: 1.5rem;
-    font-weight: 600;
-  }
-  h6 {
-    font-size: 0.875rem; /* text-sm */
-    line-height: 1.25rem;
-    font-weight: 600;
-  }
 }
 
 @layer utilities {
