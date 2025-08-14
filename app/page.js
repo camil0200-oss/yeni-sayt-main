@@ -176,7 +176,7 @@ export default function HomePage() {
                   href="https://wa.me/994552370200"
                   target="_blank"
                   rel="noopener"
-                  className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+                  className="bg-green-700 text-white px-8 py-4 rounded-lg hover:bg-green-800 transition-colors flex items-center justify-center gap-2 font-semibold"
                 >
                   <Phone className="w-5 h-5" />
                   <span>WhatsApp: +994 55 237 02 00</span>
@@ -368,7 +368,7 @@ export default function HomePage() {
               <button
                 onClick={() => openWhatsApp('994552370200')}
                 aria-label="WhatsApp ilə əlaqə saxla: +994 55 237 02 00"
-                className="w-full text-lg px-6 py-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-green-500/20 ring-1 ring-green-500/50"
+                className="w-full text-lg px-6 py-5 rounded-xl bg-green-700 text-white hover:bg-green-800 transition-colors flex items-center justify-center gap-3 shadow-lg font-semibold"
               >
                 <Phone className="w-5 h-5" />
                 <span>WhatsApp (055)</span>
@@ -377,7 +377,7 @@ export default function HomePage() {
               <button
                 onClick={() => openWhatsApp('994708001000')}
                 aria-label="WhatsApp ilə əlaqə saxla: +994 70 800 10 00"
-                className="w-full text-lg px-6 py-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-green-500/20 ring-1 ring-green-500/50"
+                className="w-full text-lg px-6 py-5 rounded-xl bg-green-700 text-white hover:bg-green-800 transition-colors flex items-center justify-center gap-3 shadow-lg font-semibold"
               >
                 <Phone className="w-5 h-5" />
                 <span>WhatsApp (070)</span>
@@ -385,7 +385,7 @@ export default function HomePage() {
 
               <a
                 href="mailto:smartkilid.az@gmail.com"
-                className="w-full text-lg px-6 py-5 rounded-xl bg-blue-600/90 hover:bg-blue-600 transition-colors flex items-center justify-center gap-3 shadow-lg"
+                className="w-full text-lg px-6 py-5 rounded-xl bg-blue-700 text-white hover:bg-blue-800 transition-colors flex items-center justify-center gap-3 shadow-lg font-semibold"
               >
                 <Mail className="w-5 h-5" />
                 <span>Email Göndər</span>
