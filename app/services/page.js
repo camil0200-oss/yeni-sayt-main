@@ -43,11 +43,11 @@ export default function ServicesPage() {
                 <Image
                   src={s.img}
                   alt={s.title}
-                  width={400}
-                  height={300}
+                  width={380}
+                  height={253}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
               <div className="p-5">

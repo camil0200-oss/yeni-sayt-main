@@ -5,8 +5,6 @@ const nextConfig = {
     // Remove if not using Server Components
     serverComponentsExternalPackages: ['mongodb'],
   },
-  optimizeFonts: true,
-  compress: true,
   webpack(config, { dev }) {
     if (dev) {
       // Reduce CPU/memory from file watching
@@ -16,6 +14,10 @@ const nextConfig = {
         ignored: ['**/node_modules'],
       };
     }
+    
+    // Modern browser targets to reduce polyfills
+    // config.target = ['web', 'es2020']; // Disabled for Next.js 14.2.3 compatibility
+    
     return config;
   },
   onDemandEntries: {
