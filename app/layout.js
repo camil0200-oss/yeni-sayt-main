@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
+import './globals.css'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -89,21 +90,6 @@ export default function RootLayout({ children }) {
         
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/globals.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="/globals.css" /></noscript>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            // Async CSS loading
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = '/globals.css';
-            link.media = 'print';
-            link.onload = function() {
-              this.media = 'all';
-            };
-            document.head.appendChild(link);
-          `
-        }} />
         <style dangerouslySetInnerHTML={{
           __html: `
             /* Critical CSS inline - Above the fold styles */
