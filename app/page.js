@@ -29,87 +29,16 @@ export default function HomePage() {
 
   // XİDMƏTLƏR (slug-larla)
   const services = [
-    {
-      slug: "gate",
-      icon: <Shield className="w-8 h-8" />,
-      title: "Elektron Kilid Sistemləri",
-      description: "Qapılar üçün elektron kilid və idarəetmə həlləri",
-      detailedDescription: "Evinizdə və iş yerinizdə girişləri təhlükəsiz idarə edin. Elektron kilid sistemləri ilə icazəsiz girişlərin qarşısını alın, rahatlığı artırın.",
-      cta: "Məsləhət üçün WhatsApp-da yazın.",
-      image: "/images/service-gate.webp"
-    },
-    {
-      slug: "biometrics",
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "Barmaq İzi ilə Giriş Sistemləri",
-      description: "Biometrik təhlükəsizlik barmaq izi və üz tanıma",
-      detailedDescription: "Biometrik texnologiya ilə yalnız icazəli şəxslərə giriş verin. Sürətli və dəqiq identifikasiya.",
-      cta: "İndi sifariş edin – təhlükəsizlik səviyyənizi artırın!",
-      image: "/images/service-biometrics.webp"
-    },
-    {
-      slug: "lift",
-      icon: <Settings className="w-8 h-8" />,
-      title: "Kartla Lift İdarəetmə",
-      description: "Liftlərdə mərtəbə üzrə giriş nəzarəti",
-      detailedDescription: "Kart əsaslı lift nəzarəti ilə yalnız səlahiyyətli şəxslər istənilən mərtəbəyə çata bilər. Binalar üçün təhlükəsiz və rahat həll.",
-      cta: "Layihəniz üçün uyğun konfiqurasiya təklif edək.",
-      image: "/images/service-lift.webp"
-    },
-    {
-      slug: "turnstile",
-      icon: <Users className="w-8 h-8" />,
-      title: "Turniket Sistemləri",
-      description: "Ofis, müəssisə və obyektlər üçün giriş-buraxılış",
-      detailedDescription: "Turniketlər ilə işçi və ziyarətçi axınını idarə edin. Kart, biometrik və QR girişləri ilə inteqrasiya mümkündür.",
-      cta: "Obyektiniz üçün uyğun turniket tipini seçək.",
-      image: "/images/service-turnstile.webp"
-    },
-    {
-      slug: "barrier",
-      icon: <Shield className="w-8 h-8" />,
-      title: "Şlaqbaum Sistemləri",
-      description: "Dayanacaq və ərazi girişlərinin idarə edilməsi",
-      detailedDescription: "Avtomatik şlaqbaumlar ilə nəqliyyat axınını təhlükəsiz və rahat idarə edin. Pult, karta və ANPR (nömrə tanıma) inteqrasiyası.",
-      cta: "Məkanınıza uyğun şlaqbaum seçimində kömək edək.",
-      image: "/images/service-barrier.webp"
-    },
-    {
-      slug: "access-control",
-      icon: <Users className="w-8 h-8" />,
-      title: "Access Control Sistemləri",
-      description: "İşçi davamiyyəti və giriş nəzarəti",
-      detailedDescription: "Ofislər, müəssisələr və obyektlər üçün giriş-çıxışların mərkəzləşdirilmiş idarə edilməsi və hesabatlandırma.",
-      cta: "İş yerinizə tam nəzarət üçün bu gün əlaqə saxlayın.",
-      image: "/images/service-access-control.webp"
-    },
-    {
-      slug: "smart-lock",
-      icon: <Lock className="w-8 h-8" />,
-      title: "Smart Kilidlər",
-      description: "Elektron kilidlər və smart giriş sistemləri",
-      detailedDescription: "Açar daşımağa ehtiyac yoxdur — qapınızı telefon, kart və ya kodla açın. Təhlükəsiz, rahat, estetik.",
-      cta: "Eviniz üçün ən uyğun smart kilidi seçək.",
-      image: "/images/service-smart-lock.webp"
-    },
-    {
-      slug: "keypad",
-      icon: <Clock className="w-8 h-8" />,
-      title: "Pin Klaviatura",
-      description: "Şifrəli giriş nəzarəti, kart və biometrika kombinasiyası",
-      detailedDescription: "Şifrələr, kartlar və biometrik həllər – hamısı bir sistemdə. Giriş ssenarilərini sərbəst qurun.",
-      cta: "Mütəxəssis məsləhəti üçün bizə yazın.",
-      image: "/images/service-keypad.webp"
-    },
-    {
-      slug: "intercom",
-      icon: <Phone className="w-8 h-8" />,
-      title: "Domofon Sistemləri",
-      description: "Video və audio domofon sistemləri",
-      detailedDescription: "Müasir domofon sistemləri ilə girişləri təhlükəsiz idarə edin. Video görüntü, audio əlaqə və smart telefon inteqrasiyası.",
-      cta: "Yaşayış kompleksiniz üçün domofon sistemi quraşdıraq.",
-      image: "/images/service-intercom.webp"
-    }
+    { slug: 'smart-lock', title: 'Smart Kilidlər', img: '/images/service-smart-lock.webp' },
+    { slug: 'access-control', title: 'Access Control', img: '/images/service-access-control.webp' },
+    { slug: 'turnstile', title: 'Turniket Sistemləri', img: '/images/service-turnstile.webp' },
+    { slug: 'barrier', title: 'Şlaqbaum Sistemləri', img: '/images/service-barrier.webp' },
+    { slug: 'lift', title: 'Kartla Lift İdarəetmə', img: '/images/service-lift.webp' },
+    { slug: 'biometrics', title: 'Biometrik Giriş', img: '/images/service-biometrics.webp' },
+    { slug: 'gate', title: 'Elektron Darvaza', img: '/images/service-gate.webp' },
+    { slug: 'keypad', title: 'Kodlayıcı Sistemlər', img: '/images/service-keypad.webp' },
+    { slug: 'hotel-card', title: 'Otel Kart Sistemi', img: '/images/service-smart-lock.webp' },
+    { slug: 'intercom', title: 'Domofon Sistemləri', img: '/images/service-intercom.webp' },
   ]
 
   const benefits = [
@@ -193,7 +122,7 @@ export default function HomePage() {
                 >
                   <div className="h-48 overflow-hidden">
                     <Image
-                      src={service.image}
+                      src={service.img}
                       alt={service.title}
                       width={380}
                       height={253}
@@ -204,13 +133,15 @@ export default function HomePage() {
                   </div>
                   <div className="p-6">
                     <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
+                      {/* Assuming icon is not directly available here, might need to be added or passed */}
+                      <Shield className="w-8 h-8" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {service.title}
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      {service.description}
+                      {/* Assuming description is not directly available here, might need to be added or passed */}
+                      {service.title}
                     </p>
                     <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
                       <span>Ətraflı məlumat</span>

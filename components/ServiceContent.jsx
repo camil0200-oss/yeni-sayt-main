@@ -58,7 +58,7 @@ export const SERVICES = [
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə tam quraşdırma xidməti.'],
       ['Neçə istifadəçi dəstəklənir?', 'Sistemdə 1000-dən çox istifadəçi qeydiyyatı mümkündür.']
     ],
-    keywords: ['access control', 'işçidavamiyyəti quraşdırılma', 'turniket quraşdırılması', 'Bakı access control', 'elektron giriş sistemi', 'davamiyyət sistemi', 'kart sistemi Bakı'],
+    keywords: ['access control', 'davamiyyət', 'turniket inteqrasiya', 'Bakı access control', 'giriş sistemi', 'davamiyyət sistemi', 'kart sistemi Bakı'],
   },
   {
     slug: 'turnstile',
@@ -73,7 +73,7 @@ export const SERVICES = [
       ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
       ['Neçə nəfər keçid edə bilər?', 'Saatda 1000-dən çox keçid mümkündür.']
     ],
-    keywords: ['turniket', 'giriş sistemləri', 'Bakı turniket qiyməti', 'turniket satışı', 'turniket quraşdırma', 'giriş turniketi sistemlər'],
+    keywords: ['turniket', 'giriş sistemləri', 'Bakı turniket', 'turniket satışı', 'turniket quraşdırma', 'giriş turniketi'],
   },
   {
     slug: 'barrier',
@@ -88,13 +88,13 @@ export const SERVICES = [
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə tam quraşdırma.'],
       ['Neçə avtomobil dəstəklənir?', 'Saatda 500-dən çox avtomobil keçidi mümkündür.']
     ],
-    keywords: ['şlaqbaum qiymeti', 'parking şlaqbaum sistemi', 'Bakı şlaqbaum', 'şlaqbaum satışı', 'avtomatik qapılar', 'Bariyer sistemləri'],
+    keywords: ['şlaqbaum', 'dayanacaq idarəetmə', 'Bakı şlaqbaum', 'şlaqbaum satışı', 'avtomatik qapı', 'dayanacaq sistemi'],
   },
   {
     slug: 'lift',
     title: 'Kartla Lift İdarəetmə',
     heroImg: '/images/service-lift.webp',
-    short: 'Mərtəbə üzrə giriş icazələrini idarə edin. lift kart sistemi.Bakıda lift kart sistemlərinin quraşdırılması.',
+    short: 'Mərtəbə üzrə giriş icazələrini idarə edin. Bakıda lift kart sistemi.',
     intro: `Sakin və ya əməkdaş yalnız icazə verilən mərtəbəyə çıxa bilir. Access control və domofonlarla birlikdə işləyir. Bakıda lift kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət.`,
     features: ['Mərtəbə əsaslı icazə', 'Zaman cədvəlləri', 'Brend lift panelləri ilə uyğunluq'],
     usecases: ['Yaşayış binaları', 'Otel və biznes mərkəzləri'],
@@ -114,20 +114,20 @@ export const SERVICES = [
     features: ['Üz/barmaq izi, palma damarı', 'Anti-spoofing alqoritmləri', 'Offline işləmə rejimi'],
     usecases: ['Ofis/istehsal girişləri', 'Datacenter və kritik zonalar'],
     faq: [
-      ['Məlumat harada saxlanır?', 'Şirkət siyasətinə görə local və ya şifrəli bazada.'],
+      ['Məlumat harada saxlanılır?', 'Şirkət siyasətinə görə local və ya şifrəli bazada.'],
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
       ['Dəqiqlik faizi nə qədərdir?', '99.9% dəqiqlik ilə işləyir.']
     ],
-    keywords: ['biometrik giriş sistemləri', 'üz tanıma aparatı', 'barmaq izi cihazı', 'Bakı biometrik qapı sistemləri', 'biometrik giriş', 'üz tanıma sistemi', 'barmaq izi sistemi'],
+    keywords: ['biometrika', 'üz tanıma', 'barmaq izi', 'Bakı biometrik', 'biometrik giriş', 'üz tanıma sistemi', 'barmaq izi sistemi'],
   },
   {
     slug: 'gate',
-    title: 'Elektron Qapılar',
+    title: 'Elektron Darvaza',
     heroImg: '/images/service-gate.webp',
-    short: 'Pult, tətbiq və ya nömrə tanıma ilə idarəetmə. Bakıda elektron qapılar. Avtomatiq Jaluz qapıları',
-    intro: `Elektron darvaza motorları, məsafədən idarəetmə modulları və təhlükəsizlik sensorları ilə tam həll. Bakıda elektron qapı sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
-    features: ['Elektron kilid', 'Hərəkət sensorları', 'Manual açma', 'Manual açma', 'Maqnit kilid'],
-    usecases: ['Ofis qapıları', 'Anbar/loqistika girişləri'],
+    short: 'Pult, tətbiq və ya nömrə tanıma ilə idarəetmə. Bakıda elektron darvaza.',
+    intro: `Elektron darvaza motorları, məsafədən idarəetmə modulları və təhlükəsizlik sensorları ilə tam həll. Bakıda elektron darvaza sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
+    features: ['Wi-Fi/4G modul', 'Hərəkət sensorları', 'Manual açma'],
+    usecases: ['Private həyətlər', 'Anbar/loqistika girişləri'],
     faq: [
       ['Elektrik kəsiləndə?', 'Manual açma və ya UPS dəstəyi ilə.'],
       ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
@@ -149,6 +149,41 @@ export const SERVICES = [
       ['Neçə kod dəstəklənir?', '1000-dən çox fərqli kod qeydiyyatı mümkündür.']
     ],
     keywords: ['kodlu qapı', 'klaviatura giriş sistemi', 'Bakı kodlayıcı', 'kod sistemi', 'klaviatura sistemi', 'pin sistemi'],
+  },
+  {
+    slug: 'hotel-card',
+    title: 'Otel Kart Sistemi',
+    heroImg: '/images/service-smart-lock.webp',
+    short: 'Otel otaqları üçün ağıllı kartla idarəetmə sistemi. Bakıda otel kart sistemi.',
+    intro: `Otel sənayesi üçün xüsusi hazırlanmış ağıllı kart sistemi. Qonaqların otaq girişi, lift istifadəsi, restoran və spa xidmətlərinə çıxışı təhlükəsiz və rahat şəkildə idarə edilir. Bakıda otel kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik.`,
+    features: [
+      'Otaq girişi üçün RFID kart sistemi',
+      'Lift və mərtəbə icazə idarəetməsi',
+      'Restoran, spa və əlavə xidmətlərə çıxış',
+      'Qonaq hesabatı və analitika',
+      'Otel PMS sistemi ilə inteqrasiya',
+      'Bakıda 24/7 texniki dəstək',
+      'Zəmanətli otel kart sistemləri',
+      'Çoxdilli dəstək (Azərbaycan, Rus, İngilis)'
+    ],
+    usecases: [
+      'Bakıda 5 ulduzlu otellər',
+      'Biznes otelləri və konfrans mərkəzləri',
+      'Resort və spa otelləri',
+      'Apartament otelləri',
+      'Hostel və qonaq evləri',
+      'Otel şəbəkələri və franchise'
+    ],
+    faq: [
+      ['Neçə otaq dəstəklənir?', '1000-dən çox otaqlı otellərdə işləyir.'],
+      ['Kartlar təhlükəsizdir?', 'Bəli, şifrəli RFID texnologiyası ilə maksimum təhlükəsizlik.'],
+      ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma xidməti.'],
+      ['PMS sistemi ilə inteqrasiya?', 'Bəli, əksər otel idarəetmə sistemləri ilə uyğun gəlir.'],
+      ['Kartların müddəti nə qədərdir?', 'Qonağın qalış müddətinə görə avtomatik təyin olunur.'],
+      ['Neçə dildə dəstək var?', 'Azərbaycan, Rus və İngilis dillərində tam dəstək.'],
+      ['Zəmanət müddəti nə qədərdir?', 'Bütün otel kart sistemlərimizə 24 ay zəmanət veririk.']
+    ],
+    keywords: ['otel kart sistemi', 'hotel card system', 'Bakı otel kart', 'otel giriş sistemi', 'otel lift kart', 'otel access control', 'otel təhlükəsizlik', 'otel idarəetmə sistemi', 'otel RFID kart', 'otel PMS inteqrasiya', 'Bakı otel sistemləri', 'otel quraşdırma Bakı'],
   },
   {
     slug: 'intercom',
