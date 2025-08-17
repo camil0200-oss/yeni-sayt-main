@@ -153,7 +153,7 @@ export const SERVICES = [
   {
     slug: 'hotel-card',
     title: 'Otel Kart Sistemi',
-    heroImg: '/images/service-smart-lock.webp',
+    heroImg: '/images/service-hotel-lock.webp',
     short: 'Otel otaqları üçün ağıllı kartla idarəetmə sistemi. Bakıda otel kart sistemi.',
     intro: `Otel sənayesi üçün xüsusi hazırlanmış ağıllı kart sistemi. Qonaqların otaq girişi, lift istifadəsi, restoran və spa xidmətlərinə çıxışı təhlükəsiz və rahat şəkildə idarə edilir. Bakıda otel kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik.`,
     features: [
