@@ -1,35 +1,30 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  // Mobil menyu açıqkən səhifə scroll-unun qarşısını al
-  useEffect(() => {
-    if (isMenuOpen) {
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+    // Mobil menyu açıqkən scroll-u dayandır
+    if (!isMenuOpen) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
     }
-  }, [isMenuOpen])
+  }
 
-  // Səhifə dəyişəndə mobil menyunu bağla
-  const handleLinkClick = () => {
+  const closeMenu = () => {
     setIsMenuOpen(false)
+    document.body.style.overflow = ''
   }
 
   return (
-    <>
-      <header className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
+    <div className="relative">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
@@ -38,119 +33,94 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-              <Link 
-                href="/" 
-                className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-              >
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Əsas Səhifə
               </Link>
-              <Link 
-                href="/services" 
-                className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-              >
+              <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Xidmətlərimiz
               </Link>
-              <Link 
-                href="/about" 
-                className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-              >
+              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Haqqımızda
               </Link>
-              <Link 
-                href="/contact" 
-                className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-              >
+              <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Əlaqə
               </Link>
             </nav>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors z-50"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? 'Menyunu bağla' : 'Menyunu aç'}
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-menu"
+              className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+              onClick={toggleMenu}
+              aria-label="Menyunu aç/bağla"
             >
-              {isMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div 
-          id="mobile-menu" 
-          className="md:hidden fixed inset-0 z-40 bg-white"
-          style={{ top: '72px' }}
-        >
-          <div className="container mx-auto px-4 py-6">
-            <nav className="flex flex-col space-y-2">
+        <div className="md:hidden fixed inset-0 top-16 z-40 bg-white">
+          <div className="container mx-auto px-4 py-8">
+            <nav className="flex flex-col space-y-4">
               <Link 
                 href="/" 
-                onClick={handleLinkClick}
-                className="px-4 py-3 text-lg font-medium text-gray-900 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                onClick={closeMenu}
+                className="text-xl font-medium text-gray-900 hover:text-blue-600 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Əsas Səhifə
               </Link>
               <Link 
                 href="/services" 
-                onClick={handleLinkClick}
-                className="px-4 py-3 text-lg font-medium text-gray-900 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                onClick={closeMenu}
+                className="text-xl font-medium text-gray-900 hover:text-blue-600 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Xidmətlərimiz
               </Link>
               <Link 
                 href="/about" 
-                onClick={handleLinkClick}
-                className="px-4 py-3 text-lg font-medium text-gray-900 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                onClick={closeMenu}
+                className="text-xl font-medium text-gray-900 hover:text-blue-600 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Haqqımızda
               </Link>
               <Link 
                 href="/contact" 
-                onClick={handleLinkClick}
-                className="px-4 py-3 text-lg font-medium text-gray-900 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                onClick={closeMenu}
+                className="text-xl font-medium text-gray-900 hover:text-blue-600 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Əlaqə
               </Link>
               
-              {/* Mobile Contact Info */}
+              {/* Contact Info */}
               <div className="mt-8 pt-6 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Əlaqə</h3>
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <span className="text-green-600">📞</span>
-                    <a 
-                      href="tel:+994552370200" 
-                      className="text-lg font-medium text-gray-900 hover:text-blue-600"
-                    >
-                      +994 55 237 02 00
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="text-green-600">💬</span>
-                    <a 
-                      href="https://wa.me/994552370200" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-lg font-medium text-gray-900 hover:text-green-600"
-                    >
-                      WhatsApp
-                    </a>
-                  </div>
+                  <a 
+                    href="tel:+994552370200" 
+                    className="flex items-center space-x-3 text-lg text-gray-700 hover:text-blue-600"
+                  >
+                    <span>📞</span>
+                    <span>+994 55 237 02 00</span>
+                  </a>
+                  <a 
+                    href="https://wa.me/994552370200" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-3 text-lg text-gray-700 hover:text-green-600"
+                  >
+                    <span>💬</span>
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </nav>
           </div>
         </div>
       )}
-    </>
+    </div>
   )
 }
 
