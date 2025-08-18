@@ -65,10 +65,10 @@ img, .prose img {
 
 /* ====== Sabit header və onun üçün üst boşluq ====== */
 .site-header {
-  @apply fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-slate-200;
+  @apply fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200;
 }
 .page-with-sticky-header {
-  @apply pt-16 md:pt-20; /* header hündürlüyünə uyğun offset */
+  @apply pt-20 md:pt-24; /* header hündürlüyünə uyğun offset */
 }
 
 /* ====== Kart şəkilləri: tam örtmə, kəsim, kölgə ====== */
@@ -80,10 +80,46 @@ img, .prose img {
   @apply object-cover w-full h-full;
 }
 
+/* ====== Mobil menyu animasiyaları ====== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu-enter {
+  animation: slideDown 0.3s ease-out;
+}
+
 /* ====== Mobil menyu overlay (üst-üstə düşməsin) ====== */
 .mobile-menu-overlay {
   @apply fixed inset-0 z-[60] bg-white overflow-y-auto;
 }
 .mobile-menu-trigger {
   @apply z-[70];
+}
+
+/* ====== Header responsive düzəlişlər ====== */
+@media (max-width: 768px) {
+  .site-header {
+    @apply bg-white/95;
+  }
+  
+  .page-with-sticky-header {
+    @apply pt-20;
+  }
+}
+
+/* ====== Mobil menyu link hover effektləri ====== */
+.mobile-menu-link {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.mobile-menu-link:hover {
+  @apply transform translate-x-1;
 }
