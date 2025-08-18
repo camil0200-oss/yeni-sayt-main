@@ -28,65 +28,67 @@ export default function Header() {
   }
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
-          {/* Logo */}
-          <Link href="/" className="text-2xl md:text-3xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-            Smart Kilid Sistemləri
-          </Link>
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between py-4">
+            {/* Logo */}
+            <Link href="/" className="text-2xl md:text-3xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+              Smart Kilid Sistemləri
+            </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-            <Link 
-              href="/" 
-              className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-            >
-              Əsas Səhifə
-            </Link>
-            <Link 
-              href="/services" 
-              className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-            >
-              Xidmətlərimiz
-            </Link>
-            <Link 
-              href="/about" 
-              className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-            >
-              Haqqımızda
-            </Link>
-            <Link 
-              href="/contact" 
-              className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-            >
-              Əlaqə
-            </Link>
-          </nav>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+              <Link 
+                href="/" 
+                className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+              >
+                Əsas Səhifə
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+              >
+                Xidmətlərimiz
+              </Link>
+              <Link 
+                href="/about" 
+                className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+              >
+                Haqqımızda
+              </Link>
+              <Link 
+                href="/contact" 
+                className="px-3 py-2 rounded-md text-sm lg:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+              >
+                Əlaqə
+              </Link>
+            </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? 'Menyunu bağla' : 'Menyunu aç'}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-          >
-            {isMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors z-50"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Menyunu bağla' : 'Menyunu aç'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div 
           id="mobile-menu" 
-          className="md:hidden fixed inset-0 z-50 bg-white"
-          style={{ top: '72px' }} // Header hündürlüyünə uyğun
+          className="md:hidden fixed inset-0 z-40 bg-white"
+          style={{ top: '72px' }}
         >
           <div className="container mx-auto px-4 py-6">
             <nav className="flex flex-col space-y-2">
@@ -148,7 +150,7 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   )
 }
 
