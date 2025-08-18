@@ -14,24 +14,24 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL('https://smartkilid.az'),
-  title: 'Smart Kilid Sistemləri - Təhlükəsizlik və Avtomatlaşdırma Sistemləri',
+  title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control, Turniket | Smartkilid.az',
   description:
-    'Bakıda elektron qapılar, smart kilidlər, domofon sistemləri, barmaq izi və üz tanıma cihazları ilə giriş sistemləri, kartla lift idarəetmə və access control sistemlərinin satışı və quraşdırılması.',
+    'Bakıda smart kilid, elektron kilid, access control, turniket sistemi, kartlı lift və domofon sistemlərinin satışı və quraşdırılması. 24/7 texniki dəstək. Pulsuz konsultasiya.',
   keywords:
-    'smart kilidlər, elektron qapılar, domofon sistemləri, video domofon, audio domofon, barmaq izi giriş, access control, liftlər üçün kart ilə idarəetmə, Barmaq izi və üz tanıma cihazları, Bakı',
+    'smart kilid Bakı, elektron kilid, access control sistemi, turniket sistemi, kartlı lift, domofon sistemi, təhlükəsizlik sistemləri, Bakı smart kilid, Azərbaycan access control, elektron qapı sistemi, biometrik giriş, şlaqbaum sistemi',
   authors: [{ name: 'Smart Kilid Sistemləri' }],
   alternates: { canonical: '/' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
     url: 'https://smartkilid.az',
-    title: 'Smart Kilid Sistemləri - Təhlükəsizlik Sistemləri',
+    title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid və Access Control',
     description:
-      'Bakıda Domofon, Turniket və Şlaqbaum sistemləri, smart kilidlər və access control sistemlərinin satışı və quraşdırılması.',
+      'Bakıda smart kilid, elektron kilid, access control, turniket sistemi və domofon sistemlərinin satışı və quraşdırılması. 24/7 texniki dəstək.',
     siteName: 'Smart Kilid Sistemləri',
     type: 'website',
     locale: 'az_AZ',
     images: [
-      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Smart Kilid Sistemləri' }
+      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Smart Kilid Sistemləri - Bakıda Təhlükəsizlik Sistemləri' }
     ]
   },
   icons: {
@@ -160,6 +160,21 @@ export default function RootLayout({ children }) {
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ldWebsite) }}
         />
+        
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          `}
+        </Script>
+        
         <Header />
         <main className="page-with-sticky-header">{children}</main>
         

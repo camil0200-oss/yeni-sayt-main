@@ -3,8 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Xidmətlər — Smart Kilid Sistemləri',
-  description: 'Elektron kilid, access control, turniket, şlaqbaum, biometrik sistemlər və lift üçün kart sistemi.',
+  title: 'Smart Kilid və Access Control Xidmətləri Bakı - Elektron Kilid, Turniket, Kartlı Lift | Smartkilid.az',
+  description: 'Bakıda smart kilid, access control, turniket sistemi, kartlı lift, domofon və biometrik sistemlərin satışı və quraşdırılması. 9 əsas xidmət. Pulsuz konsultasiya.',
   alternates: { canonical: '/services' },
 }
 

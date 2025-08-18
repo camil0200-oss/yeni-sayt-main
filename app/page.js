@@ -58,11 +58,11 @@ export default function HomePage() {
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div className="space-y-8">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Müasir <span className="text-blue-600">Təhlükəsizlik</span> Sistemləri
+                  Bakıda <span className="text-blue-600">Smart Kilid</span> və <span className="text-blue-600">Access Control</span> Sistemləri
                 </h1>
 
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Smart kilidlər, <b>elektron kilidlər</b>, domofon sistemləri, turniket və şlaqbaum sistemləri, eləcə də access control həlləri ilə təhlükəsizliyinizi bizə etibar edin.
+                  <strong>Smart kilidlər</strong>, <strong>elektron kilidlər</strong>, <strong>access control</strong>, <strong>turniket sistemi</strong> və <strong>kartlı lift</strong> sistemləri ilə təhlükəsizliyinizi bizə etibar edin. Bakıda ən keyfiyyətli təhlükəsizlik sistemləri.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -80,7 +80,7 @@ export default function HomePage() {
                     href="/services"
                     className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center gap-2"
                   >
-                    <span>Xidmətlər</span>
+                    <span>Bütün Xidmətlər</span>
                     <ChevronRight className="w-5 h-5" />
                   </Link>
                 </div>
@@ -89,7 +89,7 @@ export default function HomePage() {
               <div className="relative">
                 <Image
                   src="/images/hero-security.webp"
-                  alt="Təhlükəsizlik Sistemləri"
+                  alt="Bakıda Smart Kilid və Access Control Sistemləri - Təhlükəsizlik və Avtomatlaşdırma"
                   width={800}
                   height={600}
                   className="w-full h-auto rounded-2xl shadow-xl"
@@ -106,9 +106,9 @@ export default function HomePage() {
         <section id="services" className="py-20 bg-white">
           <div className="container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Xidmətlərimiz</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Bakıda Smart Kilid və Access Control Xidmətləri</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin tam spektri
+                Müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin tam spektri - <strong>elektron kilid</strong>, <strong>turniket sistemi</strong>, <strong>kartlı lift</strong> və <strong>domofon sistemləri</strong>
               </p>
             </div>
 
@@ -123,7 +123,7 @@ export default function HomePage() {
                   <div className="h-48 overflow-hidden">
                     <Image
                       src={service.img}
-                      alt={service.title}
+                      alt={`${service.title} - Bakıda ${service.title} satışı və quraşdırma`}
                       width={380}
                       height={253}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -133,15 +133,13 @@ export default function HomePage() {
                   </div>
                   <div className="p-6">
                     <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {/* Assuming icon is not directly available here, might need to be added or passed */}
                       <Shield className="w-8 h-8" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {service.title}
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      {/* Assuming description is not directly available here, might need to be added or passed */}
-                      {service.title}
+                      Bakıda {service.title} satışı və peşəkar quraşdırma xidməti
                     </p>
                     <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
                       <span>Ətraflı məlumat</span>
@@ -158,9 +156,9 @@ export default function HomePage() {
         <section className="py-20 bg-gray-50">
           <div className="container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Niyə Bizi Seçməlisiniz?</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Niyə Smart Kilid Sistemləri?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Keyfiyyət, etibarlılıq və peşəkarlıq bizim əsas prinsiplərimizdir
+                Bakıda <strong>smart kilid</strong> və <strong>access control</strong> sahəsində keyfiyyət, etibarlılıq və peşəkarlıq bizim əsas prinsiplərimizdir
               </p>
             </div>
 
@@ -187,12 +185,12 @@ export default function HomePage() {
   <div className="container mx-auto px-4">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">Haqqımızda</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-6">Bakıda Smart Kilid və Access Control Uzmanları</h2>
         <div className="space-y-4 text-gray-600 text-lg">
-          <p>Smart Kilid Sistemləri olaraq, biz Azərbaycanda müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması sahəsində fəaliyyət göstəririk.</p>
-          <p>Komandamız yüksək ixtisaslı mütəxəssislərdən ibarətdir və müştərilərimizə ən keyfiyyətli xidmət göstərməyə çalışır. Biz həm ev, həm də kommersiya obyektləri üçün həllər təklif edirik.</p>
+          <p><strong>Smart Kilid Sistemləri</strong> olaraq, biz Azərbaycanda müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması sahəsində fəaliyyət göstəririk.</p>
+          <p>Komandamız yüksək ixtisaslı mütəxəssislərdən ibarətdir və müştərilərimizə ən keyfiyyətli <strong>smart kilid</strong>, <strong>access control</strong> və <strong>turniket sistemi</strong> xidməti göstərməyə çalışır.</p>
           <p>Məqsədimiz müştərilərimizin təhlükəsizliyini təmin etmək və ən son texnologiyalardan istifadə edərək rahatlıq yaratmaqdır.</p>
-          <p className="font-semibold text-blue-600">Smart Kilid Sistemləri – təhlükəsizlik və avtomatlaşdırma sahəsində etibarlı partnyorunuz, peşəkar satış və quraşdırma xidmətləri təqdim edirik.</p>
+          <p className="font-semibold text-blue-600">Smart Kilid Sistemləri – Bakıda <strong>elektron kilid</strong>, <strong>access control</strong> və <strong>təhlükəsizlik sistemləri</strong> sahəsində etibarlı partnyorunuz.</p>
         </div>
         <div className="mt-8">
           <a
@@ -202,7 +200,7 @@ export default function HomePage() {
             className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.09 15.09 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.25 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1v3.68a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.72a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.25 1z"/></svg>
-            <span>Bizimlə Əlaqə</span>
+            <span>Bakıda Smart Kilid Konsultasiyası</span>
           </a>
         </div>
       </div>
@@ -210,11 +208,85 @@ export default function HomePage() {
       <div className="card-img relative aspect-[16/10]">
         <img
           src="/images/about-team.webp"
-          alt="Komandamız"
+          alt="Smart Kilid Sistemləri komandası - Bakıda təhlükəsizlik sistemləri uzmanları"
           className="w-full h-full object-cover rounded-xl shadow-xl"
           loading="lazy"
         />
       </div>
+    </div>
+  </div>
+</section>
+
+{/* FAQ Section */}
+<section className="py-20 bg-gray-50">
+  <div className="container">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Smart Kilid və Access Control Haqqında Suallar</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Bakıda <strong>smart kilid</strong>, <strong>access control</strong> və <strong>turniket sistemi</strong> haqqında ən çox verilən suallar
+      </p>
+    </div>
+
+    <div className="max-w-4xl mx-auto space-y-6">
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Bakıda smart kilid quraşdırma xidməti nə qədər çəkir?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Bakıda <strong>smart kilid</strong> quraşdırma xidməti 1-3 saat çəkir. Mövcud qapının vəziyyətindən asılı olaraq vaxt dəyişə bilər. Peşəkar komandamız sürətli və keyfiyyətli quraşdırma təmin edir.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Access control sistemi neçə istifadəçi dəstəkləyir?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          <strong>Access control</strong> sistemlərimiz 1000-dən çox istifadəçi qeydiyyatını dəstəkləyir. Sistemin ölçüsündən asılı olaraq bu say artırıla bilər. Bakıda böyük ofis binaları və yaşayış kompleksləri üçün xüsusi həllər təklif edirik.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Turniket sistemi neçə nəfər keçid edə bilər?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          <strong>Turniket sistemi</strong> saatda 1000-dən çox keçid edə bilər. Sistemin növündən və konfiqurasiyasından asılı olaraq bu göstərici dəyişə bilər. Bakıda yüksək axınlı obyektlər üçün xüsusi <strong>turniket sistemi</strong> həllləri təklif edirik.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Elektron kilid elektrik kəsiləndə işləyir?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Bəli, <strong>elektron kilid</strong> sistemlərimiz UPS dəstəyi ilə elektrik kəsiləndə də işləyir. Həmçinin mexaniki açar dəstəyi də mövcuddur. Bakıda təhlükəsizlik təmin etmək üçün bütün hallar nəzərə alınır.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Kartlı lift sistemi bütün liftlərdə işləyir?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          <strong>Kartlı lift sistemi</strong> əksər lift brendləri ilə uyğun gəlir. Sistemin quraşdırılması üçün əvvəlcədən texniki baxış tələb oluna bilər. Bakıda bütün əsas lift brendləri üçün <strong>kartlı lift</strong> həllləri təklif edirik.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Smart kilid sistemlərinə zəmanət verirsiniz?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Bəli, bütün <strong>smart kilid</strong> və <strong>access control</strong> sistemlərimizə 12-24 ay zəmanət veririk. Bakıda 24/7 texniki dəstək xidməti də mövcuddur. Keyfiyyətli məhsullar və peşəkar xidmət bizim əsas prinsiplərimizdir.
+        </p>
+      </details>
     </div>
   </div>
 </section>

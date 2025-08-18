@@ -4,6 +4,12 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/api/', '/admin/'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        crawlDelay: 1,
       },
     ],
     sitemap: 'https://smartkilid.az/sitemap.xml',
