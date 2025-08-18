@@ -8,24 +8,17 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
-    // Mobil menyu açıqkən scroll-u dayandır
-    if (!isMenuOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
   }
 
   const closeMenu = () => {
     setIsMenuOpen(false)
-    document.body.style.overflow = ''
   }
 
   return (
-    <div className="relative">
+    <>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-200">
-        <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <Link href="/" className="text-2xl md:text-3xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
@@ -33,7 +26,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="desktop-nav hidden md:flex items-center space-x-6">
               <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Əsas Səhifə
               </Link>
@@ -50,7 +43,7 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+              className="mobile-menu-button block md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
               onClick={toggleMenu}
               aria-label="Menyunu aç/bağla"
             >
@@ -60,10 +53,10 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 z-40 bg-white">
-          <div className="container mx-auto px-4 py-8">
+        <div className="mobile-menu-overlay block md:hidden">
+          <div className="max-w-6xl mx-auto px-4 py-8">
             <nav className="flex flex-col space-y-4">
               <Link 
                 href="/" 
@@ -120,7 +113,7 @@ export default function Header() {
           </div>
         </div>
       )}
-    </div>
+    </>
   )
 }
 
