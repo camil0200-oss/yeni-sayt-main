@@ -14,24 +14,24 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL('https://smartkilid.az'),
-  title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control, Turniket | Smartkilid.az',
+  title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control, Turniket, Avtomatik Qapı | Smartkilid.az',
   description:
-    'Bakıda smart kilid, elektron kilid, access control, turniket sistemi, kartlı lift və domofon sistemlərinin satışı və quraşdırılması. 24/7 texniki dəstək. Pulsuz konsultasiya.',
+    'Bakıda smart kilid, elektron kilid, access control, turniket sistemi, kartlı lift, avtomatik qapı və domofon sistemlərinin satışı və quraşdırılması. 24/7 texniki dəstək. Pulsuz konsultasiya.',
   keywords:
-    'smart kilid Bakı, elektron kilid, access control sistemi, turniket sistemi, kartlı lift, domofon sistemi, təhlükəsizlik sistemləri, Bakı smart kilid, Azərbaycan access control, elektron qapı sistemi, biometrik giriş, şlaqbaum sistemi',
+    'smart kilid Bakı, elektron kilid, access control sistemi, turniket sistemi, kartlı lift, domofon sistemi, təhlükəsizlik sistemləri, Bakı smart kilid, Azərbaycan access control, elektron qapı sistemi, avtomatik qapı, biometrik giriş, şlaqbaum sistemi, elektron qapılar',
   authors: [{ name: 'Smart Kilid Sistemləri' }],
   alternates: { canonical: '/' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
     url: 'https://smartkilid.az',
-    title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid və Access Control',
+    title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control və Avtomatik Qapı',
     description:
-      'Bakıda smart kilid, elektron kilid, access control, turniket sistemi və domofon sistemlərinin satışı və quraşdırılması. 24/7 texniki dəstək.',
+      'Bakıda smart kilid, elektron kilid, access control, turniket sistemi, avtomatik qapı və domofon sistemlərinin satışı və quraşdırılması. 24/7 texniki dəstək.',
     siteName: 'Smart Kilid Sistemləri',
     type: 'website',
     locale: 'az_AZ',
     images: [
-      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Smart Kilid Sistemləri - Bakıda Təhlükəsizlik Sistemləri' }
+      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Smart Kilid Sistemləri - Bakıda Təhlükəsizlik və Avtomatik Qapı Sistemləri' }
     ]
   },
   icons: {

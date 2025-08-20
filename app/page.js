@@ -35,7 +35,7 @@ export default function HomePage() {
     { slug: 'barrier', title: 'Şlaqbaum Sistemləri', img: '/images/service-barrier.webp' },
     { slug: 'lift', title: 'Kartla Lift İdarəetmə', img: '/images/service-lift.webp' },
     { slug: 'biometrics', title: 'Biometrik Giriş', img: '/images/service-biometrics.webp' },
-    { slug: 'gate', title: 'Elektron Darvaza', img: '/images/service-gate.webp' },
+    { slug: 'gate', title: 'Elektron Qapılar', img: '/images/service-gate.webp' },
     { slug: 'keypad', title: 'Kodlayıcı Sistemlər', img: '/images/service-keypad.webp' },
     { slug: 'hotel-card', title: 'Otel Kart Sistemi', img: '/images/service-smart-lock.webp' },
     { slug: 'intercom', title: 'Domofon Sistemləri', img: '/images/service-intercom.webp' },
@@ -62,7 +62,7 @@ export default function HomePage() {
                 </h1>
 
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  <strong>Smart kilidlər</strong>, <strong>elektron kilidlər</strong>, <strong>access control</strong>, <strong>turniket sistemi</strong> və <strong>kartlı lift</strong> sistemləri ilə təhlükəsizliyinizi bizə etibar edin. Bakıda ən keyfiyyətli təhlükəsizlik sistemləri.
+                  <strong>Smart kilidlər</strong>, <strong>elektron kilidlər</strong>, <strong>access control</strong>, <strong>turniket sistemi</strong>, <strong>kartlı lift</strong>, <strong>avtomatik qapı</strong> və <strong>elektron qapılar</strong> sistemləri ilə təhlükəsizliyinizi bizə etibar edin. Bakıda ən keyfiyyətli təhlükəsizlik sistemləri.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -108,7 +108,7 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Bakıda Smart Kilid və Access Control Xidmətləri</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin tam spektri - <strong>elektron kilid</strong>, <strong>turniket sistemi</strong>, <strong>kartlı lift</strong> və <strong>domofon sistemləri</strong>
+                Müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin tam spektri - <strong>elektron kilid</strong>, <strong>turniket sistemi</strong>, <strong>kartlı lift</strong>, <strong>avtomatik qapı</strong>, <strong>elektron qapılar</strong> və <strong>domofon sistemləri</strong>
               </p>
             </div>
 
@@ -285,6 +285,16 @@ export default function HomePage() {
         </summary>
         <p className="mt-4 text-gray-700 leading-relaxed">
           Bəli, bütün <strong>smart kilid</strong> və <strong>access control</strong> sistemlərimizə 12-24 ay zəmanət veririk. Bakıda 24/7 texniki dəstək xidməti də mövcuddur. Keyfiyyətli məhsullar və peşəkar xidmət bizim əsas prinsiplərimizdir.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Elektron qapılar və avtomatik qapı sistemləri hansı tiplərdə mövcuddur?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          <strong>Elektron qapılar</strong> və <strong>avtomatik qapı</strong> sistemlərimiz sliding, swing, folding və revolving tiplərində mövcuddur. Ofis qapıları üçün uzaqdan pult ilə idarəetmə, domofon üçün elektron kilidlər və smart telefon inteqrasiyası ilə tam həll təqdim edirik. Bakıda bütün növ qapılar üçün <strong>avtomatik qapı</strong> sistemləri quraşdırırıq.
         </p>
       </details>
     </div>
