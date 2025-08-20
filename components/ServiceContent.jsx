@@ -122,18 +122,42 @@ export const SERVICES = [
   },
   {
     slug: 'gate',
-    title: 'Elektron Darvaza',
+    title: 'Elektron Qapılar',
     heroImg: '/images/service-gate.webp',
-    short: 'Pult, tətbiq və ya nömrə tanıma ilə idarəetmə. Bakıda elektron darvaza.',
-    intro: `Elektron darvaza motorları, məsafədən idarəetmə modulları və təhlükəsizlik sensorları ilə tam həll. Bakıda elektron darvaza sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
-    features: ['Wi-Fi/4G modul', 'Hərəkət sensorları', 'Manual açma'],
-    usecases: ['Private həyətlər', 'Anbar/loqistika girişləri'],
-    faq: [
-      ['Elektrik kəsiləndə?', 'Manual açma və ya UPS dəstəyi ilə.'],
-      ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
-      ['Neçə metr məsafədən idarə olunur?', '100 metrə qədər məsafədən idarəetmə mümkündür.']
+    short: 'Ofis qapıları üçün uzaqdan pult ilə idarəetmə sistemləri, domofon üçün elektron kilidlər və avtomatik qapılar. Bakıda elektron qapı sistemləri.',
+    intro: `Ofis qapıları üçün uzaqdan pult ilə idarəetmə sistemləri, domofon üçün elektron kilidlər və avtomatik qapılar. Elektron qapı motorları, məsafədən idarəetmə modulları, təhlükəsizlik sensorları və smart telefon inteqrasiyası ilə tam həll. Bakıda elektron qapı sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
+    features: [
+      'Ofis qapıları üçün uzaqdan pult ilə idarəetmə',
+      'Domofon üçün elektron kilid sistemləri',
+      'Avtomatik qapı motorları və sürücüləri',
+      'Wi-Fi/4G modul ilə smart telefon idarəetməsi',
+      'Hərəkət sensorları və təhlükəsizlik sistemləri',
+      'Manual açma və təcili rejim dəstəyi',
+      'UPS dəstəyi ilə elektrik kəsintisində işləmə',
+      'Bakıda 24/7 texniki dəstək və quraşdırma',
+      'Zəmanətli elektron qapı sistemləri'
     ],
-    keywords: ['elektron darvaza', 'avtomatik qapı', 'Bakı elektron darvaza', 'darvaza sistemi', 'avtomatik darvaza', 'elektron qapı'],
+    usecases: [
+      'Ofis binaları və biznes mərkəzləri',
+      'Yaşayış kompleksləri və villalar',
+      'Ticarət mərkəzləri və mağazalar',
+      'Anbar və loqistika mərkəzləri',
+      'Xəstəxana və tibbi müəssisələr',
+      'Təhsil müəssisələri və məktəblər',
+      'Otel və restoran müəssisələri',
+      'Sənaye müəssisələri və zavodlar'
+    ],
+    faq: [
+      ['Ofis qapıları üçün uzaqdan pult işləyir?', 'Bəli, 100 metrə qədər məsafədən pult ilə idarəetmə mümkündür.'],
+      ['Domofon üçün elektron kilid sistemləri var?', 'Bəli, domofon ilə inteqrasiya olunan elektron kilid sistemləri təqdim edirik.'],
+      ['Avtomatik qapılar hansı tiplərdə mövcuddur?', 'Sliding, swing, folding və revolving qapı tipləri mövcuddur.'],
+      ['Elektrik kəsiləndə nə olur?', 'Manual açma və ya UPS dəstəyi ilə normal işləmə davam edir.'],
+      ['Smart telefon ilə idarəetmə mümkündür?', 'Bəli, Wi-Fi və ya 4G modul ilə smart telefon tətbiqindən idarəetmə.'],
+      ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma xidməti.'],
+      ['Neçə qapı eyni anda idarə oluna bilər?', 'Sistemdə 10-dan çox qapı eyni anda idarə oluna bilər.'],
+      ['Zəmanət müddəti nə qədərdir?', 'Bütün elektron qapı sistemlərimizə 24 ay zəmanət veririk.']
+    ],
+    keywords: ['elektron qapılar', 'avtomatik qapı', 'Bakı elektron qapı', 'qapı sistemi', 'avtomatik qapı', 'elektron qapı', 'ofis qapısı', 'uzaqdan pult', 'domofon kilid', 'avtomatik qapı motoru', 'smart qapı', 'Bakı avtomatik qapı', 'elektron qapı quraşdırma'],
   },
   {
     slug: 'keypad',
