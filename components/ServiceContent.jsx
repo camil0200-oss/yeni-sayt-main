@@ -66,14 +66,34 @@ export const SERVICES = [
     heroImg: '/images/service-turnstile.webp',
     short: 'Ofis və obyektlər üçün təhlükəsiz giriş-buraxılış həlli. Bakıda turniket sistemləri.',
     intro: `Tripod, qapı, tam boy turniketlər — kart/biometrika/QR ilə inteqrasiya. Axını idarə edin, sıxlığın qarşısını alın. Bakıda turniket sistemlərinin satışı və quraşdırılması üzrə keyfiyyətli xidmət.`,
-    features: ['Kart/biometrika/QR modulları', 'İkitərəfli keçid, anti-passback', 'Paslanmayan polad korpus'],
-    usecases: ['Ofislər', 'İstehsal sahələri', 'Təhsil müəssisələri'],
+    features: [
+      'Kart/biometrika/QR modulları',
+      'İkitərəfli keçid, anti-passback',
+      'Paslanmayan polad korpus',
+      'Saatda 1000+ keçid dəstəyi',
+      'Access control sistemi ilə inteqrasiya',
+      'Real-time hesabat və monitorinq',
+      'Bakıda 24/7 texniki dəstək',
+      'Zəmanətli turniket sistemləri'
+    ],
+    usecases: [
+      'Ofislər və biznes mərkəzləri',
+      'İstehsal sahələri və zavodlar',
+      'Təhsil müəssisələri və məktəblər',
+      'Xəstəxana və tibbi müəssisələr',
+      'Ticarət mərkəzləri və mağazalar',
+      'Otel və restoran müəssisələri',
+      'Sənaye müəssisələri və anbarlar'
+    ],
     faq: [
       ['Zəmanət nə qədərdir?', 'Adətən 12–24 ay, layihəyə görə dəyişir.'],
       ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
-      ['Neçə nəfər keçid edə bilər?', 'Saatda 1000-dən çox keçid mümkündür.']
+      ['Neçə nəfər keçid edə bilər?', 'Saatda 1000-dən çox keçid mümkündür.'],
+      ['Access control ilə inteqrasiya?', 'Bəli, bütün access control sistemləri ilə uyğun gəlir.'],
+      ['Elektrik kəsiləndə işləyir?', 'UPS dəstəyi ilə normal işləmə davam edir.'],
+      ['Neçə turniket eyni anda idarə oluna bilər?', 'Sistemdə 50-dən çox turniket eyni anda idarə oluna bilər.']
     ],
-    keywords: ['turniket', 'giriş sistemləri', 'Bakı turniket', 'turniket satışı', 'turniket quraşdırma', 'giriş turniketi'],
+    keywords: ['turniket', 'giriş sistemləri', 'Bakı turniket', 'turniket satışı', 'turniket quraşdırma', 'giriş turniketi', 'turniket sistemi', 'Bakı turniket sistemi', 'turniket access control', 'turniket biometrik'],
   },
   {
     slug: 'barrier',
@@ -81,14 +101,34 @@ export const SERVICES = [
     heroImg: '/images/service-barrier.webp',
     short: 'Dayanacaq və ərazi girişlərini avtomatlaşdırın. Bakıda şlaqbaum sistemləri.',
     intro: `Pult, UHF tag, nömrə tanıma (ANPR) və access control ilə inteqrasiya olunan şlaqbaum həllləri. Bakıda şlaqbaum sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
-    features: ['ANPR inteqrasiyası', 'UHF uzun məsafəli oxu', 'Təcili rejim və təhlükəsizlik sensorları'],
-    usecases: ['Biznes mərkəzləri', 'Yaşayış kompleksləri', 'Məhdud girişli ərazilər'],
+    features: [
+      'ANPR (Avtomatik Nömrə Tanıma) inteqrasiyası',
+      'UHF uzun məsafəli oxu (10-15 metr)',
+      'Təcili rejim və təhlükəsizlik sensorları',
+      'Saatda 500+ avtomobil keçidi dəstəyi',
+      'Access control sistemi ilə tam inteqrasiya',
+      'IP54+ su və toz davamlılığı',
+      'Bakıda 24/7 texniki dəstək',
+      'Zəmanətli şlaqbaum sistemləri'
+    ],
+    usecases: [
+      'Biznes mərkəzləri və ofis binaları',
+      'Yaşayış kompleksləri və villalar',
+      'Məhdud girişli ərazilər və zavodlar',
+      'Otel və restoran dayanacaqları',
+      'Xəstəxana və tibbi müəssisələr',
+      'Təhsil müəssisələri və məktəblər',
+      'Sənaye müəssisələri və anbarlar'
+    ],
     faq: [
       ['Soyuq/isti iqlimə davamlıdır?', 'IP54+ sinif, iqlimə uyğun model seçirik.'],
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə tam quraşdırma.'],
-      ['Neçə avtomobil dəstəklənir?', 'Saatda 500-dən çox avtomobil keçidi mümkündür.']
+      ['Neçə avtomobil dəstəklənir?', 'Saatda 500-dən çox avtomobil keçidi mümkündür.'],
+      ['ANPR sistemi nə qədər dəqiqdir?', '95%+ dəqiqlik ilə nömrə tanıma mümkündür.'],
+      ['Elektrik kəsiləndə nə olur?', 'Manual açma və ya UPS dəstəyi ilə normal işləmə.'],
+      ['Neçə şlaqbaum eyni anda idarə oluna bilər?', 'Sistemdə 20-dən çox şlaqbaum eyni anda idarə oluna bilər.']
     ],
-    keywords: ['şlaqbaum', 'dayanacaq idarəetmə', 'Bakı şlaqbaum', 'şlaqbaum satışı', 'avtomatik qapı', 'dayanacaq sistemi'],
+    keywords: ['şlaqbaum', 'dayanacaq idarəetmə', 'Bakı şlaqbaum', 'şlaqbaum satışı', 'avtomatik qapı', 'dayanacaq sistemi', 'ANPR sistemi', 'UHF şlaqbaum', 'şlaqbaum quraşdırma', 'Bakı şlaqbaum sistemi'],
   },
   {
     slug: 'lift',
@@ -107,18 +147,38 @@ export const SERVICES = [
   },
   {
     slug: 'biometrics',
-    title: 'Biometrik Giriş',
+    title: 'Barmaq İzi ilə Giriş Sistemləri',
     heroImg: '/images/service-biometrics.webp',
     short: 'Yüksək dəqiqliklə üz/barmaq izi identifikasiyası. Bakıda biometrik sistemlər.',
     intro: `Biometrika ilə yalnız icazəli şəxslər daxil olur. Sürətli keçid, dövri hesabat, kart/kodla kombinə edilə bilər. Bakıda biometrik giriş sistemlərinin satışı və quraşdırılması üzrə keyfiyyətli xidmət.`,
-    features: ['Üz/barmaq izi, palma damarı', 'Anti-spoofing alqoritmləri', 'Offline işləmə rejimi'],
-    usecases: ['Ofis/istehsal girişləri', 'Datacenter və kritik zonalar'],
+    features: [
+      'Üz/barmaq izi, palma damarı identifikasiyası',
+      'Anti-spoofing alqoritmləri və təhlükəsizlik',
+      'Offline işləmə rejimi və backup sistemləri',
+      'Sürətli identifikasiya (1-2 saniyə)',
+      'Access control sistemi ilə tam inteqrasiya',
+      '99.9% dəqiqlik ilə işləmə',
+      'Bakıda 24/7 texniki dəstək',
+      'Zəmanətli biometrik sistemlər'
+    ],
+    usecases: [
+      'Ofis/istehsal girişləri və qapılar',
+      'Datacenter və kritik zonalar',
+      'Xəstəxana və tibbi müəssisələr',
+      'Bank və maliyyə müəssisələri',
+      'Hərbi və təhlükəsizlik obyektləri',
+      'Təhsil müəssisələri və məktəblər',
+      'Otel və restoran müəssisələri'
+    ],
     faq: [
       ['Məlumat harada saxlanılır?', 'Şirkət siyasətinə görə local və ya şifrəli bazada.'],
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
-      ['Dəqiqlik faizi nə qədərdir?', '99.9% dəqiqlik ilə işləyir.']
+      ['Dəqiqlik faizi nə qədərdir?', '99.9% dəqiqlik ilə işləyir.'],
+      ['Neçə istifadəçi dəstəklənir?', 'Sistemdə 10,000-dən çox istifadəçi qeydiyyatı mümkündür.'],
+      ['Elektrik kəsiləndə işləyir?', 'UPS dəstəyi ilə normal işləmə davam edir.'],
+      ['Neçə biometrik cihaz eyni anda idarə oluna bilər?', 'Sistemdə 100-dən çox biometrik cihaz eyni anda idarə oluna bilər.']
     ],
-    keywords: ['biometrika', 'üz tanıma', 'barmaq izi', 'Bakı biometrik', 'biometrik giriş', 'üz tanıma sistemi', 'barmaq izi sistemi'],
+    keywords: ['biometrika', 'üz tanıma', 'barmaq izi', 'Bakı biometrik', 'biometrik giriş', 'üz tanıma sistemi', 'barmaq izi sistemi', 'biometrik access control', 'biometrik quraşdırma', 'Bakı biometrik sistemi'],
   },
   {
     slug: 'gate',
@@ -165,14 +225,34 @@ export const SERVICES = [
     heroImg: '/images/service-keypad.webp',
     short: 'Pin, kart və biometrika kombinasiyası. Bakıda kodlayıcı sistemlər.',
     intro: `Sadə və sərfəli giriş üçün kodlayıcı klaviaturalar — müvəqqəti kodlar, vaxt məhdudiyyəti və loglama. Bakıda kodlayıcı sistemlərin satışı və quraşdırılması üzrə keyfiyyətli xidmət.`,
-    features: ['Müvəqqəti kodlar', 'Zaman cədvəli', 'Suya/toza davamlı korpus (IP65)'],
-    usecases: ['Kiçik ofislər', 'Anbar və yardımçı otaqlar'],
+    features: [
+      'Müvəqqəti kodlar və vaxt məhdudiyyəti',
+      'Zaman cədvəli və loglama sistemi',
+      'Suya/toza davamlı korpus (IP65)',
+      '1000+ fərqli kod qeydiyyatı dəstəyi',
+      'Access control sistemi ilə inteqrasiya',
+      'Anti-vandalizm və təhlükəsizlik',
+      'Bakıda 24/7 texniki dəstək',
+      'Zəmanətli kodlayıcı sistemlər'
+    ],
+    usecases: [
+      'Kiçik ofislər və biznes mərkəzləri',
+      'Anbar və yardımçı otaqlar',
+      'Yaşayış kompleksləri və villalar',
+      'Otel və restoran müəssisələri',
+      'Xəstəxana və tibbi müəssisələr',
+      'Təhsil müəssisələri və məktəblər',
+      'Sənaye müəssisələri və zavodlar'
+    ],
     faq: [
       ['Tək qapıda işləyir?', 'Bəli, tək qapı və ya çoxqapı sistemlərinə uyğundur.'],
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
-      ['Neçə kod dəstəklənir?', '1000-dən çox fərqli kod qeydiyyatı mümkündür.']
+      ['Neçə kod dəstəklənir?', '1000-dən çox fərqli kod qeydiyyatı mümkündür.'],
+      ['Elektrik kəsiləndə işləyir?', 'UPS dəstəyi ilə normal işləmə davam edir.'],
+      ['Neçə kodlayıcı eyni anda idarə oluna bilər?', 'Sistemdə 50-dən çox kodlayıcı eyni anda idarə oluna bilər.'],
+      ['Zəmanət müddəti nə qədərdir?', 'Bütün kodlayıcı sistemlərimizə 24 ay zəmanət veririk.']
     ],
-    keywords: ['kodlu qapı', 'klaviatura giriş sistemi', 'Bakı kodlayıcı', 'kod sistemi', 'klaviatura sistemi', 'pin sistemi'],
+    keywords: ['kodlu qapı', 'klaviatura giriş sistemi', 'Bakı kodlayıcı', 'kod sistemi', 'klaviatura sistemi', 'pin sistemi', 'kodlayıcı quraşdırma', 'Bakı kodlayıcı sistemi', 'kodlayıcı access control'],
   },
   {
     slug: 'hotel-card',

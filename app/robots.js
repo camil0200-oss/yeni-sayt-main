@@ -4,10 +4,15 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
+        disallow: ['/api/', '/admin/', '/_next/', '/private/'],
       },
       {
         userAgent: 'Googlebot',
+        allow: '/',
+        crawlDelay: 1,
+      },
+      {
+        userAgent: 'Bingbot',
         allow: '/',
         crawlDelay: 1,
       },

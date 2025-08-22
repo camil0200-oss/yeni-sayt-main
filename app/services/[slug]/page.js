@@ -1,4 +1,6 @@
 import ServiceContent, { getService } from '@/components/ServiceContent'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export async function generateStaticParams() {
   const { SERVICES } = await import('@/components/ServiceContent')
@@ -98,23 +100,27 @@ export default function ServicePage({ params }) {
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">✓</span>
-                Peşəkar quraşdırma və texniki dəstək
+                <span>Peşəkar quraşdırma komandası</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">✓</span>
-                24/7 xidmət və təcili yardım
+                <span>24/7 texniki dəstək xidməti</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">✓</span>
-                Uzunmüddətli zəmanət və keyfiyyət təminatı
+                <span>Uzunmüddətli zəmanət</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">✓</span>
-                Bakı və ətraf ərazilərdə tam xidmət
+                <span>Keyfiyyətli məhsullar</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">✓</span>
-                Pulsuz konsultasiya və yerində baxış
+                <span>Razılıq qiymətləri</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-600 mr-2">✓</span>
+                <span>Pulsuz konsultasiya</span>
               </li>
             </ul>
           </div>
@@ -125,21 +131,26 @@ export default function ServicePage({ params }) {
       <section className="mt-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
         <h2 className="text-2xl font-bold mb-4">Bakıda {svc.title} üçün Peşəkar Məsləhət</h2>
         <p className="text-lg mb-6 opacity-90">
-          {svc.title} layihəniz üçün pulsuz konsultasiya və yerində baxış xidməti. 
-          WhatsApp və ya telefon ilə əlaqə saxlayın.
+          Layihəniz üçün ən yaxşı {svc.title} həllini təklif edirik. Pulsuz konsultasiya və yerində baxış üçün bizimlə əlaqə saxlayın.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href="https://wa.me/994552370200"
-            className="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            href="https://wa.me/994552370200" 
+            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
-            WhatsApp Konsultasiya
+            WhatsApp (055) - +994 55 237 02 00
           </a>
           <a 
-            href="tel:+994552370200"
-            className="bg-black/20 px-6 py-3 rounded-lg font-semibold hover:bg-black/30 transition-colors"
+            href="https://wa.me/994708001000" 
+            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
-            Telefon: +994 55 237 02 00
+            WhatsApp (070) - +994 70 800 10 00
+          </a>
+          <a 
+            href="/contact" 
+            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Əlaqə Səhifəsi
           </a>
         </div>
       </section>
@@ -151,37 +162,38 @@ export default function ServicePage({ params }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": svc.title,
-            "description": svc.short,
-            "provider": { 
-              "@type": "Organization", 
-              "name": "Smart Kilid Sistemləri", 
+            "name": `${svc.title}`,
+            "description": `${svc.short}`,
+            "url": `https://smartkilid.az/services/${params.slug}`,
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Smart Kilid Sistemləri",
               "url": "https://smartkilid.az",
+              "telephone": ["+994552370200", "+994708001000"],
+              "email": "smartkilid.az@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Bakı",
                 "addressCountry": "AZ"
               },
-              "telephone": "+994552370200",
-              "email": "smartkilid.az@gmail.com"
+              "areaServed": {
+                "@type": "City",
+                "name": "Bakı",
+                "addressCountry": "AZ"
+              }
             },
-            "areaServed": {
-              "@type": "City",
-              "name": "Bakı",
-              "addressCountry": "AZ"
-            },
-            "url": `https://smartkilid.az/services/${params.slug}`,
             "image": svc.heroImg,
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "AZN",
-              "description": `Bakıda ${svc.title} satışı və quraşdırma xidməti`
+              "description": `${svc.title} satışı və quraşdırma xidməti`,
+              "availability": "https://schema.org/InStock"
             }
           })
         }}
       />
-      
+
       {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
@@ -190,31 +202,49 @@ export default function ServicePage({ params }) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Əsas səhifə", "item": "https://smartkilid.az/" },
-              { "@type": "ListItem", "position": 2, "name": "Xidmətlər", "item": "https://smartkilid.az/services" },
-              { "@type": "ListItem", "position": 3, "name": svc.title, "item": `https://smartkilid.az/services/${params.slug}` }
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Əsas səhifə",
+                "item": "https://smartkilid.az/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Xidmətlər",
+                "item": "https://smartkilid.az/services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": svc.title,
+                "item": `https://smartkilid.az/services/${params.slug}`
+              }
             ]
           })
         }}
       />
-      
+
       {/* FAQPage JSON-LD */}
-      {svc?.faq?.length ? (
+      {svc.faq && svc.faq.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": svc.faq.map(([q, a]) => ({
+              "mainEntity": svc.faq.map(([question, answer]) => ({
                 "@type": "Question",
-                "name": q,
-                "acceptedAnswer": { "@type": "Answer", "text": a }
+                "name": question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": answer
+                }
               }))
             })
           }}
         />
-      ) : null}
+      )}
     </main>
   )
 }
