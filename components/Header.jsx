@@ -21,22 +21,22 @@ export default function Header() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+            <Link href="/" className="text-xl md:text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
               Smart Kilid Sistemləri
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors whitespace-nowrap">
                 Əsas Səhifə
               </Link>
-              <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors whitespace-nowrap">
                 Xidmətlərimiz
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors whitespace-nowrap">
                 Haqqımızda
               </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors whitespace-nowrap">
                 Əlaqə
               </Link>
             </nav>

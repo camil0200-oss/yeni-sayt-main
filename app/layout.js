@@ -89,6 +89,28 @@ export default function RootLayout({ children }) {
               padding: 1rem 0;
             }
             
+            /* Desktop navigation */
+            @media (min-width: 768px) {
+              header nav {
+                display: flex !important;
+                align-items: center;
+                gap: 1.5rem;
+              }
+              header button.md\\:hidden {
+                display: none !important;
+              }
+            }
+            
+            /* Mobile navigation */
+            @media (max-width: 767px) {
+              header nav.hidden.md\\:flex {
+                display: none !important;
+              }
+              header button.md\\:hidden {
+                display: block !important;
+              }
+            }
+            
             /* Ensure content stays below header */
             main {
               position: relative;
