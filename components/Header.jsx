@@ -17,84 +17,33 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        backgroundColor: 'white',
-        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
-        borderBottom: '1px solid #e5e7eb'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: '0 1rem'
-        }}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '1rem 0'
-          }}>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <Link href="/" style={{
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              color: '#2563eb',
-              textDecoration: 'none'
-            }}>
+            <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
               Smart Kilid Sistemləri
             </Link>
 
             {/* Desktop Navigation */}
-            <nav style={{
-              display: 'none',
-              alignItems: 'center',
-              gap: '1.5rem'
-            }} className="md:flex">
-              <Link href="/" style={{
-                color: '#374151',
-                textDecoration: 'none',
-                fontWeight: '500'
-              }}>
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Əsas Səhifə
               </Link>
-              <Link href="/services" style={{
-                color: '#374151',
-                textDecoration: 'none',
-                fontWeight: '500'
-              }}>
+              <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Xidmətlərimiz
               </Link>
-              <Link href="/about" style={{
-                color: '#374151',
-                textDecoration: 'none',
-                fontWeight: '500'
-              }}>
+              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Haqqımızda
               </Link>
-              <Link href="/contact" style={{
-                color: '#374151',
-                textDecoration: 'none',
-                fontWeight: '500'
-              }}>
+              <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Əlaqə
               </Link>
             </nav>
 
             {/* Mobile Menu Button */}
             <button
-              style={{
-                display: 'block',
-                padding: '0.5rem',
-                color: '#374151',
-                border: 'none',
-                background: 'none',
-                cursor: 'pointer'
-              }}
-              className="md:hidden"
+              className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
               onClick={toggleMenu}
               aria-label="Menyunu aç/bağla"
             >
@@ -106,134 +55,56 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div style={{
-          position: 'fixed',
-          top: '72px',
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 40,
-          backgroundColor: 'white',
-          overflowY: 'auto',
-          padding: '2rem 1rem'
-        }}>
-          <div style={{
-            maxWidth: '1200px',
-            margin: '0 auto'
-          }}>
-            <nav style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1rem'
-            }}>
-              <Link 
-                href="/" 
+        <div className="fixed inset-0 top-16 z-40 bg-white md:hidden">
+          <div className="max-w-6xl mx-auto px-4 py-8">
+            <nav className="flex flex-col space-y-4">
+              <Link
+                href="/"
                 onClick={closeMenu}
-                style={{
-                  fontSize: '1.25rem',
-                  fontWeight: '500',
-                  color: '#111827',
-                  textDecoration: 'none',
-                  padding: '0.75rem 1rem',
-                  borderRadius: '0.5rem',
-                  backgroundColor: '#f9fafb'
-                }}
+                className="text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
               >
                 Əsas Səhifə
               </Link>
-              <Link 
-                href="/services" 
+              <Link
+                href="/services"
                 onClick={closeMenu}
-                style={{
-                  fontSize: '1.25rem',
-                  fontWeight: '500',
-                  color: '#111827',
-                  textDecoration: 'none',
-                  padding: '0.75rem 1rem',
-                  borderRadius: '0.5rem',
-                  backgroundColor: '#f9fafb'
-                }}
+                className="text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
               >
                 Xidmətlərimiz
               </Link>
-              <Link 
-                href="/about" 
+              <Link
+                href="/about"
                 onClick={closeMenu}
-                style={{
-                  fontSize: '1.25rem',
-                  fontWeight: '500',
-                  color: '#111827',
-                  textDecoration: 'none',
-                  padding: '0.75rem 1rem',
-                  borderRadius: '0.5rem',
-                  backgroundColor: '#f9fafb'
-                }}
+                className="text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
               >
                 Haqqımızda
               </Link>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 onClick={closeMenu}
-                style={{
-                  fontSize: '1.25rem',
-                  fontWeight: '500',
-                  color: '#111827',
-                  textDecoration: 'none',
-                  padding: '0.75rem 1rem',
-                  borderRadius: '0.5rem',
-                  backgroundColor: '#f9fafb'
-                }}
+                className="text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
               >
                 Əlaqə
               </Link>
-              
+
               {/* Contact Info */}
-              <div style={{
-                marginTop: '2rem',
-                paddingTop: '1.5rem',
-                borderTop: '1px solid #e5e7eb'
-              }}>
-                <h3 style={{
-                  fontSize: '1.125rem',
-                  fontWeight: '600',
-                  color: '#111827',
-                  marginBottom: '1rem'
-                }}>
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
                   Əlaqə
                 </h3>
-                <div style={{ gap: '0.75rem', display: 'flex', flexDirection: 'column' }}>
-                  <a 
-                    href="tel:+994552370200" 
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.75rem',
-                      fontSize: '1.125rem',
-                      color: '#374151',
-                      textDecoration: 'none',
-                      padding: '0.5rem',
-                      borderRadius: '0.5rem',
-                      backgroundColor: '#f9fafb'
-                    }}
+                <div className="space-y-3">
+                  <a
+                    href="tel:+994552370200"
+                    className="flex items-center space-x-3 text-lg text-gray-700 hover:text-blue-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50"
                   >
                     <span>📞</span>
                     <span>+994 55 237 02 00</span>
                   </a>
-                  <a 
-                    href="https://wa.me/994552370200" 
+                  <a
+                    href="https://wa.me/994552370200"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.75rem',
-                      fontSize: '1.125rem',
-                      color: '#374151',
-                      textDecoration: 'none',
-                      padding: '0.5rem',
-                      borderRadius: '0.5rem',
-                      backgroundColor: '#f9fafb'
-                    }}
+                    className="flex items-center space-x-3 text-lg text-gray-700 hover:text-blue-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50"
                   >
                     <span>💬</span>
                     <span>WhatsApp</span>

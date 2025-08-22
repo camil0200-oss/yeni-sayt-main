@@ -301,7 +301,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <Header />
-        <div className="pt-header">
+        <div className="pt-20 md:pt-24">
           {children}
         </div>
 
