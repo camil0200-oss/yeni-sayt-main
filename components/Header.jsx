@@ -55,47 +55,47 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 top-16 z-[9998] bg-white md:hidden">
-          <div className="max-w-6xl mx-auto px-4 py-8">
-            <nav className="flex flex-col space-y-4">
+        <div className="fixed inset-0 top-20 z-[9998] bg-white md:hidden overflow-y-auto">
+          <div className="max-w-6xl mx-auto px-4 py-6">
+            <nav className="flex flex-col space-y-2">
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
+                className="text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
               >
                 Əsas Səhifə
               </Link>
               <Link
                 href="/services"
                 onClick={closeMenu}
-                className="text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
+                className="text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
               >
                 Xidmətlərimiz
               </Link>
               <Link
                 href="/about"
                 onClick={closeMenu}
-                className="text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
+                className="text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
               >
                 Haqqımızda
               </Link>
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
+                className="text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
               >
                 Əlaqə
               </Link>
 
               {/* Contact Info */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <h3 className="text-base font-semibold text-gray-900 mb-3">
                   Əlaqə
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <a
                     href="tel:+994552370200"
-                    className="flex items-center space-x-3 text-lg text-gray-700 hover:text-blue-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50"
+                    className="flex items-center space-x-3 text-base text-gray-700 hover:text-blue-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50"
                   >
                     <span>📞</span>
                     <span>+994 55 237 02 00</span>
@@ -104,7 +104,7 @@ export default function Header() {
                     href="https://wa.me/994552370200"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 text-lg text-gray-700 hover:text-blue-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50"
+                    className="flex items-center space-x-3 text-base text-gray-700 hover:text-blue-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50"
                   >
                     <span>💬</span>
                     <span>WhatsApp</span>

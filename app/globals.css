@@ -63,14 +63,6 @@ img, .prose img {
   @apply max-w-6xl mx-auto px-4;
 }
 
-/* ====== Sabit header və onun üçün üst boşluq ====== */
-.site-header {
-  @apply fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200;
-}
-.page-with-sticky-header {
-  @apply pt-20 md:pt-24; /* header hündürlüyünə uyğun offset */
-}
-
 /* ====== Kart şəkilləri: tam örtmə, kəsim, kölgə ====== */
 .card-img {
   @apply relative overflow-hidden rounded-xl shadow;
@@ -80,99 +72,16 @@ img, .prose img {
   @apply object-cover w-full h-full;
 }
 
-/* ====== Mobil menyu overlay (üst-üstə düşməsin) ====== */
-.mobile-menu-overlay {
-  @apply fixed inset-0 z-40 bg-white overflow-y-auto;
-}
-.mobile-menu-trigger {
-  @apply z-50;
-}
-
-/* ====== Mobil menyu animasiyaları ====== */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.mobile-menu-enter {
-  animation: slideDown 0.3s ease-out;
-}
-
 /* ====== Header responsive düzəlişlər ====== */
 @media (max-width: 768px) {
-  .site-header {
-    @apply bg-white/95;
-  }
-  
-  .page-with-sticky-header {
-    @apply pt-20;
-  }
-  
-  /* Mobil menyu üçün əlavə stillər */
-  #mobile-menu {
-    position: fixed !important;
-    top: 72px !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 40 !important;
-    background-color: white !important;
-    overflow-y: auto !important;
-  }
-}
-
-/* ====== Mobil menyu link hover effektləri ====== */
-.mobile-menu-link {
-  @apply transition-all duration-200 ease-in-out;
-}
-
-.mobile-menu-link:hover {
-  @apply transform translate-x-1;
-}
-
-/* ====== Mobil menyu üçün xüsusi stillər ====== */
-@media (max-width: 768px) {
-  /* Mobil menyu overlay */
-  .mobile-menu-overlay {
-    position: fixed !important;
-    top: 72px !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 40 !important;
-    background-color: white !important;
-    overflow-y: auto !important;
-  }
-  
-  /* Mobil menyu düyməsi */
-  .mobile-menu-button {
-    display: block !important;
-  }
-  
-  /* Desktop navigation gizlət */
-  .desktop-nav {
-    display: none !important;
+  /* Ensure proper header height calculation */
+  .pt-header {
+    padding-top: 80px;
   }
 }
 
 @media (min-width: 769px) {
-  /* Desktop-da mobil menyu gizlət */
-  .mobile-menu-overlay {
-    display: none !important;
-  }
-  
-  .mobile-menu-button {
-    display: none !important;
-  }
-  
-  /* Desktop navigation göstər */
-  .desktop-nav {
-    display: flex !important;
+  .pt-header {
+    padding-top: 96px;
   }
 }
