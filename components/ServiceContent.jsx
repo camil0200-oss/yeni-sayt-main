@@ -36,7 +36,7 @@ export const SERVICES = [
     title: 'Access Control Sistemləri',
     heroImg: '/images/service-access-control.webp',
     short: 'Giriş-çıxışı kart/biometrika ilə idarə edin, hesabatları mərkəzdən alın. Bakıda access control sistemləri.',
-    intro: `Ofis, zavod və ticarət obyektlərində giriş icazələri, zonalar və işçi davamiyyətini mərkəzləşdirilmiş platformada idarə edin. Bakıda access control sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət.`,
+    intro: `Müasir access control sistemləri ofislər, zavod və ticarət obyektlərində giriş icazələri, zonalar və işçi davamiyyətini mərkəzləşdirilmiş platformada idarə etməyə imkan verir. Bakıda access control sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. Access control sistemləri kart, barmaq izi və üz tanıma texnologiyalarını birləşdirərək maksimum təhlükəsizlik təmin edir. Zonalar, cədvəllər və qonaq profili modulları ilə müxtəlif şəxslərə fərqli icazələr verilə bilər. Turniket, şlaqbaum və lift ilə tam inteqrasiya sayəsində bina daxilində hər hərəkət nəzarət altında saxlanılır. Real-time monitorinq və hesabat sistemləri ilə işçi davamiyyəti, ziyarətçi qeydiyyatı və təhlükəsizlik hadisələri üzrə ətraflı məlumat əldə edilir. Mərkəzləşdirilmiş idarəetmə paneli vasitəsilə bütün giriş-çıxış nöqtələri tək yerden idarə olunur.`,
     features: [
       'Kart, barmaq izi və üz tanıma dəstəyi',
       'Zonalar, cədvəllər, qonaq profili',
@@ -65,7 +65,7 @@ export const SERVICES = [
     title: 'Turniket Sistemləri',
     heroImg: '/images/service-turnstile.webp',
     short: 'Ofis və obyektlər üçün təhlükəsiz giriş-buraxılış həlli. Bakıda turniket sistemləri.',
-    intro: `Tripod, qapı, tam boy turniketlər — kart/biometrika/QR ilə inteqrasiya. Axını idarə edin, sıxlığın qarşısını alın. Bakıda turniket sistemlərinin satışı və quraşdırılması üzrə keyfiyyətli xidmət.`,
+    intro: `Müasir turniket sistemləri ofislər, sənaye müəssisələri və ictimai binalar üçün ən etibarlı giriş idarəetmə həllidir. Tripod, qapı və tam boy turniketlər kart, biometrika və QR kod modulları ilə inteqrasiya olunaraq təhlükəsiz və sürətli keçid təmin edir. Bakıda turniket sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. Turniket sistemləri yalnız icazəli şəxslərin daxil olmasına imkan verir və axını idarə edərək sıxlığın qarşısını alır. İkitərəfli keçid nəzarəti və anti-passback funksiyası ilə təhlükəsizlik maksimum səviyyədə təmin edilir. Paslanmayan polad korpus istənilən hava şəraitində uzunmüddətli istifadəyə uyğundur. Saatda 1000-dən çox keçid dəstəyi ilə yüksək axınlı obyektlərdə effektiv işləyir.`,
     features: [
       'Kart/biometrika/QR modulları',
       'İkitərəfli keçid, anti-passback',
@@ -100,7 +100,7 @@ export const SERVICES = [
     title: 'Şlaqbaum Sistemləri',
     heroImg: '/images/service-barrier.webp',
     short: 'Dayanacaq və ərazi girişlərini avtomatlaşdırın. Bakıda şlaqbaum sistemləri.',
-    intro: `Pult, UHF tag, nömrə tanıma (ANPR) və access control ilə inteqrasiya olunan şlaqbaum həllləri. Bakıda şlaqbaum sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
+    intro: `Müasir şlaqbaum sistemləri dayanacaq və ərazi girişlərinin avtomatlaşdırılması üçün ən effektiv həlldir. Pult, UHF tag, nömrə tanıma (ANPR) və access control ilə inteqrasiya olunan şlaqbaum həllləri. Bakıda şlaqbaum sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət təqdim edirik. Şlaqbaum sistemləri UHF uzun məsafəli oxu texnologiyası ilə 10-15 metr məsafədən avtomatik keçidə imkan verir. ANPR (Avtomatik Nömrə Tanıma) inteqrasiyası sayəsində avtomobil nömrələri avtomatik tanınarəq 95%+ dəqiqliklə giriş və ya çıxışa icazə verilir. Təcili rejim və təhlükəsizlik sensorları ilə obyekt təhlükəsizliyi maksimum səviyyədə təmin edilir. Saatda 500-dən çox avtomobil keçidi dəstəyi ilə yüksək axınlı dayanacaqlarda effektiv işləyir.`,
     features: [
       'ANPR (Avtomatik Nömrə Tanıma) inteqrasiyası',
       'UHF uzun məsafəli oxu (10-15 metr)',
@@ -135,13 +135,34 @@ export const SERVICES = [
     title: 'Kartla Lift İdarəetmə',
     heroImg: '/images/service-lift.webp',
     short: 'Mərtəbə üzrə giriş icazələrini idarə edin. Bakıda lift kart sistemi.',
-    intro: `Sakin və ya əməkdaş yalnız icazə verilən mərtəbəyə çıxa bilir. Access control və domofonlarla birlikdə işləyir. Bakıda lift kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət.`,
-    features: ['Mərtəbə əsaslı icazə', 'Zaman cədvəlləri', 'Brend lift panelləri ilə uyğunluq'],
-    usecases: ['Yaşayış binaları', 'Otel və biznes mərkəzləri'],
+    intro: `Müasir kartla lift idarəetmə sistemləri yaşayış binaları və çoxmərtəbəli komplekslərdə mərtəbə üzrə giriş icazələrini idarə etməyə imkan verir. Sakin və ya əməkdaş yalnız icazə verilən mərtəbəyə çıxa bilər. Access control və domofonlarla birlikdə işləyir. Bakıda lift kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. Mərtəbə əsaslı icazə və zaman cədvəlləri ilə hər sakinə və ya işçiyə müxtəlif vaxtlarda fərqli mərtəbələrə çıxış icazəsi verilə bilər. RFID kart və biometrik daxələtmə sistemləri ilə təhlükəsizlik və rahatlıq bir arada təmin edilir. Qonaq və müvəqqəti icazələr vasitəsilə ziyarətçilərə məhdud vaxtlı çıxış icazəsi verilə bilər. Emergency rejim və təcili açma funksiyası ilə fövqəladə hallarda sistem avtomatik olaraq açılır.`,
+    features: [
+      'Mərtəbə əsaslı icazə və zaman cədvəlləri',
+      'Brend lift panelləri ilə uyğunluq',
+      'RFID kart və biometrik daxəletmə sistemləri',
+      'Qonaq və müvəqqəti icazələr',
+      'Real-time monitorinq və hesabatlar',
+      'Emergency rejim və təcili açma',
+      'Access control sistemi ilə tam inteqrasiya',
+      'Bakıda 24/7 texniki dəstək və quraşdırma',
+      'Zəmanətli lift kart sistemləri'
+    ],
+    usecases: [
+      'Yaşayış binaları və çoxmərtəbəli komplekslər',
+      'Otel və biznes mərkəzləri',
+      'Xəstəxana və tibbi müəssisələr',
+      'Təhsil müəssisələri və məktəblər',
+      'Ticaret mərkəzləri və offis binaları',
+      'Sənaye müəssisələri və anbarlar'
+    ],
     faq: [
       ['Bütün liftlərdə olur?', 'Əksər brendlərlə uyğundur, yerdə baxış tələb oluna bilər.'],
       ['Bakıda quraşdırma xidməti var?', 'Bəli, Bakı və ətraf ərazilərdə peşəkar quraşdırma.'],
-      ['Neçə mərtəbə dəstəklənir?', '100-dən çox mərtəbəli binalarda işləyir.']
+      ['Neçə mərtəbə dəstəklənir?', '100-dən çox mərtəbəli binalarda işləyir.'],
+      ['Kartların növü hansidır?', 'RFID, NFC və ya biometrik variant movcuddur.'],
+      ['Zəman məhdudiyyəti qoya bilərik?', 'Bəli, hər kart üçün ayrı saatlar və günlər təyin edilə bilər.'],
+      ['Qonaq kart sistemi var?', 'Bəli, müvəqqəti və məhdud vaxtlı qonaq kartları verilə bilər.'],
+      ['Zəmanət müddəti nə qədərdir?', 'Bütün lift kart sistemlərimizə 24 ay zəmanət veririk.']
     ],
     keywords: ['lift kart sistemi', 'mərtəbə icazəsi', 'Bakı lift sistemi', 'lift kart', 'mərtəbə idarəetmə', 'lift access control'],
   },
@@ -150,7 +171,7 @@ export const SERVICES = [
     title: 'Barmaq İzi ilə Giriş Sistemləri',
     heroImg: '/images/service-biometrics.webp',
     short: 'Yüksək dəqiqliklə üz/barmaq izi identifikasiyası. Bakıda biometrik sistemlər.',
-    intro: `Biometrika ilə yalnız icazəli şəxslər daxil olur. Sürətli keçid, dövri hesabat, kart/kodla kombinə edilə bilər. Bakıda biometrik giriş sistemlərinin satışı və quraşdırılması üzrə keyfiyyətli xidmət.`,
+    intro: `Müasir biometrik giriş sistemləri yüksək dəqiqliklə üz və barmaq izi identifikasiyası ilə yalnız icazəli şəxslərin daxil olmasına imkan verir. Biometrika ilə yalnız icazəli şəxslər daxil olur. Sürətli keçid, dövri hesabat, kart/kodla kombinə edilə bilər. Bakıda biometrik giriş sistemlərinin satışı və quraşdırılması üzrə keyfiyyətli xidmət təqdim edirik. Üz/barmaq izi, palma damarı identifikasiyası ilə 99.9% dəqiqlik əldə edilir. Anti-spoofing alqoritmlləri və təhlükəsizlik tədbirləri ilə saxta identifikasiyanın qarşısı alınır. Offline işləmə rejimi və backup sistemləri ilə şəbəkə bağlantısı olmadan da normal işləmə davam edir. Sürətli identifikasiya (1-2 saniyə) ilə axını lənğitmir. Access control sistemi ilə tam inteqrasiya sayəsində biometrik giriş digər təhlükəsizlik sistemləri ilə birgə işləyir.`,
     features: [
       'Üz/barmaq izi, palma damarı identifikasiyası',
       'Anti-spoofing alqoritmləri və təhlükəsizlik',
@@ -182,10 +203,10 @@ export const SERVICES = [
   },
   {
     slug: 'gate',
-    title: 'Elektron Qapılar',
+    title: 'Elektron Kilid Sistemləri',
     heroImg: '/images/service-gate.webp',
-    short: 'Ofis qapıları üçün uzaqdan pult ilə idarəetmə sistemləri, domofon üçün elektron kilidlər və avtomatik qapılar. Bakıda elektron qapı sistemləri.',
-    intro: `Ofis qapıları üçün uzaqdan pult ilə idarəetmə sistemləri, domofon üçün elektron kilidlər və avtomatik qapılar. Elektron qapı motorları, məsafədən idarəetmə modulları, təhlükəsizlik sensorları və smart telefon inteqrasiyası ilə tam həll. Bakıda elektron qapı sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət.`,
+    short: 'Ofis qapıları üçün uzaqdan pult ilə idarəetmə sistemləri, domofon üçün elektron kilidlər və avtomatik qapılar. Bakıda elektron kilid sistemləri.',
+    intro: `Müasir elektron kilid sistemləri ofis binaları, yaşayış kompleksləri və sənaye müəssisələri üçün ən etibarlı təhlükəsizlik həllidir. Elektron kilidlər uzaqdan pult ilə idarəetmə, domofon inteqrasiyası və avtomatik qapı motorları ilə tam avtomatlaşdırılmış giriş sistemi təmin edir. Bakıda elektron kilid sistemlərinin satışı, quraşdırılması və texniki dəstəyi üzrə ən keyfiyyətli xidmət təqdim edirik. Elektron kilid sistemləri ənənəvi açar kilidlərindən fərqli olaraq uzaqdan idarəetmə, vaxt planlaması və icazə idarəetməsi imkanları təqdim edir. Wi-Fi və 4G modul dəstəyi ilə smart telefon tətbiqindən tam idarəetmə mümkündür.`,
     features: [
       'Ofis qapıları üçün uzaqdan pult ilə idarəetmə',
       'Domofon üçün elektron kilid sistemləri',
@@ -224,7 +245,7 @@ export const SERVICES = [
     title: 'Kodlayıcı Sistemlər',
     heroImg: '/images/service-keypad.webp',
     short: 'Pin, kart və biometrika kombinasiyası. Bakıda kodlayıcı sistemlər.',
-    intro: `Sadə və sərfəli giriş üçün kodlayıcı klaviaturalar — müvəqqəti kodlar, vaxt məhdudiyyəti və loglama. Bakıda kodlayıcı sistemlərin satışı və quraşdırılması üzrə keyfiyyətli xidmət.`,
+    intro: `Sadə və sərfəli giriş üçün kodlayıcı klaviaturalar — müvəqqəti kodlar, vaxt məhdudiyyəti və loglama. Bakıda kodlayıcı sistemlərin satışı və quraşdırılması üzrə keyfiyyətli xidmət. Kodlayıcı qapı sistemləri ofis, anbar və yaşayış kompleksləri üçün ideal həlldir. Təhlükəsizlik və rahatlıq bir arada – istifadəçilər sadəcə PIN kod daxil edərək giriş edə bilərlər. Sistem vandalizm‌ə dayan‌ıqlı, hava şəraitin‌ə uyğunlaşmış və 24/7 işləyə bilər. İP65 qoruma sinfi ilə hər cür hava şəraitində etibarlı işləmə təmin edilir.`,
     features: [
       'Müvəqqəti kodlar və vaxt məhdudiyyəti',
       'Zaman cədvəli və loglama sistemi',
@@ -294,7 +315,7 @@ export const SERVICES = [
     title: 'Domofon Sistemləri',
     heroImg: '/images/service-intercom.webp',
     short: 'Video və audio domofon sistemləri ilə təhlükəsiz giriş. Bakıda domofon sistemləri.',
-    intro: `Müasir domofon sistemləri yaşayış kompleksləri, villalar və ofis binaları üçün ən yaxşı təhlükəsizlik həllidir. Video görüntü, yüksək keyfiyyətli audio əlaqə və smart telefon inteqrasiyası ilə girişləri tam idarə edin. Bakıda domofon sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik.`,
+    intro: `Müasir domofon sistemləri yaşayış kompleksləri, villalar və ofis binaları üçün ən yaxşı təhlükəsizlik həllidir. Video görüntü, yüksək keyfiyyətli audio əlaqə və smart telefon inteqrasiyası ilə girişləri tam idarə edin. Bakıda domofon sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. HD video görüntü və yüksək keyfiyyətli audio ilə ziyarətçiləri görmək və onlarla danişmaq mümkündür. Smart telefon tətbiqi ilə uzaqdan idarəetmə sayesinə evdə olmasanız belə qapını aça bilərsiniz. Çoxqapı və çoxmərtəbə dəstəyi ilə böyük binalar üçün uyğundur. Gecə görüşü və hərəkət sensorları ilə hər vaxt keyfiyyətli görüntü əldə edilir. PoE (Power over Ethernet) dəstəyi ilə quraşdırma asan və etibarlıdır.`,
     features: [
       'HD video görüntü və yüksək keyfiyyətli audio',
       'Smart telefon tətbiqi ilə uzaqdan idarəetmə',
@@ -400,7 +421,7 @@ export default function ServiceContent({ slug }) {
         <div className="flex flex-col sm:flex-row gap-3">
           <a href="https://wa.me/994552370200" className="bg-white text-blue-700 px-5 py-3 rounded-lg text-center font-semibold">WhatsApp (055)</a>
           <a href="https://wa.me/994708001000" className="bg-white/15 px-5 py-3 rounded-lg text-center font-semibold">WhatsApp (070)</a>
-          <a href="/#contact" className="bg-black/20 px-5 py-3 rounded-lg text-center">Əlaqə forması</a>
+          <a href="/contact" className="bg-black/20 px-5 py-3 rounded-lg text-center">Əlaqə forması</a>
         </div>
       </section>
     </article>
