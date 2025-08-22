@@ -4,6 +4,7 @@ const nextConfig = {
   experimental: {
     // Remove if not using Server Components
     serverComponentsExternalPackages: ['mongodb'],
+    optimizePackageImports: ['lucide-react'],
   },
   
   // Performance optimizations
@@ -43,10 +44,23 @@ const nextConfig = {
             test: /\.(css|scss)$/,
             chunks: 'all',
             enforce: true,
+            priority: 20,
+          },
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+            priority: 10,
           },
         },
       },
     };
+    
+    // CSS extraction optimization
+    if (!dev) {
+      config.optimization.minimize = true;
+      config.optimization.minimizer = config.optimization.minimizer || [];
+    }
     
     return config;
   },
