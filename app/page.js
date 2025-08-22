@@ -53,10 +53,10 @@ export default function HomePage() {
       {/* Header artıq layout-da göstərilir */}
       <main>
         {/* Hero Section */}
-        <section id="home" className="bg-gradient-to-br from-blue-50 to-gray-50 min-h-screen flex items-center">
+        <section id="home" className="hero-section bg-gradient-to-br from-blue-50 to-gray-50 min-h-screen flex items-center">
           <div className="container">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="space-y-8">
+            <div className="grid-2 grid items-center gap-12 lg:grid-cols-2">
+              <div className="hero-content space-y-8">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Bakıda <span className="text-blue-600">Smart Kilid</span> və <span className="text-blue-600">Access Control</span> Sistemləri
                 </h1>
@@ -70,7 +70,7 @@ export default function HomePage() {
                     href="https://wa.me/994552370200"
                     target="_blank"
                     rel="noopener"
-                    className="bg-green-700 text-white px-8 py-4 rounded-lg hover:bg-green-800 transition-colors flex items-center justify-center gap-2 font-semibold"
+                    className="btn-primary bg-green-700 text-white px-8 py-4 rounded-lg hover:bg-green-800 transition-colors flex items-center justify-center gap-2 font-semibold"
                   >
                     <Phone className="w-5 h-5" />
                     <span>WhatsApp: +994 55 237 02 00</span>
@@ -78,7 +78,7 @@ export default function HomePage() {
 
                   <Link
                     href="/services"
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center gap-2"
+                    className="btn-secondary border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center gap-2"
                   >
                     <span>Bütün Xidmətlər</span>
                     <ChevronRight className="w-5 h-5" />
@@ -92,7 +92,7 @@ export default function HomePage() {
                   alt="Bakıda Smart Kilid və Access Control Sistemləri - Təhlükəsizlik və Avtomatlaşdırma"
                   width={800}
                   height={600}
-                  className="w-full h-auto rounded-2xl shadow-xl"
+                  className="hero-image w-full h-auto rounded-2xl shadow-xl"
                   loading="eager"
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"

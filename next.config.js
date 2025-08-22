@@ -5,6 +5,22 @@ const nextConfig = {
     // Remove if not using Server Components
     serverComponentsExternalPackages: ['mongodb'],
   },
+  
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  
+  // Image optimization
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
+  },
+  
+  // CSS optimization
+  optimizeFonts: true,
+  
   webpack(config, { dev }) {
     if (dev) {
       // Reduce CPU/memory from file watching
@@ -15,8 +31,26 @@ const nextConfig = {
       };
     }
     
+    // CSS optimization
+    config.optimization = {
+      ...config.optimization,
+      splitChunks: {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...config.optimization.splitChunks.cacheGroups,
+          styles: {
+            name: 'styles',
+            test: /\.(css|scss)$/,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      },
+    };
+    
     return config;
   },
+  
   onDemandEntries: {
     maxInactiveAge: 10000,
     pagesBufferLength: 2,
@@ -34,10 +68,26 @@ const nextConfig = {
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
 
+          // **Performance**
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+
           // **CORS** – lazım olsa daralda bilərik
           { key: 'Access-Control-Allow-Origin', value: process.env.CORS_ORIGINS || '*' },
           { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
           { key: 'Access-Control-Allow-Headers', value: '*' },
+        ],
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];

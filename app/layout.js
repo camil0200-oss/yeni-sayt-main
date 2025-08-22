@@ -1,16 +1,9 @@
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
+import Script from 'next/script'
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true,
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: false,
-  variable: '--font-inter'
-})
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   metadataBase: new URL('https://smartkilid.az'),
@@ -40,127 +33,130 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  // JSON-LD obyektləri (səhvsiz olması üçün JSON.stringify ilə çıxarılacaq)
-  const ldLocalBusiness = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Smart Kilid Sistemləri',
-    url: 'https://smartkilid.az',
-    description: 'Təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması - domofon, smart kilid, access control',
-    email: 'smartkilid.az@gmail.com',
-    telephone: ['+994552370200', '+994708001000'],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Bakı',
-      addressCountry: 'AZ'
-    },
-    openingHours: 'Mo-Su 09:00-21:00',
-    areaServed: 'AZ',
-    logo: 'https://smartkilid.az/logo.png',
-    image: 'https://smartkilid.az/og-image.jpg',
-    // varsa sosial linklər:
-    // sameAs: ['https://facebook.com/..','https://instagram.com/..']
-  }
-
-  const ldWebsite = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    url: 'https://smartkilid.az',
-    name: 'Smart Kilid Sistemləri',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://smartkilid.az/?q={search_term_string}',
-      'query-input': 'required name=search_term_string'
-    }
-  }
-
   return (
     <html lang="az">
       <head>
-        {/* Preconnect to external domains */}
+        {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google.com" />
-        <link rel="preconnect" href="https://wa.me" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         
-        {/* DNS prefetch for critical resources */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="//www.google.com" />
-        <link rel="dns-prefetch" href="//wa.me" />
-        
-        {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* Critical CSS for LCP optimization */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            /* Critical CSS inline - Above the fold styles */
-            * { margin: 0; padding: 0; box-sizing: border-box; }
+            /* Critical CSS for above-the-fold content */
             html { scroll-behavior: smooth; }
             body { 
-              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
+              font-family: 'Inter', system-ui, -apple-system, sans-serif;
+              margin: 0;
+              padding: 0;
+            }
+            .container {
+              max-width: 72rem;
+              margin: 0 auto;
+              padding: 0 1rem;
+            }
+            /* Header critical styles */
+            header {
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: 50;
+              background-color: white;
+              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+              border-bottom: 1px solid #e5e7eb;
+            }
+            /* Hero section critical styles */
+            .hero-section {
+              background: linear-gradient(135deg, #eff6ff 0%, #f9fafb 100%);
+              min-height: 100vh;
+              display: flex;
+              align-items: center;
+            }
+            .hero-content h1 {
+              font-size: 2.25rem;
+              font-weight: bold;
+              line-height: 1.2;
+              color: #111827;
+            }
+            @media (min-width: 1024px) {
+              .hero-content h1 {
+                font-size: 3.75rem;
+              }
+            }
+            .hero-content p {
+              font-size: 1.25rem;
+              color: #4b5563;
               line-height: 1.6;
-              color: #374151;
             }
-            .font-inter { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-            img { height: auto; max-width: 100%; }
-            .container { 
-              margin: 0 auto; 
-              padding: 0 1rem; 
-              max-width: 1200px;
-            }
-            @media (min-width: 640px) { .container { padding: 0 2rem; } }
-            @media (min-width: 1024px) { .container { padding: 0 2rem; } }
-            @media (min-width: 1280px) { .container { max-width: 1400px; } }
-            
-            /* Critical layout styles */
-            .fixed { position: fixed; }
-            .top-0 { top: 0; }
-            .w-full { width: 100%; }
-            .z-50 { z-index: 50; }
-            .flex { display: flex; }
-            .items-center { align-items: center; }
-            .justify-between { justify-content: space-between; }
-            .text-2xl { font-size: 1.5rem; }
-            .font-bold { font-weight: 700; }
-            .text-blue-600 { color: #2563eb; }
-            .bg-white { background-color: #ffffff; }
-            .bg-transparent { background-color: transparent; }
-            .transition-all { transition: all 0.3s; }
-            .duration-300 { transition-duration: 300ms; }
-            
             /* Critical button styles */
-            .bg-green-700 { background-color: #15803d; }
-            .text-white { color: #ffffff; }
-            .px-8 { padding-left: 2rem; padding-right: 2rem; }
-            .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-            .rounded-lg { border-radius: 0.5rem; }
-            .font-semibold { font-weight: 600; }
-            
-            /* Critical responsive styles */
-            @media (max-width: 768px) {
-              .md\\:hidden { display: none; }
+            .btn-primary {
+              background-color: #059669;
+              color: white;
+              padding: 1rem 2rem;
+              border-radius: 0.5rem;
+              font-weight: 600;
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              gap: 0.5rem;
+              transition: background-color 0.2s;
+            }
+            .btn-primary:hover {
+              background-color: #047857;
+            }
+            .btn-secondary {
+              border: 2px solid #2563eb;
+              color: #2563eb;
+              padding: 1rem 2rem;
+              border-radius: 0.5rem;
+              font-weight: 600;
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              gap: 0.5rem;
+              transition: all 0.2s;
+            }
+            .btn-secondary:hover {
+              background-color: #2563eb;
+              color: white;
+            }
+            /* Critical image styles */
+            .hero-image {
+              width: 100%;
+              height: auto;
+              border-radius: 1rem;
+              box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            }
+            /* Critical grid styles */
+            .grid-2 {
+              display: grid;
+              gap: 3rem;
+            }
+            @media (min-width: 1024px) {
+              .grid-2 {
+                grid-template-columns: 1fr 1fr;
+              }
+            }
+            /* Critical spacing */
+            .pt-header {
+              padding-top: 5rem;
             }
             @media (min-width: 768px) {
-              .md\\:flex { display: flex; }
+              .pt-header {
+                padding-top: 6rem;
+              }
             }
           `
         }} />
       </head>
-      <body className={`${inter.className} font-inter`}>
-        {/* JSON-LD blokları — HTML entity problemi olmaması üçün Script + dangerouslySetInnerHTML */}
-        <Script
-          id="ld-localbusiness"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldLocalBusiness) }}
-        />
-        <Script
-          id="ld-website"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldWebsite) }}
-        />
-        
+      <body className={inter.className}>
+        <Header />
+        <div className="pt-header">
+          {children}
+        </div>
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
@@ -174,10 +170,83 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-XXXXXXXXXX');
           `}
         </Script>
-        
-        <Header />
-        <main className="page-with-sticky-header">{children}</main>
-        
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Smart Kilid Sistemləri",
+              "description": "Bakıda smart kilid, access control, turniket sistemi və elektron kilid sistemlərinin satışı və quraşdırılması",
+              "url": "https://smartkilid.az",
+              "telephone": ["+994552370200", "+994708001000"],
+              "email": "smartkilid.az@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bakı",
+                "addressCountry": "AZ"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.394734,
+                "longitude": 49.73893
+              },
+              "openingHours": "Mo-Su 09:00-21:00",
+              "priceRange": "$$",
+              "areaServed": {
+                "@type": "City",
+                "name": "Bakı",
+                "addressCountry": "AZ"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Təhlükəsizlik Sistemləri",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Smart Kilid Sistemləri"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Access Control Sistemləri"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Turniket Sistemləri"
+                    }
+                  }
+                ]
+              }
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Smart Kilid Sistemləri",
+              "url": "https://smartkilid.az",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://smartkilid.az/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </body>
     </html>
   )
