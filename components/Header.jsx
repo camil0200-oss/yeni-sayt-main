@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-200">
+      <header className="fixed top-0 left-0 right-0 z-[9999] bg-white shadow-lg border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
@@ -43,7 +43,7 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+              className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors relative z-[10000]"
               onClick={toggleMenu}
               aria-label="Menyunu aç/bağla"
             >
@@ -55,7 +55,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 top-16 z-40 bg-white md:hidden">
+        <div className="fixed inset-0 top-16 z-[9998] bg-white md:hidden">
           <div className="max-w-6xl mx-auto px-4 py-8">
             <nav className="flex flex-col space-y-4">
               <Link

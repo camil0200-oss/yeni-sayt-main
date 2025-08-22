@@ -51,7 +51,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header artıq layout-da göstərilir */}
-      <main>
+      <main className="relative z-1">
         {/* Hero Section */}
         <section id="home" className="hero-section bg-gradient-to-br from-blue-50 to-gray-50 min-h-screen flex items-center">
           <div className="container">

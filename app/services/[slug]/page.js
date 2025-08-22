@@ -66,7 +66,7 @@ export default function ServicePage({ params }) {
   }
 
   return (
-    <main className="container mx-auto max-w-6xl px-4 py-10">
+    <main className="container mx-auto max-w-6xl px-4 py-10 relative z-1">
       {/* Breadcrumb */}
       <nav className="text-gray-500 text-base md:text-lg mb-6" aria-label="Breadcrumb">
         <ol className="flex items-center space-x-2">

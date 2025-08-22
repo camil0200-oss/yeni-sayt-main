@@ -72,9 +72,9 @@ export default function RootLayout({ children }) {
               top: 0;
               left: 0;
               right: 0;
-              z-index: 50;
+              z-index: 9999;
               background-color: white;
-              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
               border-bottom: 1px solid #e5e7eb;
             }
             header > div {
@@ -87,6 +87,24 @@ export default function RootLayout({ children }) {
               align-items: center;
               justify-content: space-between;
               padding: 1rem 0;
+            }
+            
+            /* Ensure content stays below header */
+            main {
+              position: relative;
+              z-index: 1;
+            }
+            
+            /* Mobile menu button visibility */
+            .mobile-menu-btn {
+              position: relative;
+              z-index: 10000;
+              display: block;
+            }
+            @media (min-width: 768px) {
+              .mobile-menu-btn {
+                display: none;
+              }
             }
             
             /* Hero section critical styles */
