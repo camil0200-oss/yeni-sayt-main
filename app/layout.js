@@ -66,69 +66,6 @@ export default function RootLayout({ children }) {
             @media (min-width: 1024px) { .container { padding: 0 2rem; } }
             @media (min-width: 1280px) { .container { max-width: 1400px; } }
             
-            /* Header critical styles */
-            header {
-              position: fixed;
-              top: 0;
-              left: 0;
-              right: 0;
-              z-index: 9999;
-              background-color: white;
-              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-              border-bottom: 1px solid #e5e7eb;
-            }
-            header > div {
-              max-width: 1200px;
-              margin: 0 auto;
-              padding: 0 1rem;
-            }
-            header > div > div {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              padding: 1rem 0;
-            }
-            
-            /* Desktop navigation */
-            @media (min-width: 768px) {
-              header nav {
-                display: flex !important;
-                align-items: center;
-                gap: 1.5rem;
-              }
-              header button.md\\:hidden {
-                display: none !important;
-              }
-            }
-            
-            /* Mobile navigation */
-            @media (max-width: 767px) {
-              header nav.hidden.md\\:flex {
-                display: none !important;
-              }
-              header button.md\\:hidden {
-                display: block !important;
-              }
-            }
-            
-            /* Ensure content stays below header */
-            main {
-              position: relative;
-              z-index: 1;
-            }
-            
-            /* Mobile menu button visibility */
-            .mobile-menu-btn {
-              position: relative;
-              z-index: 10000;
-              display: block;
-            }
-            @media (min-width: 768px) {
-              .mobile-menu-btn {
-                display: none;
-              }
-            }
-            
             /* Hero section critical styles */
             .hero-section {
               background: linear-gradient(135deg, #eff6ff 0%, #f9fafb 100%);
