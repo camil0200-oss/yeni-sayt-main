@@ -190,14 +190,15 @@ export default function RootLayout({ children }) {
             .p-8 { padding: 2rem; }
             
             /* Critical responsive utilities */
-            @media (max-width: 768px) {
-              .md\\:hidden { display: none; }
-              .md\\:flex { display: flex; }
-              .md\\:grid-cols-2 { grid-template-columns: 1fr 1fr; }
+            /* Responsive utilities: ensure md: prefixed classes only apply at >=768px */
+            @media (max-width: 767px) {
+              .md\\:hidden { display: none !important; }
+              .md\\:flex { display: none !important; }
+              .md\\:grid-cols-2 { grid-template-columns: 1fr !important; }
             }
             @media (min-width: 768px) {
-              .md\\:flex { display: flex; }
-              .md\\:grid-cols-2 { grid-template-columns: 1fr 1fr; }
+              .md\\:flex { display: flex !important; }
+              .md\\:grid-cols-2 { grid-template-columns: 1fr 1fr !important; }
             }
             @media (min-width: 1024px) {
               .lg\\:grid-cols-2 { grid-template-columns: 1fr 1fr; }
