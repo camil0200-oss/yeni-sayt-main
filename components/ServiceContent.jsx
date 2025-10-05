@@ -30,6 +30,7 @@ export const SERVICES = [
       ['Zəmanət müddəti nə qədərdir?', 'Bütün smart kilid sistemlərimizə 12-24 ay zəmanət veririk.']
     ],
     keywords: ['smart kilid', 'elektron kilid', 'ağıllı qapı', 'Bakı smart kilid', 'smart kilid satışı', 'smart kilid quraşdırma', 'elektron kilid Bakı', 'ağıllı qapı sistemi'],
+    synonyms: ['smart kilid', 'elektron kilid', 'ağıllı qapı']
   },
   {
     slug: 'access-control',
@@ -58,11 +59,13 @@ export const SERVICES = [
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə tam quraşdırma xidməti.'],
       ['Neçə istifadəçi dəstəklənir?', 'Sistemdə 1000-dən çox istifadəçi qeydiyyatı mümkündür.']
     ],
-    keywords: ['access control', 'davamiyyət', 'turniket inteqrasiya', 'Bakı access control', 'giriş sistemi', 'davamiyyət sistemi', 'kart sistemi Bakı'],
+    keywords: ['access control', 'davamiyyət', 'turniket inteqrasiya', 'Bakı access control', 'giriş sistemi'],
+    synonyms: ['access control', 'giriş sistemi', 'kart sistemi']
   },
   {
     slug: 'turnstile',
     title: 'Turniket Sistemləri',
+    synonyms: ['turniket', 'turnstile', 'giriş turniketi'],
     heroImg: '/images/service-turnstile.webp',
     short: 'Ofis və obyektlər üçün təhlükəsiz giriş-buraxılış həlli. Bakıda turniket sistemləri.',
     intro: `Müasir turniket sistemləri ofislər, sənaye müəssisələri və ictimai binalar üçün ən etibarlı giriş idarəetmə həllidir. Tripod, qapı və tam boy turniketlər kart, biometrika və QR kod modulları ilə inteqrasiya olunaraq təhlükəsiz və sürətli keçid təmin edir. Bakıda turniket sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. Turniket sistemləri yalnız icazəli şəxslərin daxil olmasına imkan verir və axını idarə edərək sıxlığın qarşısını alır. İkitərəfli keçid nəzarəti və anti-passback funksiyası ilə təhlükəsizlik maksimum səviyyədə təmin edilir. Paslanmayan polad korpus istənilən hava şəraitində uzunmüddətli istifadəyə uyğundur. Saatda 1000-dən çox keçid dəstəyi ilə yüksək axınlı obyektlərdə effektiv işləyir.`,
@@ -98,6 +101,7 @@ export const SERVICES = [
   {
     slug: 'barrier',
     title: 'Şlaqbaum Sistemləri',
+    synonyms: ['şlaqbaum', 'shlagbaum', 'barrier'],
     heroImg: '/images/service-barrier.webp',
     short: 'Dayanacaq və ərazi girişlərini avtomatlaşdırın. Bakıda şlaqbaum sistemləri.',
     intro: `Müasir şlaqbaum sistemləri dayanacaq və ərazi girişlərinin avtomatlaşdırılması üçün ən effektiv həlldir. Pult, UHF tag, nömrə tanıma (ANPR) və access control ilə inteqrasiya olunan şlaqbaum həllləri. Bakıda şlaqbaum sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət təqdim edirik. Şlaqbaum sistemləri UHF uzun məsafəli oxu texnologiyası ilə 10-15 metr məsafədən avtomatik keçidə imkan verir. ANPR (Avtomatik Nömrə Tanıma) inteqrasiyası sayəsində avtomobil nömrələri avtomatik tanınarəq 95%+ dəqiqliklə giriş və ya çıxışa icazə verilir. Təcili rejim və təhlükəsizlik sensorları ilə obyekt təhlükəsizliyi maksimum səviyyədə təmin edilir. Saatda 500-dən çox avtomobil keçidi dəstəyi ilə yüksək axınlı dayanacaqlarda effektiv işləyir.`,
@@ -133,6 +137,7 @@ export const SERVICES = [
   {
     slug: 'lift',
     title: 'Kartla Lift İdarəetmə',
+    synonyms: ['kartla lift', 'lift kart sistemi', 'lift access control'],
     heroImg: '/images/service-lift.webp',
     short: 'Mərtəbə üzrə giriş icazələrini idarə edin. Bakıda lift kart sistemi.',
     intro: `Müasir kartla lift idarəetmə sistemləri yaşayış binaları və çoxmərtəbəli komplekslərdə mərtəbə üzrə giriş icazələrini idarə etməyə imkan verir. Sakin və ya əməkdaş yalnız icazə verilən mərtəbəyə çıxa bilər. Access control və domofonlarla birlikdə işləyir. Bakıda lift kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. Mərtəbə əsaslı icazə və zaman cədvəlləri ilə hər sakinə və ya işçiyə müxtəlif vaxtlarda fərqli mərtəbələrə çıxış icazəsi verilə bilər. RFID kart və biometrik daxələtmə sistemləri ilə təhlükəsizlik və rahatlıq bir arada təmin edilir. Qonaq və müvəqqəti icazələr vasitəsilə ziyarətçilərə məhdud vaxtlı çıxış icazəsi verilə bilər. Emergency rejim və təcili açma funksiyası ilə fövqəladə hallarda sistem avtomatik olaraq açılır.`,
@@ -169,6 +174,7 @@ export const SERVICES = [
   {
     slug: 'biometrics',
     title: 'Barmaq İzi ilə Giriş Sistemləri',
+    synonyms: ['biometrik', 'barmaq izi', 'üz tanıma'],
     heroImg: '/images/service-biometrics.webp',
     short: 'Yüksək dəqiqliklə üz/barmaq izi identifikasiyası. Bakıda biometrik sistemlər.',
     intro: `Müasir biometrik giriş sistemləri yüksək dəqiqliklə üz və barmaq izi identifikasiyası ilə yalnız icazəli şəxslərin daxil olmasına imkan verir. Biometrika ilə yalnız icazəli şəxslər daxil olur. Sürətli keçid, dövri hesabat, kart/kodla kombinə edilə bilər. Bakıda biometrik giriş sistemlərinin satışı və quraşdırılması üzrə keyfiyyətli xidmət təqdim edirik. Üz/barmaq izi, palma damarı identifikasiyası ilə 99.9% dəqiqlik əldə edilir. Anti-spoofing alqoritmlləri və təhlükəsizlik tədbirləri ilə saxta identifikasiyanın qarşısı alınır. Offline işləmə rejimi və backup sistemləri ilə şəbəkə bağlantısı olmadan da normal işləmə davam edir. Sürətli identifikasiya (1-2 saniyə) ilə axını lənğitmir. Access control sistemi ilə tam inteqrasiya sayəsində biometrik giriş digər təhlükəsizlik sistemləri ilə birgə işləyir.`,
@@ -204,6 +210,7 @@ export const SERVICES = [
   {
     slug: 'gate',
     title: 'Elektron Kilid Sistemləri',
+    synonyms: ['elektron qapılar', 'elektron kilid', 'avtomatik qapı'],
     heroImg: '/images/service-gate.webp',
     short: 'Ofis qapıları üçün uzaqdan pult ilə idarəetmə sistemləri, domofon üçün elektron kilidlər və avtomatik qapılar. Bakıda elektron kilid sistemləri.',
     intro: `Müasir elektron kilid sistemləri ofis binaları, yaşayış kompleksləri və sənaye müəssisələri üçün ən etibarlı təhlükəsizlik həllidir. Elektron kilidlər uzaqdan pult ilə idarəetmə, domofon inteqrasiyası və avtomatik qapı motorları ilə tam avtomatlaşdırılmış giriş sistemi təmin edir. Bakıda elektron kilid sistemlərinin satışı, quraşdırılması və texniki dəstəyi üzrə ən keyfiyyətli xidmət təqdim edirik. Elektron kilid sistemləri ənənəvi açar kilidlərindən fərqli olaraq uzaqdan idarəetmə, vaxt planlaması və icazə idarəetməsi imkanları təqdim edir. Wi-Fi və 4G modul dəstəyi ilə smart telefon tətbiqindən tam idarəetmə mümkündür.`,
@@ -243,6 +250,7 @@ export const SERVICES = [
   {
     slug: 'keypad',
     title: 'Kodlayıcı Sistemlər',
+    synonyms: ['kodlayıcı', 'klaviatura giriş', 'PIN sistemi'],
     heroImg: '/images/service-keypad.webp',
     short: 'Pin, kart və biometrika kombinasiyası. Bakıda kodlayıcı sistemlər.',
     intro: `Sadə və sərfəli giriş üçün kodlayıcı klaviaturalar — müvəqqəti kodlar, vaxt məhdudiyyəti və loglama. Bakıda kodlayıcı sistemlərin satışı və quraşdırılması üzrə keyfiyyətli xidmət. Kodlayıcı qapı sistemləri ofis, anbar və yaşayış kompleksləri üçün ideal həlldir. Təhlükəsizlik və rahatlıq bir arada – istifadəçilər sadəcə PIN kod daxil edərək giriş edə bilərlər. Sistem vandalizm‌ə dayan‌ıqlı, hava şəraitin‌ə uyğunlaşmış və 24/7 işləyə bilər. İP65 qoruma sinfi ilə hər cür hava şəraitində etibarlı işləmə təmin edilir.`,
@@ -278,6 +286,7 @@ export const SERVICES = [
   {
     slug: 'hotel-card',
     title: 'Otel Kart Sistemi',
+    synonyms: ['otel kart', 'hotel card', 'otel giriş sistemi'],
     heroImg: '/images/service-hotel-lock.webp',
     short: 'Otel otaqları üçün ağıllı kartla idarəetmə sistemi. Bakıda otel kart sistemi.',
     intro: `Otel sənayesi üçün xüsusi hazırlanmış ağıllı kart sistemi. Qonaqların otaq girişi, lift istifadəsi, restoran və spa xidmətlərinə çıxışı təhlükəsiz və rahat şəkildə idarə edilir. Bakıda otel kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik.`,
@@ -313,6 +322,7 @@ export const SERVICES = [
   {
     slug: 'intercom',
     title: 'Domofon Sistemləri',
+    synonyms: ['domofon', 'video domofon', 'audio domofon'],
     heroImg: '/images/service-intercom.webp',
     short: 'Video və audio domofon sistemləri ilə təhlükəsiz giriş. Bakıda domofon sistemləri.',
     intro: `Müasir domofon sistemləri yaşayış kompleksləri, villalar və ofis binaları üçün ən yaxşı təhlükəsizlik həllidir. Video görüntü, yüksək keyfiyyətli audio əlaqə və smart telefon inteqrasiyası ilə girişləri tam idarə edin. Bakıda domofon sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. HD video görüntü və yüksək keyfiyyətli audio ilə ziyarətçiləri görmək və onlarla danişmaq mümkündür. Smart telefon tətbiqi ilə uzaqdan idarəetmə sayesinə evdə olmasanız belə qapını aça bilərsiniz. Çoxqapı və çoxmərtəbə dəstəyi ilə böyük binalar üçün uyğundur. Gecə görüşü və hərəkət sensorları ilə hər vaxt keyfiyyətli görüntü əldə edilir. PoE (Power over Ethernet) dəstəyi ilə quraşdırma asan və etibarlıdır.`,
@@ -354,15 +364,22 @@ export default function ServiceContent({ slug }) {
   const svc = getService(slug)
   if (!svc) return <p className="text-red-600">Xidmət tapılmadı.</p>
 
+  // Ensure H1 reads as "[Xidmət adı] Sistemləri" unless it already contains the word 'Sistem'
+  const h1Title = /Sistem/i.test(svc.title) ? svc.title : `${svc.title} Sistemləri`
+
+  // Exceptions: do not create full H2 breakdown for these slugs; only add short SEO paragraph
+  const shortOnlySlugs = ['smart-lock', 'gate']
+  const isShortOnly = shortOnlySlugs.includes(svc.slug)
+
   return (
     <article className="space-y-10">
       {/* Başlıq */}
       <header className="space-y-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{svc.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{h1Title}</h1>
         <p className="text-lg text-gray-600 max-w-3xl">{svc.short}</p>
       </header>
 
-      {/* Hero şəkil — məhdud en + səliqəli */}
+      {/* Hero şəkil */}
       <div className="mx-auto max-w-4xl">
         <div className="relative w-full overflow-hidden rounded-2xl shadow-lg">
           <Image
@@ -377,32 +394,59 @@ export default function ServiceContent({ slug }) {
         </div>
       </div>
 
-      {/* Intro + Features */}
+      {/* Main content: either full H2 sections or short SEO paragraph for exceptions */}
+      {isShortOnly ? (
+        <section className="prose">
+          <h2 className="text-2xl font-semibold">Qısa SEO məlumat</h2>
+          <p className="text-gray-700 leading-relaxed">
+            {svc.title} üzrə ekspert xidmətləri: <strong>satışı</strong>, <strong>quraşdırılması</strong>, <strong>təkmilləşdirmə</strong> və <strong>servis/təmiri</strong>. Biz layihəyə uyğun məhsul seçimi və peşəkar quraşdırma təqdim edirik. Əlavə məlumat üçün <a href="/contact" className="text-blue-600 hover:underline">əlaqə</a> saxlayın.
+          </p>
+        </section>
+      ) : (
+        <>
       <section className="grid md:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-2xl font-semibold mb-3">Xidmət haqqında</h2>
-          <p className="text-gray-700 leading-relaxed">{svc.intro}</p>
-          {svc.usecases?.length ? (
-            <>
-              <h3 className="text-xl font-semibold mt-6 mb-2">İstifadə ssenariləri</h3>
-              <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                {svc.usecases.map((u, i) => <li key={i}>{u}</li>)}
-              </ul>
-            </>
-          ) : null}
+              <h2 className="text-2xl font-semibold mb-3">{svc.title} satışı</h2>
+              <p className="text-gray-700 leading-relaxed">
+                {svc.title} satışı üzrə müxtəlif modellər təklif edirik: giriş səviyyəsindən tutmuş daha zəngin funksiyalı enterprise həllərə qədər. Məhsullarımızda zəmanət, ehtiyat hissələri və texniki dəstək mövcuddur. Satış prosesi zamanı müştərinin ehtiyacına uyğun konfiqurasiya və əlavə modullar tövsiyə olunur.
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-6 mb-3">{svc.title} quraşdırılması</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Quraşdırma addımları layihə qiymətləndirilməsi, avadanlıq seçimi, montaj və konfiqurasiya mərhələlərindən ibarətdir. Peşəkar komandamız quraşdırma zamanı təhlükəsizlik və uyğunluq standartlarına riayət edir. Quraşdırma müddəti sistemin kompleksliyindən asılı olaraq dəyişir.
+              </p>
         </div>
+
         <div>
-          <h2 className="text-2xl font-semibold mb-3">Xüsusiyyətlər</h2>
+              <h2 className="text-2xl font-semibold mb-3">{svc.title} servisi və təmiri</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Texniki xidmət və təmir xidmətlərimizə periodik baxış, proqram təminatı yeniləmələri və qəza vəziyyətində təcili müdaxilə daxildir. Bütün servis işləri keyfiyyət zəmanəti ilə həyata keçirilir və ehtiyat hissələri orijinal və ya yüksək keyfiyyətli alternativlərlə təmin olunur.
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-6 mb-3">{svc.title} qiymətləri</h2>
+              <p className="text-gray-700 leading-relaxed">
+                {svc.title} qiymətləri model, funksionallıq və quraşdırma tələblərinə görə dəyişir. Ən doğru qiymət təklifini əldə etmək üçün layihə məlumatlarını göndərin və ya bizimlə <a href="/contact" className="text-blue-600 hover:underline">əlaqə</a> saxlayın. Qiymət aralığı və təklif forması müştəri tələblərinə uyğun hazırlanır.
+              </p>
+            </div>
+          </section>
+
+          {/* Istifadə ssenariləri və xüsusiyyətlər */}
+          <section className="mt-8">
+            <h3 className="text-xl font-semibold mb-3">İstifadə ssenariləri</h3>
+            <p className="text-gray-700">{svc.usecases?.slice(0,4).join(', ')} və digər senarilər üçün uyğundur.</p>
+
+            <h3 className="text-xl font-semibold mt-6 mb-3">Xüsusiyyətlər</h3>
           <ul className="list-disc pl-5 space-y-1 text-gray-700">
             {svc.features.map((f, i) => <li key={i}>{f}</li>)}
           </ul>
-        </div>
       </section>
+        </>
+      )}
 
       {/* FAQ */}
       {svc.faq?.length ? (
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Sual–Cavab</h2>
+          <h2 className="text-2xl font-semibold mb-4">Tez-tez verilən suallar</h2>
           <div className="space-y-2">
             {svc.faq.map(([q, a], i) => (
               <details key={i} className="group rounded-lg border p-4">
@@ -414,16 +458,34 @@ export default function ServiceContent({ slug }) {
         </section>
       ) : null}
 
-      {/* Güclü CTA */}
+      {/* CTA */}
       <section className="rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 p-6 md:p-8 text-white">
         <h2 className="text-2xl font-semibold mb-2">Layihəniz üçün məsləhət alaq</h2>
         <p className="opacity-90 mb-4">Ödənişsiz konsultasiya və yerində baxış mümkündür. WhatsApp və ya email ilə zəng edin.</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a href="https://wa.me/994552370200" className="bg-white text-blue-700 px-5 py-3 rounded-lg text-center font-semibold">WhatsApp (055)</a>
           <a href="https://wa.me/994708001000" className="bg-white/15 px-5 py-3 rounded-lg text-center font-semibold">WhatsApp (070)</a>
-          <a href="/contact" className="bg-black/20 px-5 py-3 rounded-lg text-center">Əlaqə forması</a>
+          <a href="/contact#contact-form" className="bg-black/20 px-5 py-3 rounded-lg text-center">Əlaqə forması</a>
         </div>
       </section>
+
+      {/* Related services */}
+      <section className="mt-12">
+        <h2 className="text-2xl font-semibold mb-4">Əlaqəli Xidmətlər</h2>
+        <ul className="list-disc pl-5 space-y-1 text-gray-700">
+          <li><a href="/services/access-control" className="hover:underline">Access Control Sistemləri</a></li>
+          <li><a href="/services/turnstile" className="hover:underline">Turniket Sistemləri</a></li>
+          <li><a href="/services/barrier" className="hover:underline">Şlaqbaum Sistemləri</a></li>
+        </ul>
+      </section>
+
+      {/* Synonyms note (per-service) */}
+      {svc.synonyms && svc.synonyms.length ? (
+        <p className="mt-6 text-sm text-gray-500">Qeyd: istifadəçilər bu xidməti bəzən {svc.synonyms.join(', ')} kimi axtarırlar.</p>
+      ) : (
+        <p className="mt-6 text-sm text-gray-500">Qeyd: istifadəçilər bu xidməti bəzən “turnstile”, “turniket”, “shlagbaum”, “slagbaum”, “access kontrol” kimi axtarırlar.</p>
+      )}
+
     </article>
   )
 }

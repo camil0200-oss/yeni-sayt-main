@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const metadata = {
   title: 'Smart Kilid və Access Control Xidmətləri Bakı - Elektron Kilid, Turniket, Kartlı Lift | Smartkilid.az',
   description: 'Bakıda smart kilid, access control, turniket sistemi, kartlı lift, domofon və biometrik sistemlərin satışı və quraşdırılması. 9 əsas xidmət. Pulsuz konsultasiya.',
-  alternates: { canonical: '/services' },
+  alternates: { canonical: 'https://smartkilid.az/services' },
 }
 
 const services = [
@@ -54,6 +54,33 @@ export default function ServicesPage() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-700 transition-colors">{s.title}</h3>
                 <p className="text-base text-gray-600 mt-2">Ətraflı məlumat üçün klikləyin</p>
+                {/* Intent anchors for SEO */}
+              <div className="mt-3 text-sm text-blue-600">
+                {s.slug === 'turnstile' && (
+                  <a href={`/services/${s.slug}#`} className="hover:underline">Turniket satışı və quraşdırılması →</a>
+                )}
+                {s.slug === 'barrier' && (
+                  <a href={`/services/${s.slug}#`} className="hover:underline">Şlaqbaum servisi və qiymətləri →</a>
+                )}
+                {s.slug === 'access-control' && (
+                  <a href={`/services/${s.slug}#`} className="hover:underline">Access Control quraşdırılması →</a>
+                )}
+                {s.slug === 'biometrics' && (
+                  <a href={`/services/${s.slug}#`} className="hover:underline">Biometrik giriş və servisi →</a>
+                )}
+                {s.slug === 'gate' && (
+                  <a href={`/services/${s.slug}#`} className="hover:underline">Elektron qapı və kilid sistemləri →</a>
+                )}
+                {s.slug === 'keypad' && (
+                  <a href={`/services/${s.slug}#`} className="hover:underline">Kodlayıcı sistemlər və quraşdırma →</a>
+                )}
+                {s.slug === 'lift' && (
+                  <a href={`/services/${s.slug}#`} className="hover:underline">Kartla lift idarəetmə və qiymətlər →</a>
+                )}
+                {s.slug === 'intercom' && (
+                  <a href={`/services/${s.slug}#`} className="hover:underline">Domofon sistemləri və quraşdırma →</a>
+                )}
+              </div>
               </div>
             </Link>
           ))}
