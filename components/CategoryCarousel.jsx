@@ -5,6 +5,8 @@ import Image from "next/image";
 export default function CategoryCarousel({ items }) {
   const wrapRef = useRef(null);
   const [inView, setInView] = useState(false);
+  const autoRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const el = wrapRef.current;
@@ -16,6 +18,26 @@ export default function CategoryCarousel({ items }) {
     io.observe(el);
     return () => io.disconnect();
   }, []);
+
+  // autoplay when carousel is in view and not paused
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el || !inView || isPaused) return;
+
+    const tick = () => {
+      const card = el.querySelector("[data-card]");
+      const w = card ? card.offsetWidth : 320;
+      // if at end, jump back to start smoothly
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 4) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        el.scrollBy({ left: w, behavior: "smooth" });
+      }
+    };
+
+    autoRef.current = setInterval(tick, 3500);
+    return () => clearInterval(autoRef.current);
+  }, [inView, isPaused]);
 
   const scrollByCard = (dir) => {
     const el = wrapRef.current;
@@ -51,6 +73,10 @@ export default function CategoryCarousel({ items }) {
         ref={wrapRef}
         className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         style={{ scrollBehavior: "smooth" }}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onFocus={() => setIsPaused(true)}
+        onBlur={() => setIsPaused(false)}
       >
         {items.map((it) => (
           <a
