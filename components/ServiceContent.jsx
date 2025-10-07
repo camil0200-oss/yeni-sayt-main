@@ -1,4 +1,15 @@
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
+// Gallery component optional — guard import to avoid build errors if missing
+let Gallery = null
+try {
+  // Optional: only used when present; dynamic import removed to keep build deterministic
+  // If you add a heavy Gallery component, prefer dynamic import with ssr:false
+  // Gallery = dynamic(() => import('./Gallery'), { ssr: false, loading: () => null })
+} catch (e) {
+  Gallery = null
+}
 
 /** Xidmətlər kataloqu — SEO üçün uzun təsvirlər, xüsusiyyətlər, FAQ */
 export const SERVICES = [

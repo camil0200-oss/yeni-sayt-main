@@ -1,10 +1,25 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+// Make bundle-analyzer optional — only require it when ANALYZE=true
+let withBundleAnalyzer = (config) => config;
+if (process.env.ANALYZE === 'true') {
+  try {
+    withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: true });
+  } catch (err) {
+    // If the package is not installed, continue without analyzer
+    // This prevents build failures in environments without the dev dependency.
+    // eslint-disable-next-line no-console
+    console.warn('@next/bundle-analyzer not installed — skipping bundle analysis.');
+    withBundleAnalyzer = (config) => config;
+  }
+}
+
+const nextConfig = withBundleAnalyzer({
   output: 'standalone',
   experimental: {
     // Remove if not using Server Components
     serverComponentsExternalPackages: ['mongodb'],
-    optimizePackageImports: ['lucide-react'],
+    // recommend optimizing imports for large libs to enable tree-shaking
+    optimizePackageImports: ['lucide-react', 'date-fns', 'lodash'],
   },
   
   // Performance optimizations
@@ -106,7 +121,7 @@ const nextConfig = {
       },
     ];
   },
-};
+});
 
 module.exports = nextConfig;
 

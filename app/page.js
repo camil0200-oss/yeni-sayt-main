@@ -4,9 +4,10 @@ import Link from 'next/link'
 
 import { useState, useEffect } from 'react'
 import {
-  Menu, X, Shield, Lock, Smartphone, Users, Settings, Clock,
+  Shield, Lock, Smartphone, Users, Settings, Clock,
   ChevronRight, Phone, Mail, MapPin, Star
 } from 'lucide-react'
+// no optional heavy icons import here to avoid build-time resolution errors
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

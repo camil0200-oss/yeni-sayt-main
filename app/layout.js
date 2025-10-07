@@ -283,19 +283,23 @@ export default function RootLayout({ children }) {
           {children}
         </div>
 
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
-          `}
-        </Script>
+        {/* Google Analytics (load lazily and only when real ID is configured) */}
+        {process.env.NEXT_PUBLIC_GA && process.env.NEXT_PUBLIC_GA !== 'G-XXXXXXXXXX' && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA}`}
+              strategy="lazyOnload"
+            />
+            <Script id="ga-init" strategy="lazyOnload">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);} 
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA}', { send_page_view: false });
+              `}
+            </Script>
+          </>
+        )}
 
         {/* JSON-LD Structured Data */}
         <script

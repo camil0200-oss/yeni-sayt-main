@@ -16,15 +16,16 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const title = `${item.title} Bakı - ${item.title} Satışı və Quraşdırma | Smartkilid.az`
-  const description = `Bakıda ${item.title} satışı və peşəkar quraşdırma xidməti. ${item.short} 24/7 texniki dəstək. Pulsuz konsultasiya.`
-  const url = `https://smartkilid.az/services/${params.slug}`
+  const base = 'https://smartkilid.az'
+  const title = `${item.title} — Satışı, Quraşdırılması və Servis | SmartKilid.az`
+  const description = `${item.title} satışı, quraşdırılması və servisi. ${item.short} Ətraflı məlumat və pulsuz konsultasiya üçün əlaqə saxlayın.`
+  const url = `${base}/services/${params.slug}`
 
   return {
     title,
     description,
     keywords: item.keywords?.join(', '),
-    alternates: { canonical: `/services/${params.slug}` },
+    alternates: { canonical: url },
     openGraph: {
       type: 'article',
       url,
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }) {
         url: item.heroImg, 
         width: 1200, 
         height: 630, 
-        alt: `${item.title} - Bakıda ${item.title} satışı və quraşdırma` 
+        alt: `${item.title} - ${item.title} satışı və quraşdırma` 
       }],
     },
     twitter: { 
@@ -65,6 +66,27 @@ export default function ServicePage({ params }) {
     )
   }
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": svc.title,
+    "description": svc.short,
+    "url": `https://smartkilid.az/services/${params.slug}`,
+    "provider": {
+      "@type": "Organization",
+      "name": "Smart Kilid Sistemləri",
+      "url": "https://smartkilid.az",
+      "telephone": ["+994552370200", "+994708001000"],
+      "email": "smartkilid.az@gmail.com"
+    },
+    "serviceType": svc.title,
+    "areaServed": "Bakı, Azərbaycan",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Smart Kilid Xidmətləri"
+    }
+  }
+
   return (
     <main className="container mx-auto max-w-6xl px-4 py-10 relative z-1">
       {/* Breadcrumb */}
@@ -81,118 +103,32 @@ export default function ServicePage({ params }) {
       <ServiceContent slug={params.slug} />
 
       {/* Əlavə SEO Məzmunu */}
-      <section className="mt-16 bg-gray-50 rounded-2xl p-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Bakıda {svc.title} Haqqında Ətraflı Məlumat</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Niyə {svc.title} Seçməlisiniz?</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Bakıda <strong>{svc.title}</strong> sahəsində ən keyfiyyətli xidmət təqdim edirik. Peşəkar komandamız 
-              <strong> {svc.title}</strong> sistemlərinin quraşdırılması və texniki dəstəyi sahəsində geniş təcrübəyə malikdir.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              <strong>{svc.title}</strong> sistemlərimiz ən son texnologiyalarla təchiz edilib və Bakı şəraitinə uyğunlaşdırılıb. 
-              24/7 texniki dəstək və uzunmüddətli zəmanət ilə <strong>{svc.title}</strong> xidmətimizə etibar edə bilərsiniz.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Bakıda {svc.title} Xidmətimizin Üstünlükləri</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
-                <span>Peşəkar quraşdırma komandası</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
-                <span>24/7 texniki dəstək xidməti</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
-                <span>Uzunmüddətli zəmanət</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
-                <span>Keyfiyyətli məhsullar</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
-                <span>Razılıq qiymətləri</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
-                <span>Pulsuz konsultasiya</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Əlaqə CTA */}
-      <section className="mt-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
-        <h2 className="text-2xl font-bold mb-4">Bakıda {svc.title} üçün Peşəkar Məsləhət</h2>
-        <p className="text-lg mb-6 opacity-90">
-          Layihəniz üçün ən yaxşı {svc.title} həllini təklif edirik. Pulsuz konsultasiya və yerində baxış üçün bizimlə əlaqə saxlayın.
+      <section className="mt-8 prose max-w-none">
+        <h2>Əlavə məlumat — {svc.title}</h2>
+        <p>
+          {svc.title} satışı, quraşdırılması və servisi üzrə ekspert xidmətləri. Xidmətlərimizə <strong>satışı</strong>, <strong>quraşdırılması</strong>, <strong>təkmilləşdirmə</strong> və <strong>təmiri</strong> daxildir. Biz layihəyə görə ən uyğun məhsulu təklif edir və peşəkar quraşdırma həyata keçiririk.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="https://wa.me/994552370200" 
-            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-          >
-            WhatsApp (055) - +994 55 237 02 00
-          </a>
-          <a 
-            href="https://wa.me/994708001000" 
-            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-          >
-            WhatsApp (070) - +994 70 800 10 00
-          </a>
-          <a 
-            href="/contact" 
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Əlaqə Səhifəsi
-          </a>
-        </div>
+        <p>
+          Açar sözlər: {svc.keywords?.slice(0,6).join(', ')}
+        </p>
+        <h3>Turniket və digər əlaqəli sistemlər</h3>
+        <p>
+          Biz həmçinin turniket, access control, şlaqbaum və lift kart idarəetmə sistemləri üzrə dəstək veririk. Ətraflı məlumat üçün <a href="/services">Xidmətlərimiz</a> səhifəsinə baxın.
+        </p>
       </section>
 
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": `${svc.title}`,
-            "description": `${svc.short}`,
-            "url": `https://smartkilid.az/services/${params.slug}`,
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Smart Kilid Sistemləri",
-              "url": "https://smartkilid.az",
-              "telephone": ["+994552370200", "+994708001000"],
-              "email": "smartkilid.az@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Bakı",
-                "addressCountry": "AZ"
-              },
-              "areaServed": {
-                "@type": "City",
-                "name": "Bakı",
-                "addressCountry": "AZ"
-              }
-            },
-            "image": svc.heroImg,
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "AZN",
-              "description": `${svc.title} satışı və quraşdırma xidməti`,
-              "availability": "https://schema.org/InStock"
-            }
-          })
-        }}
-      />
+      {/* Related services */}
+      <section className="mt-12">
+        <h2 className="text-2xl font-semibold mb-4">Əlaqəli Xidmətlər</h2>
+        <ul className="list-disc pl-5 space-y-1 text-gray-700">
+          <li><a href="/services/access-control" className="hover:underline">Access Control Sistemləri</a></li>
+          <li><a href="/services/turnstile" className="hover:underline">Turniket Sistemləri</a></li>
+          <li><a href="/services/barrier" className="hover:underline">Şlaqbaum Sistemləri</a></li>
+        </ul>
+      </section>
+
+      {/* Service JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* BreadcrumbList JSON-LD */}
       <script
