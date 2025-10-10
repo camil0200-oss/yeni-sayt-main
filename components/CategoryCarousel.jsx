@@ -23,16 +23,29 @@ export default function CategoryCarousel({ items }) {
   useEffect(() => {
     const el = wrapRef.current;
     if (!el || !inView || isPaused) return;
-
     const tick = () => {
       const card = el.querySelector("[data-card]");
       const w = card ? card.offsetWidth : 320;
-      // if at end, jump back to start smoothly
-      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 4) {
-        el.scrollTo({ left: 0, behavior: "smooth" });
+
+      // temporarily disable scroll-snap during automated scroll to avoid snap-back
+      const prevSnap = el.style.scrollSnapType;
+      el.style.scrollSnapType = 'none';
+
+      // calculate next position
+      const next = el.scrollLeft + w;
+      const max = el.scrollWidth - el.clientWidth;
+
+      if (next > max - 4) {
+        // If we're at/near the end, jump to start instantly (no smooth snap) then let next interval scroll
+        el.scrollTo({ left: 0, behavior: 'auto' });
       } else {
-        el.scrollBy({ left: w, behavior: "smooth" });
+        el.scrollTo({ left: next, behavior: 'smooth' });
       }
+
+      // restore scroll-snap after transition
+      setTimeout(() => {
+        el.style.scrollSnapType = prevSnap || '';
+      }, 600);
     };
 
     autoRef.current = setInterval(tick, 3500);
