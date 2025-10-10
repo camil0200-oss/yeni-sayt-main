@@ -29,6 +29,10 @@ const nextConfig = withBundleAnalyzer({
   // Image optimization
   images: {
     formats: ['image/webp', 'image/avif'],
+    // Disable Next.js runtime image optimization in standalone mode where sharp
+    // may not be available. This avoids runtime errors; to re-enable optimized
+    // images install the "sharp" package or run on a platform with libvips.
+    unoptimized: true,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
