@@ -7,9 +7,7 @@ import {
   Shield, Lock, Smartphone, Users, Settings, Clock,
   ChevronRight, Phone, Mail, MapPin, Star
 } from 'lucide-react'
-import dynamic from 'next/dynamic'
-
-const CategoryCarousel = dynamic(() => import('@/components/CategoryCarousel'), { ssr: false, loading: () => null })
+// carousel removed per request
 // no optional heavy icons import here to avoid build-time resolution errors
 
 export default function HomePage() {
@@ -106,15 +104,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Category carousel (dynamically loaded) */}
-        <section className="container">
-          <CategoryCarousel items={[
-            { href: '/services/turnstile', title: 'Turniket Sistemləri', img: '/images/service-turnstile.webp', alt: 'Turniket sistemləri' },
-            { href: '/services/barrier', title: 'Şlaqbaum Sistemləri', img: '/images/service-barrier.webp', alt: 'Şlaqbaum sistemləri' },
-            { href: '/services/access-control', title: 'Access Control', img: '/images/service-access-control.webp', alt: 'Access control sistemi' },
-            { href: '/services/smart-lock', title: 'Smart Kilidlər', img: '/images/service-smart-lock.webp', alt: 'Smart kilidlər' }
-          ]} />
-        </section>
+        {/* Category carousel removed intentionally */}
 
         {/* Services Section (homepage showcase) */}
         <section id="services" className="py-20 bg-white">
