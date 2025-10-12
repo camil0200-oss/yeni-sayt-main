@@ -47,15 +47,16 @@ export const SERVICES = [
     slug: 'access-control',
     title: 'Access Control Sistemləri',
     heroImg: '/images/service-access-control.webp',
-    short: 'Giriş-çıxışı kart/biometrika ilə idarə edin, hesabatları mərkəzdən alın. Bakıda access control sistemləri.',
-    intro: `Müasir access control sistemləri ofislər, zavod və ticarət obyektlərində giriş icazələri, zonalar və işçi davamiyyətini mərkəzləşdirilmiş platformada idarə etməyə imkan verir. Bakıda access control sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. Access control sistemləri kart, barmaq izi və üz tanıma texnologiyalarını birləşdirərək maksimum təhlükəsizlik təmin edir. Zonalar, cədvəllər və qonaq profili modulları ilə müxtəlif şəxslərə fərqli icazələr verilə bilər. Turniket, şlaqbaum və lift ilə tam inteqrasiya sayəsində bina daxilində hər hərəkət nəzarət altında saxlanılır. Real-time monitorinq və hesabat sistemləri ilə işçi davamiyyəti, ziyarətçi qeydiyyatı və təhlükəsizlik hadisələri üzrə ətraflı məlumat əldə edilir. Mərkəzləşdirilmiş idarəetmə paneli vasitəsilə bütün giriş-çıxış nöqtələri tək yerden idarə olunur.`,
+    short: 'Giriş-çıxışı kart/biometrika, barmaq izi və üz tanıma ilə idarə edin, hesabatları mərkəzdən alın. Bakıda access control satışı və quraşdırma.',
+    intro: `Bakıda access control satışı və quraşdırılması üzrə peşəkar xidmət. Müasir access control sistemləri ofislər, zavod və ticarət obyektlərində giriş icazələri, zonalar və işçi davamiyyətini mərkəzləşdirilmiş platformada idarə etməyə imkan verir. Access control quraşdırılması zamanı kart, barmaq izi və üz tanıma texnologiyaları birləşdirilərək maksimum təhlükəsizlik təmin edilir. Access control servisi və təmiri daxil olmaqla bütün xidmətləri təqdim edirik. Zonalar, cədvəllər və qonaq profili modulları ilə müxtəlif şəxslərə fərqli icazələr verilə bilər. Turniket, şlaqbaum və lift ilə tam inteqrasiya sayəsində bina daxilində hər hərəkət nəzarət altında saxlanılır. Real-time monitorinq və hesabat sistemləri ilə işçi davamiyyəti, ziyarətçi qeydiyyatı və təhlükəsizlik hadisələri üzrə ətraflı məlumat əldə edilir. Mərkəzləşdirilmiş idarəetmə paneli vasitəsilə bütün giriş-çıxış nöqtələri tək yerden idarə olunur. Access control qiymətləri barədə ətraflı məlumat üçün bizimlə əlaqə saxlayın.`,
     features: [
       'Kart, barmaq izi və üz tanıma dəstəyi',
       'Zonalar, cədvəllər, qonaq profili',
       'Turniket, şlaqbaum, lift ilə inteqrasiya',
       'Hesabatlar və real-time monitorinq',
-      'Bakıda 24/7 texniki dəstək',
-      'Mərkəzləşdirilmiş idarəetmə sistemi'
+      'Bakıda 24/7 texniki dəstək və servis',
+      'Mərkəzləşdirilmiş idarəetmə sistemi',
+      'Zəmanətli access control satışı və quraşdırılması'
     ],
     usecases: [
       'Ofislərdə şöbə/zona əsaslı icazələr',
@@ -70,16 +71,16 @@ export const SERVICES = [
       ['Bakıda quraşdırma mümkündür?', 'Bəli, Bakı və ətraf ərazilərdə tam quraşdırma xidməti.'],
       ['Neçə istifadəçi dəstəklənir?', 'Sistemdə 1000-dən çox istifadəçi qeydiyyatı mümkündür.']
     ],
-    keywords: ['access control', 'davamiyyət', 'turniket inteqrasiya', 'Bakı access control', 'giriş sistemi'],
-    synonyms: ['access control', 'giriş sistemi', 'kart sistemi']
+    keywords: ['access control satışı', 'access control quraşdırılması', 'access control servisi', 'access control təmiri', 'access control qiymətləri', 'Bakı access control', 'access control', 'davamiyyət sistemi', 'giriş sistemi', 'kart sistemi', 'Bakı access control satışı', 'Bakı access control quraşdırma', 'turniket inteqrasiya', 'biometrik access control'],
+    synonyms: ['access control', 'giriş sistemi', 'kart sistemi', 'access control sistemləri']
   },
   {
     slug: 'turnstile',
     title: 'Turniket Sistemləri',
-    synonyms: ['turniket', 'turnstile', 'giriş turniketi'],
+    synonyms: ['turniket', 'turnstile', 'giriş turniketi', 'turniket sistemləri'],
     heroImg: '/images/service-turnstile.webp',
-    short: 'Ofis və obyektlər üçün təhlükəsiz giriş-buraxılış həlli. Bakıda turniket sistemləri.',
-    intro: `Müasir turniket sistemləri ofislər, sənaye müəssisələri və ictimai binalar üçün ən etibarlı giriş idarəetmə həllidir. Tripod, qapı və tam boy turniketlər kart, biometrika və QR kod modulları ilə inteqrasiya olunaraq təhlükəsiz və sürətli keçid təmin edir. Bakıda turniket sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. Turniket sistemləri yalnız icazəli şəxslərin daxil olmasına imkan verir və axını idarə edərək sıxlığın qarşısını alır. İkitərəfli keçid nəzarəti və anti-passback funksiyası ilə təhlükəsizlik maksimum səviyyədə təmin edilir. Paslanmayan polad korpus istənilən hava şəraitində uzunmüddətli istifadəyə uyğundur. Saatda 1000-dən çox keçid dəstəyi ilə yüksək axınlı obyektlərdə effektiv işləyir.`,
+    short: 'Ofis və obyektlər üçün təhlükəsiz giriş-buraxılış həlli. Bakıda turniket satışı və quraşdırma.',
+    intro: `Bakıda turniket satışı və quraşdırılması üzrə peşəkar xidmət. Müasir turniket sistemləri ofislər, sənaye müəssisələri və ictimai binalar üçün ən etibarlı giriş idarəetmə həllidir. Tripod, qapı və tam boy turniketlər kart, biometrika və QR kod modulları ilə inteqrasiya olunaraq təhlükəsiz və sürətli keçid təmin edir. Turniket quraşdırılması zamanı yalnız icazəli şəxslərin daxil olmasına imkan verilir və axın idarə olunaraq sıxlığın qarşısı alınır. Turniket servisi və təmiri daxil olmaqla bütün xidmətləri təqdim edirik. İkitərəfli keçid nəzarəti və anti-passback funksiyası ilə təhlükəsizlik maksimum səviyyədə təmin edilir. Paslanmayan polad korpus istənilən hava şəraitində uzunmüddətli istifadəyə uyğundur. Saatda 1000-dən çox keçid dəstəyi ilə yüksək axınlı obyektlərdə effektiv işləyir. Turniket qiymətləri barədə ətraflı məlumat üçün bizimlə əlaqə saxlayın.`,
     features: [
       'Kart/biometrika/QR modulları',
       'İkitərəfli keçid, anti-passback',
@@ -87,8 +88,8 @@ export const SERVICES = [
       'Saatda 1000+ keçid dəstəyi',
       'Access control sistemi ilə inteqrasiya',
       'Real-time hesabat və monitorinq',
-      'Bakıda 24/7 texniki dəstək',
-      'Zəmanətli turniket sistemləri'
+      'Bakıda 24/7 texniki dəstək və servis',
+      'Zəmanətli turniket satışı və quraşdırılması'
     ],
     usecases: [
       'Ofislər və biznes mərkəzləri',
@@ -107,15 +108,15 @@ export const SERVICES = [
       ['Elektrik kəsiləndə işləyir?', 'UPS dəstəyi ilə normal işləmə davam edir.'],
       ['Neçə turniket eyni anda idarə oluna bilər?', 'Sistemdə 50-dən çox turniket eyni anda idarə oluna bilər.']
     ],
-    keywords: ['turniket', 'giriş sistemləri', 'Bakı turniket', 'turniket satışı', 'turniket quraşdırma', 'giriş turniketi', 'turniket sistemi', 'Bakı turniket sistemi', 'turniket access control', 'turniket biometrik'],
+    keywords: ['turniket satışı', 'turniket quraşdırılması', 'turniket servisi', 'turniket təmiri', 'turniket qiymətləri', 'Bakı turniket', 'turniket', 'giriş sistemləri', 'giriş turniketi', 'turniket sistemi', 'Bakı turniket satışı', 'Bakı turniket quraşdırma', 'turniket access control', 'turniket biometrik'],
   },
   {
     slug: 'barrier',
     title: 'Şlaqbaum Sistemləri',
-    synonyms: ['şlaqbaum', 'shlagbaum', 'barrier'],
+    synonyms: ['şlaqbaum', 'shlagbaum', 'barrier', 'şlaqbaum sistemləri'],
     heroImg: '/images/service-barrier.webp',
-    short: 'Dayanacaq və ərazi girişlərini avtomatlaşdırın. Bakıda şlaqbaum sistemləri.',
-    intro: `Müasir şlaqbaum sistemləri dayanacaq və ərazi girişlərinin avtomatlaşdırılması üçün ən effektiv həlldir. Pult, UHF tag, nömrə tanıma (ANPR) və access control ilə inteqrasiya olunan şlaqbaum həllləri. Bakıda şlaqbaum sistemlərinin satışı və quraşdırılması üzrə etibarlı xidmət təqdim edirik. Şlaqbaum sistemləri UHF uzun məsafəli oxu texnologiyası ilə 10-15 metr məsafədən avtomatik keçidə imkan verir. ANPR (Avtomatik Nömrə Tanıma) inteqrasiyası sayəsində avtomobil nömrələri avtomatik tanınarəq 95%+ dəqiqliklə giriş və ya çıxışa icazə verilir. Təcili rejim və təhlükəsizlik sensorları ilə obyekt təhlükəsizliyi maksimum səviyyədə təmin edilir. Saatda 500-dən çox avtomobil keçidi dəstəyi ilə yüksək axınlı dayanacaqlarda effektiv işləyir.`,
+    short: 'Dayanacaq və ərazi girişlərini avtomatlaşdırın. Bakıda şlaqbaum satışı və quraşdırma.',
+    intro: `Bakıda şlaqbaum satışı və quraşdırılması üzrə peşəkar xidmət. Dayanacaq və ərazi girişlərinin avtomatlaşdırılması üçün ən müasir həllər. Pult, UHF tag, nömrə tanıma (ANPR) və access control ilə inteqrasiya olunan şlaqbaum sistemləri. Şlaqbaum quraşdırılması zamanı UHF uzun məsafəli oxu texnologiyası ilə 10-15 metr məsafədən avtomatik keçidə imkan verilir. ANPR (Avtomatik Nömrə Tanıma) inteqrasiyası sayəsində avtomobil nömrələri avtomatik tanınaraq 95%+ dəqiqliklə giriş və ya çıxışa icazə verilir. Şlaqbaum servisi və təmiri daxil olmaqla bütün xidmətləri təqdim edirik. Təcili rejim və təhlükəsizlik sensorları ilə obyekt təhlükəsizliyi maksimum səviyyədə təmin edilir. Saatda 500-dən çox avtomobil keçidi dəstəyi ilə yüksək axınlı dayanacaqlarda effektiv işləyir. Şlaqbaum qiymətləri barədə ətraflı məlumat üçün bizimlə əlaqə saxlayın.`,
     features: [
       'ANPR (Avtomatik Nömrə Tanıma) inteqrasiyası',
       'UHF uzun məsafəli oxu (10-15 metr)',
@@ -123,8 +124,8 @@ export const SERVICES = [
       'Saatda 500+ avtomobil keçidi dəstəyi',
       'Access control sistemi ilə tam inteqrasiya',
       'IP54+ su və toz davamlılığı',
-      'Bakıda 24/7 texniki dəstək',
-      'Zəmanətli şlaqbaum sistemləri'
+      'Bakıda 24/7 texniki dəstək və servis',
+      'Zəmanətli şlaqbaum satışı və quraşdırılması'
     ],
     usecases: [
       'Biznes mərkəzləri və ofis binaları',
@@ -143,15 +144,15 @@ export const SERVICES = [
       ['Elektrik kəsiləndə nə olur?', 'Manual açma və ya UPS dəstəyi ilə normal işləmə.'],
       ['Neçə şlaqbaum eyni anda idarə oluna bilər?', 'Sistemdə 20-dən çox şlaqbaum eyni anda idarə oluna bilər.']
     ],
-    keywords: ['şlaqbaum', 'dayanacaq idarəetmə', 'Bakı şlaqbaum', 'şlaqbaum satışı', 'avtomatik qapı', 'dayanacaq sistemi', 'ANPR sistemi', 'UHF şlaqbaum', 'şlaqbaum quraşdırma', 'Bakı şlaqbaum sistemi'],
+    keywords: ['şlaqbaum satışı', 'şlaqbaum quraşdırılması', 'şlaqbaum servisi', 'şlaqbaum təmiri', 'şlaqbaum qiymətləri', 'Bakı şlaqbaum', 'şlaqbaum', 'dayanacaq idarəetmə', 'avtomatik şlaqbaum', 'dayanacaq sistemi', 'ANPR sistemi', 'UHF şlaqbaum', 'Bakı şlaqbaum satışı', 'Bakı şlaqbaum quraşdırma'],
   },
   {
     slug: 'lift',
-    title: 'Kartla Lift İdarəetmə',
-    synonyms: ['kartla lift', 'lift kart sistemi', 'lift access control'],
+    title: 'Lift Kart Sistemi',
+    synonyms: ['lift kart sistemi', 'kartla lift', 'lift üçün kart sistemləri', 'liftlərə kart sistemi quraşdırılması', 'kartla lift idarəetmə', 'lift üçün access control'],
     heroImg: '/images/service-lift.webp',
-    short: 'Mərtəbə üzrə giriş icazələrini idarə edin. Bakıda lift kart sistemi.',
-    intro: `Müasir kartla lift idarəetmə sistemləri yaşayış binaları və çoxmərtəbəli komplekslərdə mərtəbə üzrə giriş icazələrini idarə etməyə imkan verir. Sakin və ya əməkdaş yalnız icazə verilən mərtəbəyə çıxa bilər. Access control və domofonlarla birlikdə işləyir. Bakıda lift kart sistemlərinin satışı və quraşdırılması üzrə peşəkar xidmət təqdim edirik. Mərtəbə əsaslı icazə və zaman cədvəlləri ilə hər sakinə və ya işçiyə müxtəlif vaxtlarda fərqli mərtəbələrə çıxış icazəsi verilə bilər. RFID kart və biometrik daxələtmə sistemləri ilə təhlükəsizlik və rahatlıq bir arada təmin edilir. Qonaq və müvəqqəti icazələr vasitəsilə ziyarətçilərə məhdud vaxtlı çıxış icazəsi verilə bilər. Emergency rejim və təcili açma funksiyası ilə fövqəladə hallarda sistem avtomatik olaraq açılır.`,
+    short: 'Mərtəbə üzrə giriş icazələrini idarə edin. Bakıda lift kart sistemi satışı və quraşdırılması.',
+    intro: `Bakıda lift kart sistemi satışı və liftlərə kart sistemi quraşdırılması üzrə peşəkar xidmət. Müasir lift üçün kart sistemləri yaşayış binaları və çoxmərtəbəli komplekslərdə mərtəbə üzrə giriş icazələrini idarə etməyə imkan verir. Lift kart sistemi quraşdırılması zamanı sakin və ya əməkdaş yalnız icazə verilən mərtəbəyə çıxa bilər. Lift avtomatlaşdırma və access control sistemləri ilə tam inteqrasiya. Kartla lift idarəetmə servisi və təmiri daxil olmaqla bütün xidmətləri təqdim edirik. Mərtəbə əsaslı icazə və zaman cədvəlləri ilə hər sakinə və ya işçiyə müxtəlif vaxtlarda fərqli mərtəbələrə çıxış icazəsi verilə bilər. RFID kart və biometrik daxələtmə sistemləri ilə təhlükəsizlik və rahatlıq bir arada təmin edilir. Qonaq və müvəqqəti icazələr vasitəsilə ziyarətçilərə məhdud vaxtlı çıxış icazəsi verilə bilər. Emergency rejim və təcili açma funksiyası ilə fövqəladə hallarda sistem avtomatik olaraq açılır. Lift kart sistemi qiymətləri barədə ətraflı məlumat üçün bizimlə əlaqə saxlayın.`,
     features: [
       'Mərtəbə əsaslı icazə və zaman cədvəlləri',
       'Brend lift panelləri ilə uyğunluq',
@@ -161,7 +162,8 @@ export const SERVICES = [
       'Emergency rejim və təcili açma',
       'Access control sistemi ilə tam inteqrasiya',
       'Bakıda 24/7 texniki dəstək və quraşdırma',
-      'Zəmanətli lift kart sistemləri'
+      'Lift avtomatlaşdırma və smart inteqrasiya',
+      'Zəmanətli lift kart sistemi satışı və quraşdırılması'
     ],
     usecases: [
       'Yaşayış binaları və çoxmərtəbəli komplekslər',
@@ -180,7 +182,7 @@ export const SERVICES = [
       ['Qonaq kart sistemi var?', 'Bəli, müvəqqəti və məhdud vaxtlı qonaq kartları verilə bilər.'],
       ['Zəmanət müddəti nə qədərdir?', 'Bütün lift kart sistemlərimizə 24 ay zəmanət veririk.']
     ],
-    keywords: ['lift kart sistemi', 'mərtəbə icazəsi', 'Bakı lift sistemi', 'lift kart', 'mərtəbə idarəetmə', 'lift access control'],
+    keywords: ['lift kart sistemi', 'lift kart sistemi satışı', 'liftlərə kart sistemi quraşdırılması', 'lift üçün kart sistemləri', 'lift avtomatlaşdırma', 'kartla lift idarəetmə', 'lift kart sistemi quraşdırılması', 'lift kart sistemi servisi', 'lift kart sistemi təmiri', 'lift kart sistemi qiymətləri', 'Bakı lift kart sistemi', 'mərtəbə icazəsi', 'lift access control', 'RFID lift sistemi', 'kartla lift', 'Bakı lift avtomatlaşdırma'],
   },
   {
     slug: 'biometrics',
@@ -220,11 +222,11 @@ export const SERVICES = [
   },
   {
     slug: 'gate',
-    title: 'Elektron Kilid Sistemləri',
-    synonyms: ['elektron qapılar', 'elektron kilid', 'avtomatik qapı'],
+    title: 'Elektron Qapılar',
+    synonyms: ['elektron qapı', 'avtomatik qapı', 'elektron kilid', 'elektron qapılar', 'avtomatik qapı sistemləri', 'ofis qapısı', 'smart qapı'],
     heroImg: '/images/service-gate.webp',
-    short: 'Ofis qapıları üçün uzaqdan pult ilə idarəetmə sistemləri, domofon üçün elektron kilidlər və avtomatik qapılar. Bakıda elektron kilid sistemləri.',
-    intro: `Müasir elektron kilid sistemləri ofis binaları, yaşayış kompleksləri və sənaye müəssisələri üçün ən etibarlı təhlükəsizlik həllidir. Elektron kilidlər uzaqdan pult ilə idarəetmə, domofon inteqrasiyası və avtomatik qapı motorları ilə tam avtomatlaşdırılmış giriş sistemi təmin edir. Bakıda elektron kilid sistemlərinin satışı, quraşdırılması və texniki dəstəyi üzrə ən keyfiyyətli xidmət təqdim edirik. Elektron kilid sistemləri ənənəvi açar kilidlərindən fərqli olaraq uzaqdan idarəetmə, vaxt planlaması və icazə idarəetməsi imkanları təqdim edir. Wi-Fi və 4G modul dəstəyi ilə smart telefon tətbiqindən tam idarəetmə mümkündür.`,
+    short: 'Ofis qapıları üçün uzaqdan pult ilə idarəetmə, domofon üçün elektron kilid və avtomatik qapılar. Bakıda elektron qapı satışı və quraşdırılması.',
+    intro: `Bakıda elektron qapı satışı və quraşdırılması üzrə peşəkar xidmət. Müasir elektron qapılar və avtomatik qapı sistemləri ofis binaları, yaşayış kompleksləri və sənaye müəssisələri üçün ən etibarlı təhlükəsizlik həllidir. Elektron qapı quraşdırılması zamanı uzaqdan pult ilə idarəetmə, domofon inteqrasiyası və avtomatik qapı motorları ilə tam avtomatlaşdırılmış giriş sistemi təmin edilir. Elektron kilid və smart qapı texnologiyaları ilə maksimum təhlükəsizlik. Elektron qapı servisi və təmiri daxil olmaqla bütün xidmətləri təqdim edirik. Avtomatik qapı sistemləri sliding, swing və folding tiplərdə mövcuddur. Ofis qapısı üçün smart idarəetmə, domofon kilid inteqrasiyası və uzaqdan pult ilə tam nəzarət. Wi-Fi və 4G modul dəstəyi ilə smart telefon tətbiqindən idarəetmə mümkündür. Elektron qapı qiymətləri və avtomatik qapı quraşdırılması barədə ətraflı məlumat üçün bizimlə əlaqə saxlayın.`,
     features: [
       'Ofis qapıları üçün uzaqdan pult ilə idarəetmə',
       'Domofon üçün elektron kilid sistemləri',
@@ -234,7 +236,7 @@ export const SERVICES = [
       'Manual açma və təcili rejim dəstəyi',
       'UPS dəstəyi ilə elektrik kəsintisində işləmə',
       'Bakıda 24/7 texniki dəstək və quraşdırma',
-      'Zəmanətli elektron qapı sistemləri'
+      'Zəmanətli elektron qapı satışı və quraşdırılması'
     ],
     usecases: [
       'Ofis binaları və biznes mərkəzləri',
@@ -256,7 +258,7 @@ export const SERVICES = [
       ['Neçə qapı eyni anda idarə oluna bilər?', 'Sistemdə 10-dan çox qapı eyni anda idarə oluna bilər.'],
       ['Zəmanət müddəti nə qədərdir?', 'Bütün elektron qapı sistemlərimizə 24 ay zəmanət veririk.']
     ],
-    keywords: ['elektron qapılar', 'avtomatik qapı', 'Bakı elektron qapı', 'qapı sistemi', 'avtomatik qapı', 'elektron qapı', 'ofis qapısı', 'uzaqdan pult', 'domofon kilid', 'avtomatik qapı motoru', 'smart qapı', 'Bakı avtomatik qapı', 'elektron qapı quraşdırma'],
+    keywords: ['elektron qapı satışı', 'avtomatik qapı satışı', 'elektron qapı quraşdırılması', 'avtomatik qapı quraşdırılması', 'elektron qapı servisi', 'avtomatik qapı təmiri', 'elektron qapı qiymətləri', 'avtomatik qapı qiymətləri', 'Bakı elektron qapı', 'Bakı avtomatik qapı', 'elektron qapı', 'avtomatik qapı', 'ofis qapısı', 'uzaqdan pult qapı', 'domofon kilid', 'avtomatik qapı motoru', 'smart qapı', 'sliding qapı', 'elektron kilid', 'Bakı elektron qapı satışı'],
   },
   {
     slug: 'keypad',
@@ -376,7 +378,11 @@ export default function ServiceContent({ slug }) {
   if (!svc) return <p className="text-red-600">Xidmət tapılmadı.</p>
 
   // Ensure H1 reads as "[Xidmət adı] Sistemləri" unless it already contains the word 'Sistem'
-  const h1Title = /Sistem/i.test(svc.title) ? svc.title : `${svc.title} Sistemləri`
+  // Exception: only 'gate' slug should NOT have "Sistemləri" added
+  const noSistemiSlugs = ['gate']
+  const h1Title = noSistemiSlugs.includes(svc.slug) || /Sistem/i.test(svc.title) 
+    ? svc.title 
+    : `${svc.title} Sistemləri`
 
   // Exceptions: do not create full H2 breakdown for these slugs; only add short SEO paragraph
   const shortOnlySlugs = ['smart-lock', 'gate']
@@ -410,7 +416,7 @@ export default function ServiceContent({ slug }) {
         <section className="prose">
           <h2 className="text-2xl font-semibold">Qısa SEO məlumat</h2>
           <p className="text-gray-700 leading-relaxed">
-            {svc.title} üzrə ekspert xidmətləri: <strong>satışı</strong>, <strong>quraşdırılması</strong>, <strong>təkmilləşdirmə</strong> və <strong>servis/təmiri</strong>. Biz layihəyə uyğun məhsul seçimi və peşəkar quraşdırma təqdim edirik. Əlavə məlumat üçün <a href="/contact" className="text-blue-600 hover:underline">əlaqə</a> saxlayın.
+            {svc.title} üzrə ekspert xidmətləri: <strong>{svc.title} satışı</strong>, <strong>{svc.title} quraşdırılması</strong>, <strong>{svc.title} təkmilləşdirmə</strong> və <strong>{svc.title} servis/təmiri</strong>. Biz layihəyə uyğun məhsul seçimi və peşəkar quraşdırma təqdim edirik. Əlavə məlumat üçün <a href="/contact" className="text-blue-600 hover:underline">əlaqə</a> saxlayın.
           </p>
         </section>
       ) : (
@@ -490,11 +496,19 @@ export default function ServiceContent({ slug }) {
         </ul>
       </section>
 
-      {/* Synonyms note (per-service) */}
-      {svc.synonyms && svc.synonyms.length ? (
-        <p className="mt-6 text-sm text-gray-500">Qeyd: istifadəçilər bu xidməti bəzən {svc.synonyms.join(', ')} kimi axtarırlar.</p>
-      ) : (
-        <p className="mt-6 text-sm text-gray-500">Qeyd: istifadəçilər bu xidməti bəzən “turnstile”, “turniket”, “shlagbaum”, “slagbaum”, “access kontrol” kimi axtarırlar.</p>
+      {/* Alternative search terms as H2 for SEO */}
+      {svc.synonyms && svc.synonyms.length > 0 && (
+        <section className="mt-12">
+          <h2 className="text-2xl font-semibold mb-4">Əlaqəli Axtarış Terminləri</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {svc.synonyms.slice(0, 6).map((synonym, idx) => (
+              <div key={idx} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <h3 className="text-lg font-medium text-gray-900 capitalize">{synonym}</h3>
+                <p className="text-sm text-gray-600 mt-1">Bakıda satış və quraşdırma</p>
+              </div>
+            ))}
+          </div>
+        </section>
       )}
 
     </article>

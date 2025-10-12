@@ -32,12 +32,12 @@ export default function HomePage() {
   // XİDMƏTLƏR (slug-larla)
   const services = [
     { slug: 'smart-lock', title: 'Smart Kilidlər', img: '/images/service-smart-lock.webp' },
-    { slug: 'access-control', title: 'Access Control', img: '/images/service-access-control.webp' },
+    { slug: 'access-control', title: 'Access Control Sistemləri', img: '/images/service-access-control.webp' },
     { slug: 'turnstile', title: 'Turniket Sistemləri', img: '/images/service-turnstile.webp' },
     { slug: 'barrier', title: 'Şlaqbaum Sistemləri', img: '/images/service-barrier.webp' },
-    { slug: 'lift', title: 'Kartla Lift İdarəetmə', img: '/images/service-lift.webp' },
+    { slug: 'lift', title: 'Lift Kart Sistemi', img: '/images/service-lift.webp' },
     { slug: 'biometrics', title: 'Biometrik Giriş', img: '/images/service-biometrics.webp' },
-    { slug: 'gate', title: 'Elektron Kilid Sistemləri', img: '/images/service-gate.webp' },
+    { slug: 'gate', title: 'Elektron Qapı', img: '/images/service-gate.webp' },
     { slug: 'keypad', title: 'Kodlayıcı Sistemlər', img: '/images/service-keypad.webp' },
     { slug: 'hotel-card', title: 'Otel Kart Sistemi', img: '/images/service-smart-lock.webp' },
     { slug: 'intercom', title: 'Domofon Sistemləri', img: '/images/service-intercom.webp' },
@@ -91,7 +91,7 @@ export default function HomePage() {
               <div className="relative">
                 <Image
                   src="/images/hero-security.webp"
-                  alt="Bakıda Smart Kilid və Access Control Sistemləri - Təhlükəsizlik və Avtomatlaşdırma"
+                  alt="Bakıda Smart Kilid Satışı, Access Control, Turniket və Şlaqbaum Satışı və Quraşdırılması - Smart Kilid Sistemləri"
                   width={800}
                   height={600}
                   className="hero-image w-full h-auto rounded-2xl shadow-xl"
@@ -110,9 +110,9 @@ export default function HomePage() {
         <section id="services" className="py-20 bg-white">
           <div className="container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Bakıda Smart Kilid və Access Control Xidmətləri</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Bakıda Smart Kilid Satışı, Access Control, Turniket və Şlaqbaum Satışı</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin tam spektri - <strong>elektron kilid</strong>, <strong>turniket sistemi</strong>, <strong>kartlı lift</strong>, <strong>avtomatik qapı</strong>, <strong>elektron qapılar</strong> və <strong>domofon sistemləri</strong>
+                Müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin tam spektri - <strong>smart kilid satışı</strong>, <strong>elektron kilid</strong>, <strong>turniket satışı və quraşdırılması</strong>, <strong>şlaqbaum satışı</strong>, <strong>kartlı lift</strong>, <strong>avtomatik qapı</strong>, <strong>elektron qapılar</strong> və <strong>domofon sistemləri</strong>. Satış, quraşdırılma, servis və təmir xidmətləri.
               </p>
             </div>
 
@@ -127,7 +127,7 @@ export default function HomePage() {
                   <div className="h-48 overflow-hidden">
                     <Image
                       src={service.img}
-                      alt={`${service.title} - Bakıda ${service.title} satışı və quraşdırma`}
+                      alt={`${service.title} - Bakıda ${service.title} satışı, quraşdırılması, servisi və təmiri`}
                       width={380}
                       height={253}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -143,7 +143,7 @@ export default function HomePage() {
                       {service.title}
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      Bakıda {service.title} satışı və peşəkar quraşdırma xidməti
+                      Bakıda {service.title} satışı, quraşdırılması və servis xidməti
                     </p>
                     <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
                       <span>Ətraflı məlumat</span>
@@ -160,9 +160,9 @@ export default function HomePage() {
         <section className="py-20 bg-gray-50">
           <div className="container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Niyə Smart Kilid Sistemləri?</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Niyə Bizi Seçməlisiniz?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Bakıda <strong>smart kilid</strong> və <strong>access control</strong> sahəsində keyfiyyət, etibarlılıq və peşəkarlıq bizim əsas prinsiplərimizdir
+                Bakıda <strong>smart kilid satışı</strong>, <strong>access control</strong>, <strong>turniket satışı</strong> və <strong>şlaqbaum satışı</strong> sahəsində keyfiyyət, etibarlılıq və peşəkarlıq bizim əsas prinsiplərimizdir. Satış, quraşdırılma və servisdə 10 illik təcrübə.
               </p>
             </div>
 
@@ -189,12 +189,12 @@ export default function HomePage() {
   <div className="container mx-auto px-4">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">Bakıda Smart Kilid və Access Control Uzmanları</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-6">Bakıda Smart Kilid Satışı, Turniket və Şlaqbaum Satışı Uzmanları</h2>
         <div className="space-y-4 text-gray-600 text-lg">
-          <p><strong>Smart Kilid Sistemləri</strong> olaraq, biz Azərbaycanda müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı və quraşdırılması sahəsində fəaliyyət göstəririk.</p>
-          <p>Komandamız yüksək ixtisaslı mütəxəssislərdən ibarətdir və müştərilərimizə ən keyfiyyətli <strong>smart kilid</strong>, <strong>access control</strong> və <strong>turniket sistemi</strong> xidməti göstərməyə çalışır.</p>
-          <p>Məqsədimiz müştərilərimizin təhlükəsizliyini təmin etmək və ən son texnologiyalardan istifadə edərək rahatlıq yaratmaqdır.</p>
-          <p className="font-semibold text-blue-600">Smart Kilid Sistemləri – Bakıda <strong>elektron kilid</strong>, <strong>access control</strong> və <strong>təhlükəsizlik sistemləri</strong> sahəsində etibarlı partnyorunuz.</p>
+          <p><strong>Smart Kilid Sistemləri</strong> olaraq, biz Azərbaycanda müasir təhlükəsizlik və avtomatlaşdırma sistemlərinin satışı, quraşdırılması və servisi sahəsində 10 ildən çox fəaliyyət göstəririk.</p>
+          <p>Komandamız yüksək ixtisaslı mütəxəssislərdən ibarətdir və müştərilərimizə ən keyfiyyətli <strong>smart kilid satışı</strong>, <strong>access control</strong>, <strong>turniket satışı və quraşdırılması</strong>, <strong>şlaqbaum satışı</strong> xidməti göstərməyə çalışır.</p>
+          <p>Məqsədimiz müştərilərimizin təhlükəsizliyini təmin etmək və ən son texnologiyalardan istifadə edərək rahatlıq yaratmaqdır. <strong>Turniket servisi və təmiri</strong>, <strong>şlaqbaum servisi</strong>, <strong>smart kilid təmiri</strong> daxil olmaqla bütün xidmətləri təqdim edirik.</p>
+          <p className="font-semibold text-blue-600">Smart Kilid Sistemləri – Bakıda <strong>smart kilid satışı</strong>, <strong>elektron kilid</strong>, <strong>turniket satışı</strong>, <strong>şlaqbaum satışı</strong>, <strong>access control</strong> və <strong>təhlükəsizlik sistemləri</strong> sahəsində etibarlı partnyorunuz. Satış, quraşdırılma, servis və təmir.</p>
         </div>
         <div className="mt-8">
           <a
@@ -212,7 +212,7 @@ export default function HomePage() {
       <div className="card-img relative aspect-[16/10]">
         <img
           src="/images/about-team.webp"
-          alt="Smart Kilid Sistemləri komandası - Bakıda təhlükəsizlik sistemləri uzmanları"
+          alt="Smart Kilid Sistemləri komandası - Bakıda smart kilid satışı, turniket və şlaqbaum satışı uzmanları"
           className="w-full h-full object-cover rounded-xl shadow-xl"
           loading="lazy"
         />
@@ -225,9 +225,9 @@ export default function HomePage() {
 <section className="py-20 bg-gray-50">
   <div className="container">
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-gray-900 mb-4">Smart Kilid və Access Control Haqqında Suallar</h2>
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Smart Kilid Satışı, Turniket və Şlaqbaum Haqqında Suallar</h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        Bakıda <strong>smart kilid</strong>, <strong>access control</strong> və <strong>turniket sistemi</strong> haqqında ən çox verilən suallar
+        Bakıda <strong>smart kilid satışı</strong>, <strong>access control</strong>, <strong>turniket satışı və quraşdırılması</strong>, <strong>şlaqbaum satışı</strong> və <strong>şlaqbaum qiymətləri</strong> haqqında ən çox verilən suallar
       </p>
     </div>
 
@@ -299,6 +299,36 @@ export default function HomePage() {
         </summary>
         <p className="mt-4 text-gray-700 leading-relaxed">
           <strong>Elektron qapılar</strong> və <strong>avtomatik qapı</strong> sistemlərimiz sliding, swing, folding və revolving tiplərində mövcuddur. Ofis qapıları üçün uzaqdan pult ilə idarəetmə, domofon üçün elektron kilidlər və smart telefon inteqrasiyası ilə tam həll təqdim edirik. Bakıda bütün növ qapılar üçün <strong>avtomatik qapı</strong> sistemləri quraşdırırıq.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Bakıda şlaqbaum satışı və quraşdırılması xidməti necə işləyir?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Bakıda <strong>şlaqbaum satışı</strong> və quraşdırılması xidməti aşağıdakı mərhələlərdə həyata keçirilir: 1) Pulsuz konsultasiya və texniki baxış, 2) <strong>Şlaqbaum qiymətləri</strong> və ən uyğun modelin seçilməsi, 3) Peşəkar quraşdırma (1-2 gün), 4) Sistem testi və təlim, 5) <strong>Şlaqbaum servisi</strong> və texniki dəstək. Bütün <strong>şlaqbaum</strong> sistemlərimizə 12-24 ay zəmanət veririk.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Şlaqbaum qiymətləri nədən asılıdır?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          <strong>Şlaqbaum qiymətləri</strong> bir neçə faktordan asılıdır: boom uzunluğu (3-6 metr), avtomatika növü (elektrik və ya hidravlik), əlavə funksiyalar (ANPR nömrə tanıma, UHF oxuyucu, loop detektor), quraşdırma mürəkkəbliyi və zəmanət müddəti. Dəqiq qiymət üçün bizimlə əlaqə saxlayın - pulsuz texniki baxış və <strong>şlaqbaum satışı</strong> üzrə məsləhət təqdim edirik. <strong>Şlaqbaum servisi və təmiri</strong> xidmətləri də mövcuddur.
+        </p>
+      </details>
+
+      <details className="group bg-white rounded-lg border p-6">
+        <summary className="cursor-pointer font-semibold text-lg text-gray-900 flex items-center justify-between">
+          <span>Turniket satışı və quraşdırılması nə qədər vaxt alır?</span>
+          <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          <strong>Turniket satışı</strong> və quraşdırılması adətən 2-5 gün çəkir. Proses aşağıdakı mərhələlərdən ibarətdir: layihə qiymətləndirilməsi (1 gün), <strong>turniket qiymətləri</strong> razılaşdırma və sifariş (1 gün), quraşdırma və konfiqurasiya (1-2 gün), test və təlim (1 gün). Bakıda <strong>turniket quraşdırılması</strong>, <strong>turniket servisi və təmiri</strong> xidmətləri 24/7 texniki dəstəklə təqdim olunur.
         </p>
       </details>
     </div>

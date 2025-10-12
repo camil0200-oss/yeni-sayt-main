@@ -106,10 +106,7 @@ export default function ServicePage({ params }) {
       <section className="mt-8 prose max-w-none">
         <h2>Əlavə məlumat — {svc.title}</h2>
         <p>
-          {svc.title} satışı, quraşdırılması və servisi üzrə ekspert xidmətləri. Xidmətlərimizə <strong>satışı</strong>, <strong>quraşdırılması</strong>, <strong>təkmilləşdirmə</strong> və <strong>təmiri</strong> daxildir. Biz layihəyə görə ən uyğun məhsulu təklif edir və peşəkar quraşdırma həyata keçiririk.
-        </p>
-        <p>
-          Açar sözlər: {svc.keywords?.slice(0,6).join(', ')}
+          {svc.title} satışı, quraşdırılması və servisi üzrə ekspert xidmətləri. Xidmətlərimizə <strong>{svc.title} satışı</strong>, <strong>{svc.title} quraşdırılması</strong>, <strong>{svc.title} təkmilləşdirmə</strong> və <strong>{svc.title} təmiri</strong> daxildir. Biz layihəyə görə ən uyğun məhsulu təklif edir və peşəkar quraşdırma həyata keçiririk.
         </p>
         <h3>Turniket və digər əlaqəli sistemlər</h3>
         <p>

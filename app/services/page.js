@@ -3,9 +3,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Smart Kilid və Access Control Xidmətləri Bakı - Elektron Kilid, Turniket, Kartlı Lift | Smartkilid.az',
-  description: 'Bakıda smart kilid, access control, turniket sistemi, kartlı lift, domofon və biometrik sistemlərin satışı və quraşdırılması. 9 əsas xidmət. Pulsuz konsultasiya.',
+  title: 'Smart Kilid Satışı, Turniket və Şlaqbaum Satışı Bakı - 9 Əsas Xidmət | Smartkilid.az',
+  description: 'Bakıda smart kilid satışı, access control, turniket satışı və quraşdırılması, şlaqbaum satışı, kartlı lift, domofon və biometrik sistemlərin satışı, quraşdırılması, servisi və təmiri. 9 əsas xidmət. Pulsuz konsultasiya və texniki dəstək.',
+  keywords: 'smart kilid satışı, turniket satışı, şlaqbaum satışı, access control, turniket quraşdırılması, şlaqbaum quraşdırılması, turniket servisi, şlaqbaum servisi, turniket qiymətləri, şlaqbaum qiymətləri, Bakı',
   alternates: { canonical: 'https://smartkilid.az/services' },
+  openGraph: {
+    title: 'Smart Kilid Satışı, Turniket və Şlaqbaum Satışı Bakı - 9 Əsas Xidmət',
+    description: 'Bakıda smart kilid satışı, turniket və şlaqbaum satışı və quraşdırılması. 9 əsas xidmət. Pulsuz konsultasiya.',
+    url: 'https://smartkilid.az/services',
+    type: 'website',
+    images: [{ url: 'https://smartkilid.az/images/hero-security.webp', width: 1200, height: 630 }]
+  }
 }
 
 const services = [
@@ -13,9 +21,9 @@ const services = [
   { slug: 'access-control',   title: 'Access Control Sistemləri', img: '/images/service-access-control.webp' },
   { slug: 'turnstile',        title: 'Turniket Sistemləri',       img: '/images/service-turnstile.webp' },
   { slug: 'barrier',          title: 'Şlaqbaum Sistemləri',       img: '/images/service-barrier.webp' },
-  { slug: 'lift',             title: 'Kartla Lift İdarəetmə',     img: '/images/service-lift.webp' },
+  { slug: 'lift',             title: 'Lift Kart Sistemi',     img: '/images/service-lift.webp' },
   { slug: 'biometrics',       title: 'Biometrik Giriş',           img: '/images/service-biometrics.webp' },
-  { slug: 'gate',             title: 'Elektron Kilid Sistemləri',        img: '/images/service-gate.webp' },
+  { slug: 'gate',             title: 'Elektron Qapı',        img: '/images/service-gate.webp' },
   { slug: 'keypad',           title: 'Kodlayıcı Sistemlər',       img: '/images/service-keypad.webp' },
   { slug: 'hotel-card',       title: 'Otel Kart Sistemi',        img: '/images/service-smart-lock.webp' },
   { slug: 'intercom',         title: 'Domofon Sistemləri',        img: '/images/service-intercom.webp' },
@@ -26,9 +34,9 @@ export default function ServicesPage() {
     <main className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Xidmətlər</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Smart Kilid Satışı, Turniket və Şlaqbaum Satışı - Xidmətlərimiz</h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-            9 əsas xidmət üzrə satış və quraşdırma — klikləyin, detalları görün.
+            Bakıda 9 əsas xidmət üzrə <strong>satış, quraşdırılma, servis və təmir</strong> — <strong>smart kilid satışı</strong>, <strong>turniket satışı</strong>, <strong>şlaqbaum satışı</strong> və daha çox. Klikləyin, detalları görün.
           </p>
         </div>
 

@@ -7,28 +7,69 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   metadataBase: new URL('https://smartkilid.az'),
-  title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control, Turniket, Avtomatik Qapı | Smartkilid.az',
+  title: {
+    default: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control, Turniket, Şlaqbaum Satışı və Quraşdırılması | Smartkilid.az',
+    template: '%s | Smart Kilid Sistemləri Bakı'
+  },
   description:
-    'Bakıda smart kilid, elektron kilid, access control, turniket sistemi, kartlı lift, avtomatik qapı və domofon sistemlərinin satışı və quraşdırılması. 24/7 texniki dəstək. Pulsuz konsultasiya.',
+    'Bakıda smart kilid satışı, elektron kilid, access control, turniket satışı və quraşdırılması, kartlı lift, şlaqbaum satışı, avtomatik qapı və domofon sistemlərinin satışı, quraşdırılması, servisi və təmiri. 24/7 texniki dəstək. Pulsuz konsultasiya və məsləhət.',
   keywords:
-    'smart kilid Bakı, elektron kilid, access control sistemi, turniket sistemi, kartlı lift, domofon sistemi, təhlükəsizlik sistemləri, Bakı smart kilid, Azərbaycan access control, elektron qapı sistemi, avtomatik qapı, biometrik giriş, şlaqbaum sistemi, elektron qapılar',
+    'smart kilid satışı Bakı, smart kilid quraşdırılması, elektron kilid Bakı, access control satışı, access control quraşdırılması, turniket satışı, turniket quraşdırılması, turniket servisi, turniket qiymətləri, şlaqbaum satışı, şlaqbaum quraşdırılması, şlaqbaum servisi, şlaqbaum qiymətləri, kartlı lift, domofon sistemləri, təhlükəsizlik sistemləri Bakı, Azərbaycan access control, elektron qapı sistemi, avtomatik qapı, biometrik giriş, elektron qapılar, Bakı smart kilid, smart kilid təmiri, access control təmiri, turniket təmiri, şlaqbaum təmiri',
   authors: [{ name: 'Smart Kilid Sistemləri' }],
-  alternates: { canonical: '/' },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  creator: 'Smart Kilid Sistemləri',
+  publisher: 'Smart Kilid Sistemləri',
+  alternates: { 
+    canonical: 'https://smartkilid.az',
+    languages: {
+      'az': 'https://smartkilid.az',
+      'az-AZ': 'https://smartkilid.az'
+    }
+  },
+  robots: { 
+    index: true, 
+    follow: true, 
+    nocache: false,
+    googleBot: { 
+      index: true, 
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    } 
+  },
   openGraph: {
     url: 'https://smartkilid.az',
-    title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control və Avtomatik Qapı',
+    title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control, Turniket, Şlaqbaum Satışı və Quraşdırılması',
     description:
-      'Bakıda smart kilid, elektron kilid, access control, turniket sistemi, avtomatik qapı və domofon sistemlərinin satışı və quraşdırılması. 24/7 texniki dəstək.',
+      'Bakıda smart kilid satışı, elektron kilid, access control, turniket satışı və quraşdırılması, şlaqbaum satışı, avtomatik qapı və domofon sistemlərinin satışı, quraşdırılması və servisi. 24/7 texniki dəstək. Pulsuz konsultasiya.',
     siteName: 'Smart Kilid Sistemləri',
     type: 'website',
     locale: 'az_AZ',
     images: [
-      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Smart Kilid Sistemləri - Bakıda Təhlükəsizlik və Avtomatik Qapı Sistemləri' }
+      { 
+        url: 'https://smartkilid.az/images/hero-security.webp', 
+        width: 1200, 
+        height: 630, 
+        alt: 'Smart Kilid Sistemləri - Bakıda Smart Kilid, Access Control, Turniket və Şlaqbaum Satışı' 
+      }
     ]
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Smart Kilid Sistemləri Bakı - Elektron Kilid, Access Control, Turniket, Şlaqbaum Satışı',
+    description: 'Bakıda smart kilid satışı, access control, turniket və şlaqbaum satışı və quraşdırılması. 24/7 texniki dəstək.',
+    images: ['https://smartkilid.az/images/hero-security.webp'],
+    creator: '@smartkilid'
+  },
+  verification: {
+    google: 'google-site-verification-code',
+    yandex: 'yandex-verification-code'
+  },
+  category: 'Təhlükəsizlik Sistemləri',
+  classification: 'Təhlükəsizlik və Avtomatlaşdırma Sistemləri',
   icons: {
-    icon: '/icon.svg'
+    icon: '/icon.svg',
+    apple: '/apple-touch-icon.png'
   }
 }
 
@@ -301,7 +342,7 @@ export default function RootLayout({ children }) {
           </>
         )}
 
-        {/* JSON-LD Structured Data */}
+        {/* JSON-LD Structured Data - Organization */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -309,13 +350,17 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Smart Kilid Sistemləri",
-              "description": "Bakıda smart kilid, access control, turniket sistemi və elektron kilid sistemlərinin satışı və quraşdırılması",
+              "alternateName": ["Smartkilid.az", "Smart Kilid Bakı"],
+              "description": "Bakıda smart kilid satışı, elektron kilid, access control, turniket satışı və quraşdırılması, şlaqbaum satışı, avtomatik qapı və domofon sistemlərinin satışı, quraşdırılması, servisi və təmiri",
               "url": "https://smartkilid.az",
+              "logo": "https://smartkilid.az/icon.svg",
+              "image": "https://smartkilid.az/images/hero-security.webp",
               "telephone": ["+994552370200", "+994708001000"],
               "email": "smartkilid.az@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Bakı",
+                "addressRegion": "Bakı",
                 "addressCountry": "AZ"
               },
               "geo": {
@@ -323,40 +368,140 @@ export default function RootLayout({ children }) {
                 "latitude": 40.394734,
                 "longitude": 49.73893
               },
-              "openingHours": "Mo-Su 09:00-21:00",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                  "opens": "09:00",
+                  "closes": "21:00"
+                }
+              ],
               "priceRange": "$$",
-              "areaServed": {
-                "@type": "City",
-                "name": "Bakı",
-                "addressCountry": "AZ"
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Bakı",
+                  "addressCountry": "AZ"
+                },
+                {
+                  "@type": "Country",
+                  "name": "Azərbaycan"
+                }
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "Təhlükəsizlik Sistemləri",
+                "name": "Təhlükəsizlik və Avtomatlaşdırma Sistemləri",
                 "itemListElement": [
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Smart Kilid Sistemləri"
+                      "name": "Smart Kilid Satışı və Quraşdırılması",
+                      "description": "Bakıda smart kilid satışı və quraşdırılması, elektron kilid sistemləri",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "Smart Kilid Sistemləri"
+                      }
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Access Control Sistemləri"
+                      "name": "Access Control Satışı və Quraşdırılması",
+                      "description": "Bakıda access control sistemlərinin satışı və quraşdırılması",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "Smart Kilid Sistemləri"
+                      }
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Turniket Sistemləri"
+                      "name": "Turniket Satışı və Quraşdırılması",
+                      "description": "Bakıda turniket satışı, quraşdırılması və servisi",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "Smart Kilid Sistemləri"
+                      }
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Şlaqbaum Satışı və Quraşdırılması",
+                      "description": "Bakıda şlaqbaum satışı, quraşdırılması, servisi və təmiri",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "Smart Kilid Sistemləri"
+                      }
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Kartla Lift İdarəetmə",
+                      "description": "Bakıda kartla lift idarəetmə sistemlərinin quraşdırılması",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "Smart Kilid Sistemləri"
+                      }
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Biometrik Giriş Sistemləri",
+                      "description": "Bakıda biometrik giriş sistemlərinin satışı və quraşdırılması",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "Smart Kilid Sistemləri"
+                      }
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Elektron Qapı və Avtomatik Qapı Sistemləri",
+                      "description": "Bakıda elektron qapı və avtomatik qapı sistemlərinin satışı və quraşdırılması",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "Smart Kilid Sistemləri"
+                      }
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Domofon Sistemləri",
+                      "description": "Bakıda domofon sistemlərinin satışı və quraşdırılması",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "Smart Kilid Sistemləri"
+                      }
                     }
                   }
                 ]
-              }
+              },
+              "sameAs": [
+                "https://www.facebook.com/smartkilid",
+                "https://www.instagram.com/smartkilid",
+                "https://wa.me/994552370200"
+              ]
             })
           }}
         />
